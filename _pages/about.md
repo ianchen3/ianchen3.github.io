@@ -9,7 +9,7 @@ redirect_from:
 
 # Bio
 
-Hey, I'm Ian Chen, studying Statistics and Computer Science as a third-year undergraduate at the University of Illinois-Urbana Champaign.
+Hey, I'm Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign.
 I am interested generally in algorithmic computer science and applications of probability.
 Specifically, I am always looking for creative ideas in algorithms for graphs and networks.
 
