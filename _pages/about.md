@@ -18,3 +18,10 @@ Specifically, I am always looking for creative ideas in algorithms for graphs an
 
 I'm currently working on Network Science with [Tandy Warnow](https://tandy.cs.illinois.edu/) and [George Chacko](https://siebelschool.illinois.edu/about/people/faculty/chackoge).
 We are scaling local community detection, also known as community search, towards networks with millions to billions of nodes.
+
+
+# Special Interest Group in math and algorithms
+
+I am a lead for the ACM@UIUC group in math and algorithms!
+This semester, we are participating in [CG:SHOP](https://cgshop.ibr.cs.tu-bs.de/competition/cg-shop-2027/#problem-description).
+See our activities [here](https://www.cstheory.org/).
