@@ -63,6 +63,6 @@ function Pandoc(doc)
   if #found == 0 then
     return nil
   end
-  doc.blocks:insert(pandoc.CodeBlock(table.concat(found, "\n\n"), { class = "bibtex", filename = "BibTeX" }))
+  doc.blocks:insert(pandoc.CodeBlock(table.concat(found, "\n\n"), { id = "bibtex", class = "bibtex", filename = "BibTeX" }))
   return doc
 end

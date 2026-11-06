@@ -15,6 +15,7 @@ styles.scss                CSS on top of the light and dark themes
 index.qmd                  about page                       /
 blog/                      posts, and the listing in index.qmd   /blog/<slug>
 publications/              papers, one listing per category      /publications/<slug>
+  publication.ejs          one listing entry: title, venue, authors, buttons
   refs.bib                 BibTeX for every paper (also served for download)
   _metadata.yml            points every page in the folder at refs.bib
 talks/  teaching/  notes/  entries, and the listing in index.qmd
@@ -114,7 +115,8 @@ nocite: "@bibkey"
 …
 ```
 
-The entry's BibTeX source follows the abstract.
+The entry's BibTeX source follows the abstract. The listing's Paper button links to
+`/files/publications/<slug>/paper.pdf`, so every publication needs that file.
 
 **News** — add an item to `news/news.yml`. The title is Markdown. The home page shows the same items,
 so links to pages on the site start with `/`:

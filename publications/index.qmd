@@ -3,6 +3,8 @@ title: "Publications"
 toc: true
 listing:
   - id: manuscripts
+    type: custom
+    template: publication.ejs
     contents: "*.qmd"
     sort: "date desc"
     date-format: "MMMM YYYY"
@@ -10,6 +12,8 @@ listing:
     include:
       category: manuscripts
   - id: conferences
+    type: custom
+    template: publication.ejs
     contents: "*.qmd"
     sort: "date desc"
     date-format: "MMMM YYYY"
@@ -17,6 +21,8 @@ listing:
     include:
       category: conferences
   - id: preprints
+    type: custom
+    template: publication.ejs
     contents: "*.qmd"
     sort: "date desc"
     date-format: "MMMM YYYY"

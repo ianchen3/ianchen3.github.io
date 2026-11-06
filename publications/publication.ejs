@@ -1,0 +1,29 @@
+::: {.list .quarto-listing-default}
+
+<% for (const item of items) {
+  const slug = item.path.split('/').pop().replace(/\.qmd$/, '');
+%>
+
+::: {.quarto-post <%= metadataAttrs(item) %>}
+
+::: {.body}
+
+### [<%- item.title %>](<%- item.path %>) {.no-anchor .listing-title .unlisted}
+
+::: {.listing-subtitle}
+<%- item.subtitle %> · <%= item.date %>
+:::
+
+::: {.listing-description}
+<%- item.description.replace('Ian Chen', '[Ian Chen]{.underline}') %>
+:::
+
+[Paper](/files/publications/<%- slug %>/paper.pdf){.btn .btn-outline-secondary .btn-sm} [BibTeX](<%- item.path %>#bibtex){.btn .btn-outline-secondary .btn-sm} [HTML](<%- item.path %>){.btn .btn-outline-secondary .btn-sm}
+
+:::
+
+:::
+
+<% } %>
+
+:::
