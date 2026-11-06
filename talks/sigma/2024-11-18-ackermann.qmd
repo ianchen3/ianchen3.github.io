@@ -1,0 +1,9 @@
+---
+title: "The Inverse Ackermann Function"
+subtitle: "SIGma"
+date: 2024-11-18
+description: "Recursion, Inverse Ackermann, Union-Find, Range-Minimum Queries..."
+---
+
+[Slides](/files/talks/sigma/2024-11-18-ackermann/slides.pdf)
+[Video](https://youtu.be/se64bz0bPH4)

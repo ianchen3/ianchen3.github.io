@@ -1,0 +1,10 @@
+---
+title: "CS 421: Programming Languages and Compilers"
+subtitle: "Undergraduate/Graduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA"
+date: 2026-08-01
+description: "Lecture notes with OCaml cells that run in the browser."
+listing:
+  contents: "*.qmd"
+  sort: "date"
+  fields: [date, title, description]
+---

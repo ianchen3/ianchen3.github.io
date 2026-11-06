@@ -1,0 +1,41 @@
+---
+title: "Publications"
+toc: true
+listing:
+  - id: manuscripts
+    contents: "*.qmd"
+    sort: "date desc"
+    date-format: "MMMM YYYY"
+    fields: [date, title, subtitle, description]
+    include:
+      category: manuscripts
+  - id: conferences
+    contents: "*.qmd"
+    sort: "date desc"
+    date-format: "MMMM YYYY"
+    fields: [date, title, subtitle, description]
+    include:
+      category: conferences
+  - id: preprints
+    contents: "*.qmd"
+    sort: "date desc"
+    date-format: "MMMM YYYY"
+    fields: [date, title, subtitle, description]
+    include:
+      category: preprints
+---
+
+## Journal Articles
+
+::: {#manuscripts}
+:::
+
+## Conference Papers
+
+::: {#conferences}
+:::
+
+## Preprints
+
+::: {#preprints}
+:::

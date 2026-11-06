@@ -1,0 +1,35 @@
+---
+title: "Reading group"
+subtitle: "University of Illinois Urbana-Champaign · Urbana, IL, USA"
+date: 2026-05-31
+description: "Write-ups and presentations from summer 2026 reading groups."
+listing:
+  - id: kyle-tai
+    contents: "*.qmd"
+    sort: "date desc"
+    fields: [date, title]
+    include:
+      category: kyle-tai
+  - id: srujan
+    contents: "*.qmd"
+    sort: "date desc"
+    fields: [date, title]
+    include:
+      category: srujan
+---
+
+## Schedule for Readings with Kyle Enkzhul and Tai Nguyen
+
+[Schedule](https://docs.google.com/spreadsheets/d/1QBAPXNKPZR_qJm9-nG-dXG29AknlLf7pCjgb90VlTsE/edit?usp=sharing)
+
+::: {#kyle-tai}
+:::
+
+## Write-ups and presentations Reading with [Srujan Roplekar](https://srujanr2.github.io/)
+
+<!-- ## Fast Linear Solvers; July 19th, 2026 -->
+
+<!-- ## What's the big deal with Expanders? (Part 2); July 12th, 2026 -->
+
+::: {#srujan}
+:::

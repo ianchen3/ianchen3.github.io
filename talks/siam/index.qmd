@@ -1,0 +1,10 @@
+---
+title: "SIAM talks"
+subtitle: "Presentations · SIAM Undergraduate Seminar at UIUC · Urbana, IL, USA"
+date: 2026-10-09
+description: "Talks for the SIAM Undergraduate Seminar at UIUC."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  fields: [date, title, description]
+---

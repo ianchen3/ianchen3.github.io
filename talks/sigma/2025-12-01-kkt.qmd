@@ -1,0 +1,8 @@
+---
+title: "Linear Time Minimum Spanning Trees"
+subtitle: "SIGma"
+date: 2025-12-01
+description: "Karger-Klein-Tarjan randomized algorithm for computing minimum spanning trees in linear expected time."
+---
+
+[Slides](/files/talks/sigma/2025-12-01-kkt/slides.pdf)

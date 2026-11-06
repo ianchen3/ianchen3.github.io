@@ -1,0 +1,9 @@
+---
+title: "DeBruijn Graphs"
+subtitle: "SIGma"
+date: 2025-02-03
+description: "Elementary graph theory, De Bruijn sequences, and genome assembly..."
+---
+
+[Slides](/files/talks/sigma/2025-02-03-debruijn/slides.pdf)
+[Video](https://youtu.be/D0fynPgXm60)

@@ -1,0 +1,8 @@
+---
+title: "PHYS 213: Thermal Physics"
+subtitle: "Undergraduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA"
+date: 2024-08-01
+description: "Introduction to thermodynamics..."
+---
+
+[Notes](/files/notes/fa24-phys213/notes.pdf)

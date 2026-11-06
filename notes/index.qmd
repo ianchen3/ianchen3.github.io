@@ -1,0 +1,9 @@
+---
+title: "Notes"
+listing:
+  contents: "*.qmd"
+  exclude:
+    subtitle: ["CS 421", "Reading group"]
+  sort: "date desc"
+  fields: [date, title, subtitle, description]
+---

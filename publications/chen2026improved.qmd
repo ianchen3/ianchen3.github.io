@@ -1,0 +1,14 @@
+---
+title: "Improved Methods for $k$-Core Community Search"
+subtitle: "Submitted to CompleNet 2027"
+date: 2026-09-01
+category: "preprints"
+description: "Ian Chen, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko"
+nocite: "@chen2026improved"
+---
+
+[PDF](/files/publications/chen2026improved/paper.pdf){.btn .btn-outline-secondary .btn-sm} [arXiv](https://arxiv.org/abs/2609.17822){.btn .btn-outline-secondary .btn-sm}
+
+## Abstract
+
+Community search based on user-specified query nodes is complementary to community finding or graph clustering. Prior work in community search is divided into optimizing for external separateness or internal cohesiveness, which does not scale well networks of over a billion edges. We present SteinerKCore, a new scalable k-core based community search algorithm for multi-vertex queries. We also present Par-ShellStruct, a parallel algorithm for building the ShellStruct data structure used for k-core community search. We show that our implementations in Icebug, an open-source toolkit for large-scale network analysis, are both more efficient and more scalable than comparative tools, being able to perform on a benchmark network of 273M and 5.1B edges using just 64GB RAM and under 4 hours runtime with 16 CPUs.

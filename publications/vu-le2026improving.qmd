@@ -1,0 +1,14 @@
+---
+title: "Improving community detection with CVC, a new cluster ensemble method"
+subtitle: "Applied Network Science"
+date: 2026-06-01
+category: "manuscripts"
+description: "The-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow"
+nocite: "@vu-le2026improving"
+---
+
+[PDF](/files/publications/vu-le2026improving/paper.pdf){.btn .btn-outline-secondary .btn-sm} [DOI](https://doi.org/10.1007/s41109-026-00809-z){.btn .btn-outline-secondary .btn-sm}
+
+## Abstract
+
+Community detection is an unsupervised learning problem with many applications. In this study, we present Constrained Voting Consensus (CVC), a new ensemble clustering method that is designed to combine multiple clusterings, some of which may only cover a small portion of the network. We demonstrate that combining several dense subgraph clustering methods with standard methods within this ensemble approach produces a more accurate clustering than its constituent clustering methods. We also compare CVC to other ways of combining sets of clusterings, including the median consensus method, and show that CVC achieves higher accuracy and has better robustness. Furthermore, CVC can scale to very large networks with millions of vertices.

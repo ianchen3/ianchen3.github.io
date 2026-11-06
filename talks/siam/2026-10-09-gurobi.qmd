@@ -1,0 +1,10 @@
+---
+title: "Graph Optimization with Mixed Integer Programming"
+subtitle: "SIAM"
+date: 2026-10-09
+description: "Mixed integer programming and Gurobi."
+---
+
+[Slides](/files/talks/siam/2026-10-09-gurobi/slides.pdf)
+[Video](https://www.youtube.com/watch?v=2N1dRmzz2xg)
+[Notebook](https://colab.research.google.com/github/SIGma-UIUC/meetings/blob/main/FA26/Gurobi/notebook.ipynb)

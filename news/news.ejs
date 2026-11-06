@@ -1,0 +1,25 @@
+::: {.list .quarto-listing-default}
+
+<% for (const item of items) { %>
+
+::: {.quarto-post .image-right <%= metadataAttrs(item) %>}
+
+::: {.body}
+
+### <%- item.title %> {.no-anchor .listing-title .unlisted}
+
+:::
+
+::: {.metadata}
+
+```{=html}
+<div class="listing-date"><%= item.date %></div>
+```
+
+:::
+
+:::
+
+<% } %>
+
+:::

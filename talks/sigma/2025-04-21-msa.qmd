@@ -1,0 +1,8 @@
+---
+title: "Multiple Sequence Alignment"
+subtitle: "SIGma"
+date: 2025-04-21
+description: "Multiple sequence alignment, maximum weight trace, dynamic programing, heuristics..."
+---
+
+[Slides](/files/talks/sigma/2025-04-21-msa/slides.pdf)

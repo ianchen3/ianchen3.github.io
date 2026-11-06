@@ -1,0 +1,9 @@
+---
+title: "Introduction; Convex Hulls"
+subtitle: "SIGma"
+date: 2026-08-31
+description: "The first SIGma meeting of Fall 2026, with Mihir Tandon and Franklin Zhang."
+---
+
+[Slides](/files/talks/sigma/2026-08-31-intro/slides.pdf)
+[Video](https://youtu.be/89-KlBaQkFo)

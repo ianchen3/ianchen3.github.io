@@ -1,0 +1,8 @@
+---
+title: "Applications of Community Detection"
+subtitle: "Reading group"
+date: 2026-07-01
+category: kyle-tai
+---
+
+[Presentation](/files/notes/su26-reading/kyle-tai/07-01.pdf)

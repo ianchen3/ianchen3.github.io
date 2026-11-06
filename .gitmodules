@@ -1,3 +1,4 @@
-[submodule "files/2024-summer-rl/assets/mathjax"]
-	path = files/2024-summer-rl/assets/mathjax
-	url = https://github.com/mathjax/MathJax
+[submodule "sty"]
+	path = sty
+	url = git@github.com:IanChenUIUC/latex-styles.git
+	branch = pages

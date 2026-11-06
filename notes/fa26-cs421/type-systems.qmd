@@ -1,0 +1,437 @@
+---
+title: "Type systems"
+subtitle: "CS 421"
+date: 2026-09-30
+description: "Type judgments for a subset of OCaml, monomorphic and polymorphic."
+---
+
+First, we specify a subset of the OCaml grammar subset.
+Associativity and precedence are not described here, and a description can be found in the Bison grammar `picoml-stepper/interpreter/picoml.y`.
+
+\begin{bnf}
+    $e$ -- \textsf{Expressions} ::=
+    | $c$ -- \textsf{Constant}
+    | $x$ -- \textsf{Variable}
+    | $(e_1, e_2)$ -- \textsf{Pair}
+    | $\oplus e$ -- \textsf{Monadic operator}
+    | $e_1 \oplus e_2$ -- \textsf{Binary operator}
+    | if $e_1$ then $e_2$ else $e_3$ -- \textsf{If-then-else}
+    | $e_1 e_2$ -- \textsf{Application}
+    | \texttt{fun} $x$ \texttt{->} $e$ -- \textsf{Functions}
+    | \texttt{let} $x = e_1$ in $e_2$ -- \textsf{Let-in}
+    | \texttt{let rec} $f \ x = e_1$ in $e_2$ -- \textsf{Let-rec-in}
+    ;;
+\end{bnf}
+
+This note will describe the static semantics of our language.
+In particular, each expression has a *type* $\tau$ of possible data values.
+Our (sound) type system will a type for each expression, such that the dynamic value will always be in the type of $\tau$.
+
+Towards this, the main rule is the *type judgment*.
+
+$$
+    \inferrule*{ \cdots }{ \Gamma \vdash e: \tau }
+$$
+
+where $\Gamma$ is our type environment (a context mapping variables to types), $e$ is an expression, and $\tau$ is some type.
+Then, under the type environemnt and a set of preconditions (above the bar), then we prove that $e$ has type $\tau$.
+A sound program has expressions for which the judgement $\emptyset \vdash e : \tau$ is derivable.
+We will use $\Gamma_1 + \Gamma_2$ to denote $\Gamma_1 \cup (\Gamma_2 \setminus \Gamma_1)$ (note that this is not commutative).
+
+Note that this is closely related to the idea of a logic system.
+Types correspond to propositions, and terms correspond to proofs.
+This is known as the Curry-Howard isomorphism; we will see that functions correspond to implication, and application corresponds to modus ponens.
+
+## A monomorphic type system
+
+First, we give the rules for a very simple type system, in which each variable provably has a unique type.
+In contrast, a polymorphic type system can give a variable distinct types, as we will see later.
+
+```{.ocaml .live}
+let x = fun y -> y + 2;;
+```
+
+Under our type system, we will assign $x$ the type $\textsf{int} \mapsto \textsf{int}$.
+Informally, if $x$ is the type $\textsf{int} \mapsto \textsf{int}$, then the binder $y$ gets type $\textsf{int}$, and the $+$ operator will also return an integer.
+This is an example of a *type derivation*, and we will now provide judgements for proving the type of an expression (though we do not show soundness or completeness).
+
+First, we can specify boolean constants
+
+$$
+    \inferrule*[right=Const]{}{\Gamma \vdash \texttt{true} : \textsf{bool}}
+    \qquad
+    \inferrule*[right=Const]{}{\Gamma \vdash \texttt{false} : \textsf{bool}}
+$$
+
+In the above rule, $\Gamma$ is a meta-variable.
+Rather than writing a rule for every possible type environment, we write a schema in terms of $\Gamma$.
+Note that the rules themselves are still in terms of the concrete syntax as before.
+
+As another example of a meta-variable, say $n$ is an integral constant, so that the rule says that $1$ is an integer, $2$ is an integer, and so on.
+
+$$
+    \inferrule*[right=Const]{}{\Gamma \vdash n : \textsf{int}}
+$$
+
+Deriving the type of a variable involves looking in the type context.
+
+$$
+    \inferrule*[right=Variable]{}{\set{x: \tau} + \Gamma \vdash x: \tau}
+$$
+
+Another interesting example is to determine the type of a pair $(e_1, e_2)$.
+This rule has a precondition, that $e_1: \tau_1$ and $e_2: \tau_2$, and once these are set, then $(e_1, e_2)$ has type $\tau_1 * \tau_2$.
+
+$$
+    \inferrule*[right=Pair]{ \Gamma \vdash e_1: \tau_1, \Gamma \vdash e_2: \tau_2 }{ \Gamma \vdash (e_1, e_2): \tau_1 * \tau_2 }
+$$
+
+So to derive the type of $(1, \texttt{false})$, then we have to first derive the type of both components $1$ and $\texttt{false}$.
+Indeed, it is typed is $\textsf{int} * \textsf{bool}$.
+
+```{.ocaml .live}
+(1, false)
+```
+
+and we can write a derivation for this as follows:
+
+$$
+    \inferrule*[right=Pair]{
+        \inferrule*[right=Const]{}{\emptyset \vdash 1: \textsf{int}} \\
+        \inferrule*[right=Const]{}{\emptyset \vdash \texttt{false}: \textsf{bool}}
+    }{ \emptyset \vdash (1, \texttt{false}) : \textsf{int} * \textsf{bool} }
+$$
+
+Writing out the rules for the rest of our expression constructors is straightforward and intuitive.
+
+$$
+    \inferrule*[right=Monoid]{ \Gamma \vdash e_1: \tau_1, (\oplus): \tau_1 \to \tau_2 }{ \Gamma \vdash \oplus e_1: \tau_2}
+$$
+
+$$
+    \inferrule*[right=Binary]{ \Gamma \vdash e_1: \tau_1, \Gamma \vdash e_2: \tau_2, (\oplus): \tau_1 \to \tau_2 \to \tau_3 }{ \Gamma \vdash e_1 \oplus e_2: \tau_3 }
+$$
+
+$$
+    \inferrule*[right=IfThenElse]{ \Gamma \vdash e_1: \textsf{bool}, \Gamma \vdash e_2: \tau, \Gamma \vdash e_3: \tau }{ \Gamma \vdash \texttt{if}\ e_1 \ \texttt{then}\ e_2 \ \texttt{else}\ e_3: \tau }
+$$
+
+$$
+    \inferrule*[right=Application]{ \Gamma \vdash e_1: \tau_1 \to \tau_2, \Gamma \vdash e_2: \tau_1 }{ \Gamma \vdash e_1 e_2 : \tau_2 }
+$$
+
+$$
+    \inferrule*[right=Functions]{ \set{x: \tau_1} + \Gamma \vdash e: \tau_2 }{ \Gamma \vdash \texttt{fun}\ x \to e: \tau_1 \to \tau_2 }
+$$
+
+$$
+    \inferrule*[right=LetIn]{ \Gamma \vdash e_1: \tau_1, \set{x: \tau_1} + \Gamma \vdash e_2: \tau_2 }{ \Gamma \vdash \texttt{let}\ x = e_1 \ \texttt{in}\ e_2 : \tau_2 }
+$$
+
+$$
+    \inferrule*[right=LetRecIn]{ \set{x: \tau_1} + \Gamma \vdash e_1: \tau_1, \set{x: \tau_1} + \Gamma \vdash e_2: \tau_2 }{ \Gamma \vdash \texttt{let rec}\ x = e_1 \ \texttt{in}\ e_2 : \tau_2 }
+$$
+
+At this point, it is prudent to prove properties about the system we have thus given.
+One important property is that each $x: \tau \in \Gamma$ has a unique $\tau$.
+We will not prove it here, but intead illustrate these with a more in-depth example, showing (almost) all of our judgements.
+
+### Examples
+
+```{.ocaml .live}
+let rec f x = if x <= 1 then 1 else x * f (x - 1) in f 3;;
+```
+
+We want to prove that this expression has type $\textsf{int}$.
+We work backwards from the conclusion; our judgment rules are *syntax driven* and so there is only one possible rule to apply at each step.
+
+First, the \textsf{LetRecIn} has two premises.
+The second is straightforward to derive: we first derive the types of both terms of the application $f$ and $3$ using the variable and constant rules respectively, before applying the application rule.
+
+$$
+    \inferrule*[right=LetRecIn]{
+        (1)\ \set{f: \textsf{int} \to \textsf{int}} \vdash \texttt{fun}\ x \to \ldots : \textsf{int} \to \textsf{int} \\
+        (2)\ \set{f: \textsf{int} \to \textsf{int}} \vdash f \ 3 : \textsf{int}
+    }{ \emptyset \vdash \texttt{let rec}\ f = \texttt{fun}\ x \to \texttt{if}\ x \le 1 \ \texttt{then}\ 1 \ \texttt{else}\ x \times  f \ (x - 1) \ \texttt{in}\ f \ 3 : \textsf{int} }
+$$
+
+$$
+    \inferrule*[right=App]{
+        \inferrule*[right=Var]{}{\set{f: \textsf{int} \to \textsf{int}} \vdash f : \textsf{int} \to \textsf{int} } \\
+        \inferrule*[right=Const]{}{\set{f: \textsf{int} \to \textsf{int}} \vdash 3 : \textsf{int} }
+    }{ (2)\ \set{f: \textsf{int} \to \textsf{int}} \vdash f \ 3 : \textsf{int} }
+$$
+
+The other premise is a bit more involved.
+There are the function rules, and then the conditional, in which the three expressions have to be typed.
+The base case is trivial.
+
+$$
+    \inferrule*[right=Func]{
+        (3)\ \set{x: \textsf{int}, f: \textsf{int} \to \textsf{int}} \vdash \texttt{if}\ x \le 1 \ \texttt{then}\ 1 \ \texttt{else}\ x \times f \ (x - 1) : \textsf{int}
+    }{ (1)\ \set{f: \textsf{int} \to \textsf{int}} \vdash \texttt{fun}\ x \to \texttt{if}\ x \le 1 \ \texttt{then}\ 1 \ \texttt{else}\ x \times f \ (x - 1) : \textsf{int} \to \textsf{int} }
+$$
+
+Let $\Gamma_1 = \set{x: \textsf{int}, f: \textsf{int} \to \textsf{int}}$.
+
+$$
+    \inferrule*[right=IfThenElse]{
+        (4)\ \Gamma_1 \vdash x \le 1 : \textsf{bool} \\
+        \inferrule*[right=Const]{}{\Gamma_1 \vdash 1 : \textsf{int}} \\
+        (5)\ \Gamma_1 \vdash x \times f \ (x - 1) : \textsf{int}
+    }{ (3)\ \Gamma_1 \vdash \texttt{if}\ x \le 1 \ \texttt{then}\ 1 \ \texttt{else}\ x \times f \ (x - 1) : \textsf{int} }
+$$
+
+As far as the predicate of the $\textsf{if}$, we can indeed verify it types to a $\textsf{bool}$.
+
+$$
+    \inferrule*[right=Binary]{
+        \inferrule*[right=Var]{}{\Gamma_1 \vdash x : \textsf{int}} \\
+        \inferrule*[right=Const]{}{\Gamma_1 \vdash 1 : \textsf{int}} \\
+        (\le) : \textsf{int} \to \textsf{int} \to \textsf{bool}
+    }{ (4)\ \Gamma_1 \vdash x \le 1 : \textsf{bool} }
+$$
+
+And as for the other side, we verify that it matches with the true branch of the if, namely that it also evaluates to an $\textsf{int}$.
+
+$$
+    \inferrule*[right=Binary]{
+        \inferrule*[right=Var]{}{\Gamma_1 \vdash x : \textsf{int}} \\
+        (6)\ \Gamma_1 \vdash f \ (x - 1) : \textsf{int} \\
+        (\times) : \textsf{int} \to \textsf{int} \to \textsf{int}
+    }{ (5)\ \Gamma_1 \vdash x \times f \ (x - 1) : \textsf{int} }
+$$
+
+$$
+    \inferrule*[right=App]{
+        \inferrule*[right=Var]{}{\Gamma_1 \vdash f : \textsf{int} \to \textsf{int}} \\
+        (7)\ \Gamma_1 \vdash x - 1 : \textsf{int}
+    }{ (6)\ \Gamma_1 \vdash f \ (x - 1) : \textsf{int} }
+$$
+
+$$
+    \inferrule*[right=Binary]{
+        \inferrule*[right=Var]{}{\Gamma_1 \vdash x : \textsf{int}} \\
+        \inferrule*[right=Const]{}{\Gamma_1 \vdash 1 : \textsf{int}} \\
+        (-) : \textsf{int} \to \textsf{int} \to \textsf{int}
+    }{ (7)\ \Gamma_1 \vdash x - 1 : \textsf{int} }
+$$
+
+## A polymorphic type system
+
+The type system described above is very limited.
+Consider for example, the following expression:
+
+```{.ocaml .live}
+let id x = x in (id 1, id false)
+```
+
+What type is $\texttt{id}$?
+For the first element of the pair, it seems like we need $\texttt{id}: \textsf{int} \to \textsf{int}$, but for the second element, it seems like we need $\texttt{id}: \textsf{bool} \to \textsf{bool}$.
+We need a more powerful type system to express the possibility for $\texttt{id}$ to be both!
+
+```{.ocaml .live}
+let id x = x
+```
+
+We see that OCaml gives $\texttt{id}$ the type signature `'a -> 'a`
+It is instructive to think of this as sugar for the universally quantified type $\forall(\alpha . \alpha \to \alpha)$.
+We read this as the type is now a *function* taking a *type* as an argument, and in general denote as $\forall(t . \tau)$.
+
+In this system, beyond our basic and compound types in the monomorphic type system, we also introduce type variables (in OCaml, prefixed with a `'`, and in our mathematics, we use lowercase greek letters).
+Finally, every type has a universal quantifier dictating the bound variables.
+
+In particular, consider the grammar for the types:
+
+\begin{bnf}
+    $\tau$ -- \textsf{Monotype} ::=
+    | $\textsf{int}$ // $\textsf{bool}$ // $\ldots$ -- \textsf{Basic}
+    | $\alpha$ -- \textsf{Type Variable}
+    | $\tau_1 * \tau_2$ -- \textsf{Pair}
+    | $\tau_1 \to \tau_2$ -- \textsf{Function}
+    ;;
+    $\sigma$ -- \textsf{Polytype} ::=
+    | $\forall . \tau$ -- \textsf{Monotype}
+    | $\forall \overline{\alpha} . \ \sigma$ -- \textsf{Quantified}
+    ;;
+\end{bnf}
+
+Now, type judgements are still over monotypes
+
+$$
+    \inferrule*{ \cdots }{ \Gamma \vdash e: \textsf{Monotype} }
+$$
+
+But, as type environments are now mappings from variables to *polytypes*, they will hold more power.
+With this, we can consider the first judgment that must change: variables.
+
+$$
+    \inferrule*[right=Variable]{}{ \set{x: \forall \alpha_1, \ldots, \alpha_n . \tau} + \Gamma \vdash x: \phi(\tau) }
+$$
+
+where $\phi$ is a function replacing each $\alpha_i$ with a monotype.
+For example, if the type environment is $\set{x: \alpha}$, then $x: \textsf{int}$ can be derived, and $x: \textsf{bool}$ too.
+
+The second judgment that must change is in assigning new variables in a let (i.e. modifying the type environment); we need to be able to create polytypes from monotypes.
+To do this, consider a new function
+
+$$
+    \mathbf{Gen}(\tau, \Gamma): \textsf{Monotype} \times \textsf{Environment} \to \textsf{Polytype}
+$$
+
+which will bind all the free variables in $\tau$ that are not in $\Gamma$.
+Namely, the free variables of monomorphic types are the type variables, of polymorphic types must remove the quantified vars, and for an environment, all free variables over the range.
+
+Now, the modifications to the grammar are simple, with only the following rules changing.
+
+$$
+    \inferrule*[right=Functions]{ \set{x: \tau_1} + \Gamma \vdash e: \tau_2 }{ \Gamma \vdash \texttt{fun}\ x \to e: \forall . \tau_1 \to \tau_2 }
+$$
+
+$$
+    \inferrule*[right=LetIn]{ \Gamma \vdash e_1: \tau_1, \set{x: \mathbf{Gen}(\tau_1, \Gamma)} + \Gamma \vdash e_2: \tau_2 }{ \Gamma \vdash \texttt{let}\ x = e_1 \ \texttt{in}\ e_2 : \tau_2 }
+$$
+
+$$
+    \inferrule*[right=LetRecIn]{ \set{x: \forall . \tau_1} + \Gamma \vdash e_1: \tau_1, \set{x: \mathbf{Gen}(\tau_1, \Gamma)} + \Gamma \vdash e_2: \tau_2 }{ \Gamma \vdash \texttt{let}\ x = e_1 \ \texttt{in}\ e_2 : \tau_2 }
+$$
+
+### Examples
+
+To illustrate this, we shall consider three examples.
+
+```{.ocaml .live}
+fun y -> let f = fun x -> y in (f 1, f true);;
+```
+
+We can derive the type as follows.
+In the second premise of [LetIn]{.smallcaps}, $f$ is bound to $\mathbf{Gen}(\beta \to \alpha, \set{y: \forall . \alpha}) = \forall \beta . \beta \to \alpha$; only $\beta$ is quantified, since $\alpha$ is free in the environment.
+
+$$
+    \inferrule*[right=Func]{
+        \inferrule*[right=LetIn]{
+            (1)\ \set{y: \forall . \alpha} \vdash \texttt{fun}\ x \to y : \beta \to \alpha \\
+            (2)\ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash (f \ 1, f \ \texttt{true}) : \alpha * \alpha
+        }{ \set{y: \forall . \alpha} \vdash \texttt{let}\ f = \texttt{fun}\ x \to y \ \texttt{in}\ (f \ 1, f \ \texttt{true}) : \alpha * \alpha }
+    }{ \emptyset \vdash \texttt{fun}\ y \to \texttt{let}\ f = \texttt{fun}\ x \to y \ \texttt{in}\ (f \ 1, f \ \texttt{true}) : \alpha \to \alpha * \alpha }
+$$
+
+$$
+    \inferrule*[right=Func]{
+        \inferrule*[right=Var]{}{ \set{x: \forall . \beta, y: \forall . \alpha} \vdash y : \alpha }
+    }{ (1)\ \set{y: \forall . \alpha} \vdash \texttt{fun}\ x \to y : \beta \to \alpha }
+$$
+
+$$
+    \inferrule*[right=Pair]{
+        (3)\ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash f \ 1 : \alpha \\
+        (4)\ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash f \ \texttt{true} : \alpha
+    }{ (2)\ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash (f \ 1, f \ \texttt{true}) : \alpha * \alpha }
+$$
+
+$$
+    \inferrule*[right=App]{
+        \inferrule*[right=Var]{}{ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash f : \textsf{int} \to \alpha } \\
+        \inferrule*[right=Const]{}{ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash 1 : \textsf{int} }
+    }{ (3)\ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash f \ 1 : \alpha }
+$$
+
+$$
+    \inferrule*[right=App]{
+        \inferrule*[right=Var]{}{ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash f : \textsf{bool} \to \alpha } \\
+        \inferrule*[right=Const]{}{ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash \texttt{true} : \textsf{bool} }
+    }{ (4)\ \set{f: \forall \beta . \beta \to \alpha, y: \forall . \alpha} \vdash f \ \texttt{true} : \alpha }
+$$
+
+Note that the derived type is $\alpha * \alpha$; the output of $f$ must be the same type even though it is a polytype.
+In contrast, consider the following, whose output pair type is $\alpha * \beta$.
+
+```{.ocaml .live}
+fun y -> let rec f = fun x -> f x in (f 1, f true);;
+```
+
+We can derive the type as follows.
+
+$$
+    \inferrule*[right=Func]{
+        \inferrule*[right=LetRecIn]{
+            (1)\ \Gamma_1 \vdash \texttt{fun}\ x \to f \ x : \delta \to \varepsilon \\
+            (2)\ \Gamma_2 \vdash (f \ 1, f \ \texttt{true}) : \beta * \gamma
+        }{ \set{y: \forall . \alpha} \vdash \texttt{let rec}\ f = \texttt{fun}\ x \to f \ x \ \texttt{in}\ (f \ 1, f \ \texttt{true}) : \beta * \gamma }
+    }{ \emptyset \vdash \texttt{fun}\ y \to \texttt{let rec}\ f = \texttt{fun}\ x \to f \ x \ \texttt{in}\ (f \ 1, f \ \texttt{true}) : \alpha \to \beta * \gamma }
+$$
+
+Where in the first premise, the type environment is $\Gamma_1 = \set{f: \forall . \delta \to \varepsilon, y: \forall . \alpha}$.
+
+$$
+    \inferrule*[right=Func]{
+        \inferrule*[right=App]{
+            \inferrule*[right=Var]{}{ \set{x: \forall . \delta} + \Gamma_1 \vdash f : \delta \to \varepsilon } \\
+            \inferrule*[right=Var]{}{ \set{x: \forall . \delta} + \Gamma_1 \vdash x : \delta }
+        }{ \set{x: \forall . \delta} + \Gamma_1 \vdash f \ x : \varepsilon }
+    }{ (1)\ \Gamma_1 \vdash \texttt{fun}\ x \to f \ x : \delta \to \varepsilon }
+$$
+
+and in the second premise, let $\Gamma_2 = \set{f: \forall \delta, \varepsilon . \delta \to \varepsilon, y: \forall . \alpha}$.
+
+$$
+    \inferrule*[right=Pair]{
+        \inferrule*[right=App]{
+            \inferrule*[right=Var]{}{ \Gamma_2 \vdash f : \textsf{int} \to \beta } \\
+            \inferrule*[right=Const]{}{ \Gamma_2 \vdash 1 : \textsf{int} }
+        }{ \Gamma_2 \vdash f \ 1 : \beta } \\
+        \inferrule*[right=App]{
+            \inferrule*[right=Var]{}{ \Gamma_2 \vdash f : \textsf{bool} \to \gamma } \\
+            \inferrule*[right=Const]{}{ \Gamma_2 \vdash \texttt{true} : \textsf{bool} }
+        }{ \Gamma_2 \vdash f \ \texttt{true} : \gamma }
+    }{ (2)\ \Gamma_2 \vdash (f \ 1, f \ \texttt{true}) : \beta * \gamma }
+$$
+
+And for the final example, we note that the following does not type check.
+
+```{.ocaml .live}
+let rec f = fun x -> f (x, x);;
+```
+
+Indeed, we fail at the argument of the recursive call.
+
+$$
+    \inferrule*[right=Func]{
+        \inferrule*[right=App]{
+            \inferrule*[right=Var]{}{ \set{x: \forall . \alpha, f: \forall . \alpha \to \beta} \vdash f : \alpha \to \beta } \\
+            \set{x: \forall . \alpha, f: \forall . \alpha \to \beta} \vdash (x, x) : \alpha
+        }{ \set{x: \forall . \alpha, f: \forall . \alpha \to \beta} \vdash f \ (x, x) : \beta }
+    }{ \set{f: \forall . \alpha \to \beta} \vdash \texttt{fun}\ x \to f \ (x, x) : \alpha \to \beta }
+$$
+
+The type of $f$ is not quantified inside its own body, so its input type is fixed to $\alpha$.
+The premise $\set{x: \forall . \alpha, f: \forall . \alpha \to \beta} \vdash (x, x) : \alpha$ has no derivation: the pair rule only derives $(x, x) : \alpha * \alpha$, and no monotype $\alpha$ is equal to $\alpha * \alpha$.
+
+The above is a case of our type system not allowing *polymorphic recursion*.
+However, OCaml does allow this when the types are explicitly written.
+Apparently, polymorphic recursion makes type inference undecidable.
+
+```{.ocaml .live}
+let rec f: 'a . 'a -> int = fun x -> f (x, x);;
+```
+
+Indeed, this can be very powerful.
+Consider the following representation of a perfect binary tree, with values at the leaves.
+
+```{.ocaml .live}
+type 'a perfect = Leaf of 'a | Node of ('a * 'a) perfect;;
+```
+
+We might want to find the depth for a perfect tree.
+A typical way might be to use mutual recursion for the two cases.
+However, it is more elegant to use the same depth function that is polymorphic, from a `'a perfect` to `('a * 'a) perfect` in the recursive call.
+
+```{.ocaml .live}
+let rec depth : 'a . 'a perfect -> int =
+fun t -> match t with
+  | Leaf _ -> 0
+  | Node t -> 1 + depth t in
+let t = Node (Node (Leaf ((1, 2), (3, 4)))) in
+    depth t;;
+```
+

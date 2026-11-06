@@ -1,0 +1,9 @@
+---
+title: "Lower Bounds and Impossibility Results"
+subtitle: "Reading group"
+date: 2026-07-05
+category: srujan
+---
+
+[Writeup](/files/notes/su26-reading/07-05/writeup.pdf)
+[Presentation](/files/notes/su26-reading/07-05/presentation.pdf)

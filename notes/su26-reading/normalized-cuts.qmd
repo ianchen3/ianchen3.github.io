@@ -1,0 +1,9 @@
+---
+title: "Normalized Cuts and Cheeger's Inequality"
+subtitle: "Reading group"
+date: 2026-06-07
+category: srujan
+---
+
+[Writeup](/files/notes/su26-reading/06-07/writeup.pdf)
+[Presentation](/files/notes/su26-reading/06-07/presentation.pdf)

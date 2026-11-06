@@ -1,0 +1,4 @@
+bibliography: refs.bib
+date-format: "MMMM YYYY"
+suppress-bibliography: true
+toc: false

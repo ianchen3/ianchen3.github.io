@@ -1,0 +1,8 @@
+---
+title: "Exploring the Effect of Iteration on MAGUS"
+subtitle: "Presentation · CS 581 · Urbana, IL, USA"
+date: 2025-05-06
+description: "Course project, Multiple Sequence Alignment, MAGUS, ..."
+---
+
+[Slides](/files/talks/2025-05-06-magus/slides.pdf)

@@ -1,0 +1,10 @@
+---
+title: "Mindbenders"
+description: "My solutions to the MoMath mindbenders."
+date: 2026-10-25
+categories: [puzzle]
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  fields: [date, title, description, categories]
+---

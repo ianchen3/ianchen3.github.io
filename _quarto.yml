@@ -1,0 +1,59 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - 404.qmd
+    - blog/*.qmd
+    - blog/*/*.qmd
+    - publications/*.qmd
+    - talks/*.qmd
+    - talks/*/*.qmd
+    - teaching/*.qmd
+    - notes/*.qmd
+    - notes/*/*.qmd
+    - news/*.qmd
+  resources:
+    - /files/**
+    - publications/refs.bib
+
+website:
+  title: "Ian Chen"
+  site-url: https://ianchen3.github.io
+  favicon: files/site/favicon.svg
+  navbar:
+    left:
+      - text: Blog Posts
+        href: blog/index.qmd
+      - text: Notes
+        href: notes/index.qmd
+      - text: Teaching
+        href: teaching/index.qmd
+      - text: Talks
+        href: talks/index.qmd
+      - text: Publications
+        href: publications/index.qmd
+      - text: CV
+        href: files/personal/cv.pdf
+  page-footer:
+    center: "Site last updated {{< today >}}"
+
+shortcodes:
+  - filters/today.lua
+
+# HTML options are given at the top level, not under `format: html`, so that pages in other HTML
+# formats (`format: live-html`) get them too.
+format: html
+theme:
+  light: [default, styles.scss]
+  dark: [darkly, styles.scss]
+respect-user-color-scheme: true
+toc: true
+filters:
+  - sty/quarto/html-adapter.lua
+  - sty/quarto/target-mathjax.lua
+  - filters/x-ocaml.lua
+  - path: filters/bibtex.lua
+    at: pre-ast
+
+execute:
+  freeze: auto

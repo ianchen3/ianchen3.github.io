@@ -1,0 +1,10 @@
+---
+title: "News"
+listing:
+  id: news
+  contents: news.yml
+  type: custom
+  template: news.ejs
+  sort: "date desc"
+  fields: [date, title]
+---

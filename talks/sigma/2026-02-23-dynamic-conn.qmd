@@ -1,0 +1,8 @@
+---
+title: "Dynamic Graph Connectivity"
+subtitle: "SIGma"
+date: 2026-02-23
+description: "In a static graph, checking whether nodes are in the connected component takes linear time. I will describe the Kapron, King, Mountjoy algorithm supporting polylog time updates and queries."
+---
+
+[Slides](/files/talks/sigma/2026-02-23-dynamic-conn/slides.pdf)

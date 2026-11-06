@@ -1,0 +1,11 @@
+---
+title: "Blog Posts"
+listing:
+  contents: "*.qmd"
+  exclude:
+    subtitle: ["Mindbenders"]
+  sort: "date desc"
+  categories: true
+  fields: [date, title, subtitle, description, categories]
+  feed: true
+---

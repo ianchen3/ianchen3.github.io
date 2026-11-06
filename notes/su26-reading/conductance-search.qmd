@@ -1,0 +1,8 @@
+---
+title: "Effective and Efficient Conductance-Based Community Search at Billion Scale"
+subtitle: "Reading group"
+date: 2026-06-15
+category: kyle-tai
+---
+
+[Presentation](/files/notes/su26-reading/kyle-tai/06-15.pdf)

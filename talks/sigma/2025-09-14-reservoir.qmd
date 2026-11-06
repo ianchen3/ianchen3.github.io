@@ -1,0 +1,8 @@
+---
+title: "Generating a Random Sample and Introduction to Discrete Probability"
+subtitle: "SIGma"
+date: 2025-09-14
+description: "Sampling with replacement, quickly."
+---
+
+[Slides](/files/talks/sigma/2025-09-14-reservoir/slides.pdf)

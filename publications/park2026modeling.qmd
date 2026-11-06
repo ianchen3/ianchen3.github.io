@@ -1,0 +1,14 @@
+---
+title: "Modeling citations and cartels"
+subtitle: "Preprint"
+date: 2026-04-01
+category: "preprints"
+description: "Minhyuk Park, Haotian Yi, Ian Chen, Tandy Warnow, George Chacko"
+nocite: "@park2026modeling"
+---
+
+[PDF](/files/publications/park2026modeling/paper.pdf){.btn .btn-outline-secondary .btn-sm} [DOI](https://doi.org/10.21203/rs.3.rs-9270520/v1){.btn .btn-outline-secondary .btn-sm}
+
+## Abstract
+
+Citation data are widely used to inform researchers and administrators. Interpreting the results of citation analysis is non-trivial on account of uncertainty around motivations for citation, varied disciplinary practices, data quality, standards for quality, and the lack of ground truths. In-silico approaches that harness autonomous behavior and randomness offer an option in this regard. We have developed an agent-based model of citation that allows us to parsimoniously model citation dynamics at article and author levels. We characterize the model through baseline simulations, sensitivity, and ablation analysis. We also model the behavior of cartels that seek to manipulate citations. We observe an early advantage to cartels that is lost over time implying that, on balance, cartel membership may offer less than its members hope for but may still be incentivizing for some who enroll in such membership.

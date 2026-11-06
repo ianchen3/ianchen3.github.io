@@ -1,0 +1,14 @@
+---
+title: "Dense Subgraph Clustering and a New Cluster Ensemble Method"
+subtitle: "Complex Networks & Their Applications XIV"
+date: 2026-05-01
+category: "conferences"
+description: "The-Anh Vu-Le, João Alfredo Cardoso Lamy, Tomás Alessi, Ian Chen, Minhyuk Park, Elfarouk Harb, George Chacko, Tandy Warnow"
+nocite: "@vu-le2026dense"
+---
+
+[PDF](/files/publications/vu-le2026dense/paper.pdf){.btn .btn-outline-secondary .btn-sm} [DOI](https://doi.org/10.1007/978-3-032-16719-4_3){.btn .btn-outline-secondary .btn-sm}
+
+## Abstract
+
+We propose DSC-Flow-Iter, a new community detection algorithm that is based on iterative extraction of dense subgraphs. Although DSC-Flow-Iter leaves many nodes unclustered, it is competitive with leading methods and has high-precision and low-recall, making it complementary to modularity-based methods that typically have high recall but lower precision. Based on this observation, we introduce a novel cluster ensemble technique that combines DSC-Flow-Iter with modularity-based clustering, to provide improved accuracy. We show that our proposed pipeline, which uses this ensemble technique, outperforms its individual components and improves upon the baseline techniques on a large collection of synthetic networks.

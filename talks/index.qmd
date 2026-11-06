@@ -1,0 +1,9 @@
+---
+title: "Talks"
+listing:
+  contents: "*.qmd"
+  exclude:
+    subtitle: ["SIGma", "SIAM"]
+  sort: "date desc"
+  fields: [date, title, subtitle, description]
+---

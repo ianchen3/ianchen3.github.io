@@ -1,0 +1,7 @@
+---
+title: "Teaching"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  fields: [date, title, subtitle, description]
+---

@@ -1,0 +1,48 @@
+---
+title: "Ian Chen"
+listing:
+  id: news
+  contents: news/news.yml
+  type: custom
+  template: news/news.ejs
+  sort: "date desc"
+  max-items: 3
+  fields: [date, title]
+image: files/personal/avatar.jpg
+toc: false
+about:
+  template: solana
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:ianchen3@illinois.edu
+    - icon: github
+      text: GitHub
+      href: https://github.com/ianchen3
+    - icon: person-badge
+      text: ORCID
+      href: https://orcid.org/0009-0000-3777-3603
+---
+
+## Bio
+
+Hey, I'm Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign.
+I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing.
+
+## Research
+
+My past research has been focused on Network Science with [Tandy Warnow](https://tandy.cs.illinois.edu/) and [George Chacko](https://siebelschool.illinois.edu/about/people/faculty/chackoge).
+We are scaling local community detection, also known as community search, towards networks with millions to billions of nodes.
+
+## Special Interest Group in math and algorithms
+
+I am a lead for the ACM@UIUC group in math and algorithms!
+This semester, we are participating in [CG:SHOP](https://cgshop.ibr.cs.tu-bs.de/competition/cg-shop-2027/#problem-description).
+See our activities [here](https://www.cstheory.org/).
+
+## News
+
+::: {#news}
+:::
+
+[All news](news/index.qmd)

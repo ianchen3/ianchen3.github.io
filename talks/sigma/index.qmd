@@ -1,0 +1,10 @@
+---
+title: "SIGma talks"
+subtitle: "Presentations · SIGma (UIUC Special Interest Group in Math and Algorithms) · Urbana, IL, USA"
+date: 2026-08-31
+description: "Talks for the UIUC Special Interest Group in Math and Algorithms."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  fields: [date, title, description]
+---

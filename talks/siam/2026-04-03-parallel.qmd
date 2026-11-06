@@ -1,0 +1,8 @@
+---
+title: "Parallel Connectivity and Shortest Paths"
+subtitle: "SIAM"
+date: 2026-04-03
+description: "Near-linear work algorithms for connectivity and single-source shortest paths (SSSP) have been known since before the 1950s. In this talk, we will describe approaches to increase their parallelism, including coarsening algorithms for connectivity, and incremental stepping algorithms for SSSP."
+---
+
+[Slides](/files/talks/siam/2026-04-03-parallel/slides.pdf)

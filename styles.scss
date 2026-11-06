@@ -1,0 +1,128 @@
+/*-- scss:rules --*/
+
+// Code blocks in the code.sty boxes. In the dark theme, white replaces black.
+$code-ink: if(lightness($body-bg) > 50%, #000, #fff);
+$code-languages: (
+  r: rgb(31, 78, 121),
+  cpp: rgb(101, 60, 140),
+  python: rgb(31, 109, 64),
+);
+
+@each $language, $colour in $code-languages {
+  div.sourceCode:has(> pre.sourceCode.#{$language}),
+  .code-with-filename:has(pre.sourceCode.#{$language}) > .code-with-filename-file {
+    background-color: mix($code-ink, $body-bg, 2%);
+    border: none;
+    border-left: 2px solid $colour;
+    border-radius: 0;
+  }
+
+  div.sourceCode:has(> pre.sourceCode.#{$language}) {
+    padding: 0;
+  }
+
+  div.sourceCode:has(> pre.sourceCode.#{$language}) > pre.sourceCode {
+    padding: 3mm 5mm;
+  }
+
+  .code-with-filename:has(pre.sourceCode.#{$language}) > .code-with-filename-file {
+    padding: 1mm 5mm;
+    box-shadow: inset 0 -1px 0 $body-bg;
+
+    pre {
+      font-size: 0.875em;
+      color: mix($code-ink, $body-bg, 70%);
+    }
+  }
+}
+
+// quarto-live editors in the same boxes.
+$live-engines: (
+  webr: r,
+  pyodide: python,
+);
+
+@each $engine, $language in $live-engines {
+  .exercise-cell[id^="#{$engine}-"] .card.exercise-editor {
+    --exercise-cap-bg: #{mix($code-ink, $body-bg, 2%)};
+    --exercise-code-block-bg: #{mix($code-ink, $body-bg, 2%)};
+    border: none;
+    border-left: 2px solid map-get($code-languages, $language);
+    border-radius: 0;
+
+    .card-header {
+      padding: 1mm 5mm;
+      border-bottom: none;
+      box-shadow: inset 0 -1px 0 $body-bg;
+      font-family: $font-family-monospace;
+      font-size: 0.875em;
+      color: mix($code-ink, $body-bg, 70%);
+    }
+
+    .cm-gutters {
+      border-right: none;
+    }
+  }
+}
+
+// x-ocaml styles its output for light pages only.
+x-ocaml {
+  margin: 1em 0;
+  font-family: $font-family-monospace;
+  font-size: 0.875em;
+  color-scheme: light;
+  background-color: #fff;
+  color: #212529;
+}
+
+// Bootstrap sizes only images written in Markdown. Transparent diagrams are drawn in black.
+#quarto-document-content img {
+  max-width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+// Quarto colours inline code only inside p, li and td.
+.description code:not(.sourceCode) {
+  background-color: $code-block-bg-color;
+  padding: 0.2em;
+}
+
+.quarto-listing {
+  padding-bottom: 0;
+}
+
+div.quarto-post {
+  gap: 1em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+
+  .metadata {
+    flex-basis: 7em;
+    flex-shrink: 0;
+    padding-bottom: 0;
+  }
+
+  .body .listing-subtitle {
+    margin-bottom: 0.2em;
+  }
+
+  .listing-description {
+    margin-bottom: 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#listing-news div.quarto-post {
+  .body h3.listing-title {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .listing-title a {
+    text-decoration: underline;
+  }
+}

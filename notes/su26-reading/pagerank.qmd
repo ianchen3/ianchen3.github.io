@@ -1,0 +1,9 @@
+---
+title: "PageRank, and Local Graph Partitioning"
+subtitle: "Reading group"
+date: 2026-06-14
+category: srujan
+---
+
+[Writeup](/files/notes/su26-reading/06-14/writeup.pdf)
+[Presentation](/files/notes/su26-reading/06-14/presentation.pdf)

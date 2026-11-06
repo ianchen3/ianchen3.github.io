@@ -1,0 +1,102 @@
+---
+title: "User data types"
+subtitle: "CS 421"
+date: 2026-09-24
+description: "Parametric and mutually recursive data types in OCaml."
+---
+
+See [variants](https://dev.realworldocaml.org/variants.html).
+
+## Polymorphic Variants
+
+Consider the following parametric binary tree, where data is at the leaves.
+
+```{.ocaml .live}
+type 'a binTree =
+  Leaf of 'a
+| Node of 'a binTree * 'a binTree ;;
+```
+
+For example, the tree
+```{.ocaml .live}
+let t = Node(Leaf(1), Node(Leaf(2), Leaf(3)));;
+```
+
+We can write a map function transforming the tree
+
+```{.ocaml .live}
+let rec mapBinTree f tree = match tree with
+| Leaf x -> Leaf (f x)
+| Node (l, r) -> Node(mapBinTree f l, mapBinTree f r);;
+```
+
+e.g. adding 2 to all leaves:
+
+```{.ocaml .live}
+let add2 x = x + 2 in
+  mapBinTree add2 t;;
+```
+
+or transforming to a different data type
+
+```{.ocaml .live}
+mapBinTree string_of_int t;;
+```
+
+Similarly, we can write a reduction function
+
+```{.ocaml .live}
+let rec reduceBinTree f tree id = match tree with
+| Leaf x -> f x id
+| Node (l, r) ->
+    let reduceL = reduceBinTree f l id in
+    reduceBinTree f r reduceL;;
+```
+
+so that summing up all elements, say,
+
+```{.ocaml .live}
+let f x y = x + y in
+  reduceBinTree f t 0;;
+```
+
+or finding the max element
+
+```{.ocaml .live}
+let f x y = if x > y then x else y in
+  reduceBinTree f t 0;;
+```
+
+## Mutually recursive variants
+
+These require mutually recursive functions.
+Consider implementing a tree where each node can have a variable number of children.
+
+```{.ocaml .live}
+type 'a tree =
+  TreeLeaf of 'a
+| TreeNode of 'a treeList 
+and 'a treeList =
+  Last of 'a tree
+| More of 'a tree * 'a treeList;;
+```
+
+Now, say, to get the size, we can do
+
+```{.ocaml .live}
+let rec treeSize t = match t with
+  TreeLeaf x -> 1 |
+  TreeNode x -> treeListSize x
+and treeListSize l = match l with
+  Last t -> treeSize t |
+  More (t, r) -> treeSize t + treeListSize r;;
+```
+
+For example,
+
+```{.ocaml .live}
+let t2 = TreeNode(More(
+  TreeNode(More(TreeLeaf 1, More(TreeLeaf 2, Last(TreeLeaf 3)))),
+  Last(TreeLeaf 4))) in
+treeSize t2;;
+```

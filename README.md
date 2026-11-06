@@ -1,96 +1,153 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Personal website
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+A [Quarto](https://quarto.org) website.
 
-# Getting Started
+Math uses the `math.sty`/`stat.sty` macros from [latex-styles](https://github.com/IanChenUIUC/latex-styles), rendered by MathJax.
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## Layout
 
-See more info at https://academicpages.github.io/
+Everything whose name starts with `_` or `.` is managed by Quarto or other tools, except
+`_quarto.yml` and `_metadata.yml`. Everything else is hand-written.
 
-## Running locally
+```
+_quarto.yml                site config: navbar, footer, theme, filters
+styles.scss                CSS on top of the light and dark themes
+index.qmd                  about page                       /
+blog/                      posts, and the listing in index.qmd   /blog/<slug>
+publications/              papers, one listing per category      /publications/<slug>
+  refs.bib                 BibTeX for every paper (also served for download)
+  _metadata.yml            points every page in the folder at refs.bib
+talks/  teaching/  notes/  entries, and the listing in index.qmd
+news/                      news log                              /news/
+  news.yml                 one item per line of news; the home page shows the latest three
+files/                     everything that is not a page            /files/…
+  site/                    favicon and other site-wide files
+  personal/                avatar, CV
+  <section>/<slug>/        files for one entry, e.g. files/talks/<slug>/slides.pdf
+filters/                   Lua filters and shortcodes used by the site
+sty/                       latex-styles checkout (pages branch)
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+_site/                     rendered site; not committed
+_freeze/                   stored output of executed code; committed
+_extensions/               extensions installed with `quarto add`; committed
+.quarto/                   cache; not committed
 ```
 
-You should now be able to access the website from `localhost:4000`.
+The slug is the file name without `.qmd`, and it is the page's URL:
+`talks/2025-05-06-magus.qmd` is served at `/talks/2025-05-06-magus`. A publication's slug is its BibTeX
+key.
 
-### Using the DevContainer in VS Code
+## Workflow
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+```sh
+quarto preview      # serve locally; re-renders a page when it is saved
+quarto render       # render the whole site into _site/
+```
 
-# Maintenance
+`quarto preview` re-renders only the pages that change. After editing `_quarto.yml`, a listing,
+or a filter, restart it or run `quarto render`.
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+The footer date ("Site last updated") is the date the page was rendered, so a full render or
+publish sets it on every page.
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+Code in executable pages runs once and its output is stored in `_freeze/`. A full render reuses
+the stored output unless the page's source changed; rendering a single page always runs its code.
 
-## Bugfixes and enhancements
+## Adding content
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+Each entry is one `.qmd` file in its section folder. Files that belong to it go in
+`files/<section>/<slug>/` and are linked with root paths, e.g.
+`[Slides](/files/talks/<slug>/slides.pdf)`.
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+Listings show `title`, `subtitle`, `date` and `description`. The `description` is the summary on
+the listing and in the page header; it is not repeated in the body.
 
+**Blog post** — `blog/<slug>.qmd`:
+
+```yaml
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+title: "…"
+description: "One-sentence summary."
+date: 2026-11-05
+categories: [algorithms]
+---
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Every post needs a `description`: without one, the listing cuts an excerpt from the first
+paragraph, and a cut inside a formula leaves raw TeX.
+
+**Talk, teaching, notes** — `talks/<slug>.qmd` (likewise `teaching/`, `notes/`):
+
+```yaml
+---
+title: "…"
+subtitle: "Presentation · Venue · City, State, Country"
+date: 2025-12-01
+description: "Abstract."
+---
+
+[Slides](/files/talks/<slug>/slides.pdf)
+```
+
+A course or group with several notes is a folder: `notes/<slug>/index.qmd` is its entry in the notes
+listing and lists the pages beside it, as in `notes/fa26-cs421/`. The pages share a `subtitle`, which
+is added to the `exclude` list in `notes/index.qmd` to keep them out of the main listing. Blog
+series and talk series work the same way, as in `blog/mindbenders/` and `talks/sigma/`.
+
+**Publication** — add the entry to `publications/refs.bib`, then `publications/<slug>.qmd`:
+
+```yaml
+---
+title: "…"
+subtitle: "Venue"
+date: 2025-12-09
+category: conferences          # manuscripts | conferences | preprints
+description: "Authors."
+nocite: "@bibkey"
+---
+
+[PDF](/files/publications/<slug>/paper.pdf){.btn .btn-outline-secondary .btn-sm}
+[DOI](https://doi.org/…){.btn .btn-outline-secondary .btn-sm}
+
+## Abstract
+
+…
+```
+
+The entry's BibTeX source follows the abstract.
+
+**News** — add an item to `news/news.yml`. The title is Markdown. The home page shows the same items,
+so links to pages on the site start with `/`:
+
+```yaml
+- date: 2025-12-01
+  title: "Gave a [talk](/talks/sigma/2025-12-01-kkt.qmd) at SIGma on linear-time MSTs."
+```
+
+## Math
+
+Inline math is `$…$` and display math is `$$…$$`. The macros of `sty/math.sty` and
+`sty/stat.sty` work as in LaTeX, as do the physics2 `\ab`, `\abs`, `\norm`, `\eval` and the
+derivative package's `\odv`, `\pdv`, `\odif`, `\pdif`. Theorem environments are divs:
+
+```markdown
+::: {.thrm title="Bias-variance"}
+$\MSE(\hat\theta) = \Var(\hat\theta) + \Bias(\hat\theta)^2$.
+:::
+```
+
+The environments are `defn`, `ex`, `thrm`, `prop`, `lem`, `cor`, `exercise` and `pf`. They are
+unnumbered, as in `math.sty`. For numbered theorems that can be cross-referenced, use Quarto's
+own syntax, `::: {#thm-label}` with the title as a `##` heading, referenced as `@thm-label`.
+
+## Filters
+
+- `sty/quarto/html-adapter.lua`: renders what MathJax cannot (`\inferrule`, the `bnf`
+  environment) with LaTeX and inlines it as SVG. Needs `latex` and `dvisvgm`; the SVGs are cached
+  in `~/.cache/latex-styles-svg`, so LaTeX runs only for new or changed snippets.
+- `sty/quarto/target-mathjax.lua`: expands the latex-styles macros for MathJax and renders the
+  theorem divs.
+- `filters/x-ocaml.lua`: turns ```` ```{.ocaml .live} ```` blocks into OCaml editors that run in
+  the browser.
+- `filters/bibtex.lua`: appends the BibTeX source of a page's `nocite` entries.
+- `filters/today.lua`: the `{{< today >}}` shortcode used in the footer.

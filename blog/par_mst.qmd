@@ -1,0 +1,185 @@
+---
+title: "ParlayLib for Parallel MST"
+description: "parlaylib is a C++ library for parallel programming with its own custom work-stealing scheduler."
+date: 2026-08-22
+categories: [puzzle]
+draft: true
+---
+
+[parlaylib](https://github.com/cmuparlay/parlaylib) is a C++ library for parallel programming with its own custom work-stealing scheduler that makes it faster than alternatives (e.g. OpenMP or Cilk) for irregular workloads.
+Here, I solve the 8th exercise from the 2025 Advent of Code. TODO: link to the problem
+
+## Work Stealing
+
+The general challenge that ParlayLib must solve is to assign threads (maximal sequences of instructions without synchronization) to system processes that can execute them.
+In the fork-join model (in which we have a *pardo(f1, f2)* primitive that executes *f1* and *f2* in concurrently, joining so that the next instruction is executed only after both are completed.
+The work $W$ of an algorithm is the total number of instructions, and the span $S$ is the longest sequence of dependent instructions.
+
+In the offline setting, in which the scheduler can see the entire task dependency graph, the greedy scheduler is a 2-approximation of optimality.
+For $P$ processors, the greedy scheduler completes in at most $W/P + S$ time.
+
+In the online setting, the overhead of an idle processor taking a task is nontrivial.
+Thus, it makes sense to introduce process-local queues.
+Work stealing is this paradigm: have local dequeues, taking work from the bottom of its work deque, and if empty, then stealing from the top of another processors.
+Stealing randomly (choosing a processor at random and popping from the top) is near-optimal (TODO: attach proof).
+
+## ParlayLib
+
+In addition to the scheduler, perhaps the nicest part about using parlay is its comprehensive set of examples and work-efficient library functions.
+We can do prefix sums, filters, maps, etc. in linear work and logarithmic span.
+It also provides nice atomic primitives, such as `write_min` that uses the compare-and-swap to atomically update the minimum value.
+
+# The Puzzle
+
+Here, I focus on part 2 of the day 8 puzzle.
+As input, we have $N = 1000$ points in 3D space (integer coordinates).
+We must simulate Kruskals algorithm for building an MST, and find the last edge added.
+For all inputs, this last edge will is unique.
+
+## Sequential Kruskals
+
+Of course, the simple approach is to just implement it.
+For all $\binom{N}{2}$ pairs of node, we append an edge connecting them, with weight the squared distance (so that we use integer operations, rather than floating point and sqrts).
+Sort all edges, merge them sequentially using a Union Find implementation, and record the last edge added.
+
+We get a time of about 75ms (using `hyperfine` as the benchmark runner)
+
+```console
+Benchmark 1: ./build/main kruskal_seq < data.in
+  Time (mean ± σ):      75.5 ms ±   3.3 ms    [User: 68.9 ms, System: 6.1 ms]
+  Range (min … max):    70.1 ms …  85.7 ms    39 runs
+```
+
+Seeing where the time is at, we can use `perf`.
+
+```console
++   98.81%     0.00%  main     main                  [.] _start
++   98.81%     0.00%  main     libc.so.6             [.] __libc_start_main@@GLIBC_2.34
++   98.81%     0.00%  main     libc.so.6             [.] __libc_start_call_main
++   98.81%     0.00%  main     main                  [.] main
++   98.77%    15.16%  main     main                  [.] solve_kruskal_seq(std::vector<Point3D, std::alloc
++   84.58%    84.55%  main     main                  [.] void std::__introsort_loop<__gnu_cxx::__normal_it
+     0.08%     0.01%  main     ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+...
+```
+
+As expected, nearly 85% of the the time is in the `std::sort` of the 500k edges.
+Remembering that our edges are integers, a simple radix sort makes this much better.
+
+```console
+Benchmark 2: ./build/main kruskal_seq_parlay < data.in
+  Time (mean ± σ):      25.9 ms ±   2.2 ms    [User: 16.9 ms, System: 10.3 ms]
+  Range (min … max):    20.2 ms …  31.0 ms    98 runs
+```
+
+## Parallelizing Kruskals
+
+We can do much better: 25 milliseconds is much too slow.
+First, let's parallelize this.
+
+Using a parallel radix sort over the edges, we get to about 20ms (TODO: show).
+To do better with Kruskals, we would have to look at fewer edges.
+
+Let's use quicksort: we partition the edges by weight, find the minimum spanning forest only using the light edges, and then prune the heavy edge set.
+Any edge in the heavy set that is between two nodes that are already connected can be pruned.
+This is known as filter-kruskals (TODO: cite), and is a bit faster.
+
+```console
+Benchmark 3: ./build/main kruskal_par < data.in
+  Time (mean ± σ):      18.8 ms ±   1.6 ms    [User: 52.4 ms, System: 57.7 ms]
+  Range (min … max):    15.5 ms …  24.7 ms    132 runs
+```
+
+We can even push this further, and note that we don't actually need the MST, but only the bottleneck MST.
+Essentially, it is the same procedure: binary search on the edge weight, essentially what quicksort is.
+To check if the bottleneck edge weight is lower or higher than our pivot, we can check if the lower is connected.
+TODO: impleent this and see if it is useful.
+
+## Boruvkas
+
+Another simple parallelizable algorithm for computing minimum spanning trees is known as Boruvkas.
+At each step, we identifty at least $n / 2$ edges that can be added into the MST, where $n$ is the number of components we have (initially $N$ ).
+The work recurrence follows $T(n) = O(n^2) + T(n/2)$, and costs quaderatic work.
+We obtain $S(n) = O( \log n ) + S(n/2)$, and $O(\log^2(n))$ span.
+
+The elegant part is that identifying these edges is super parallel: each node just finds the shortest boundary edge (in another component) in its neighborhood.
+Indeed, looking at the results, we do beat parallel kruskals.
+In fact, the work that we do is genuinely smaller (asymptotically), as we do less passes over the edgelist.
+
+We can see that our input points are all quite regular in the 3D cube, and so the edge weights in the MST are all quite similar (TODO).
+This could lead to the filtering heuristic not being as good as reported in the paper, though it is just a hypothesis.
+
+### Removing the Edgelist
+
+Each of our improvements above seem to have diminishing returns.
+Examining our `perf` a little more, we can see why: maintaining a sequence of 500k edges is just expensive.
+TODO
+
+Instead, we can scan over these edges lazily.
+TODO: what if we use a delayed sequence here... will using that for explicit boruvkas just work, or do we actually need a new algorithm?
+
+For each component in our MST, we must find the shortest boundary edge (i.e. to another component).
+If our component is of size $k$, then there is $k \times N$ edges incident to the component that we check.
+This is different from the standard Boruvkas, where after each round, we deduplicate the edgelist so that there are no intra-component edges and no parallel edges between components.
+A highly parallel write min loop later, and we get our fastest result by far:
+
+TODO: why the reduce_by_index is not good here.
+
+```cpp
+auto best = parlay::tabulate<std::atomic<Distance>>(
+  points.size(),
+  [](size_t) { return Distance::Infty(); }
+);
+
+parlay::parallel_for(
+  0, points.size(), [&](size_t u) {             // for each node u
+  for (size_t v = 0; v < points.size(); ++v) {  // and neighboring node v
+   if (labels[u] != labels[v])                  // in different components
+    parlay::write_min(                          // update min dist
+      &out[labels[u]],                          // for the component of u
+      points[u].SqDistance(points[v]            // to include edge uv
+    ));  
+  }
+);
+```
+
+TODO: this is cleaner. moreover, it would be good to compact the labels as well (which is really quite cheap and better expresses this loop)
+the thread local min is probably better, though it is interesting enough to check
+
+```console
+Benchmark 4: ./build/main boruvka_implicit < data.in
+  Time (mean ± σ):       7.9 ms ±   1.4 ms    [User: 35.2 ms, System: 6.9 ms]
+  Range (min … max):     5.4 ms …  11.5 ms    241 runs
+```
+
+## a reference implementation
+
+The creators of ParlayLib also have a reference implementation for minimum spanning trees, using their own custom variant of Boruvkas.
+When we pass this in, we find TODO.
+
+## The final standings
+
+TODO
+
+and if we amortize out the input reading + setup, then we find
+
+# Conclusions
+
+There are lots of ideas to make this better.
+With data driven design (link to the cppcon talk), the struct of arrays pattern may make distance calculations more ammenable for vectorization.
+
+Not mentioned, but the representation of Distance as trivially copyable as a uint64 was very important in making the edgelist fit in cache (TODO: check sizes)
+and potentially a factor towards which the Boruvkas is so fast.
+
+Perhaps the biggest way of saving time is to get better heuristics for partitioning the edgelist.
+I mentioned earlier that our points seem to fit pretty regularly into a cube.
+There are poeople TODO who take advantage of this!
+Optimizing an algorithm for a particular family of instances is also important.
+
+As a final note, for Euclidean minimum spanning trees, our $O(n^2)$ work is not optimal.
+In 3D space, $O(n^{4/3})$ work is achievable (TODO: cite), though the details are too in the weeds for me to understand as of now.
+
+Whooh.
+This has been fun.
+The extensive primitives parlay provides allows us to write, in a very concise manner, complex algorithms that perform effectively.
+It is also a reminder to always measure the performance of code and instrument it: there are always an infinitude number of ways to improve one's code.

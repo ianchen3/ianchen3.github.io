@@ -1,0 +1,8 @@
+---
+title: "Mining Complex Networks"
+subtitle: "University of Illinois Urbana-Champaign · Urbana, IL, USA"
+date: 2026-05-08
+description: "These notes very briefly summarize Chapters 2, 3, 5, 6 from Klaminski, Pralat, and Theberge's book on Mining Complex Networks."
+---
+
+[Notes](/files/notes/mining-networks/notes.pdf)

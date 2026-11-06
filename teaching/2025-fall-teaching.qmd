@@ -1,0 +1,6 @@
+---
+title: "CS 473 Algorithms"
+subtitle: "Undergraduate/Graduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA"
+date: 2025-08-01
+description: "Undergraduate course assistant in Fall 2025 and Fall 2026."
+---
