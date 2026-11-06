@@ -1,0 +1,23 @@
+<svg width="280" height="160" viewBox="120 155 280 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="213.5" cy="228.5" rx="30" ry="30"/>
+	<text x="213.5" y="234.5" text-anchor="middle" font-family="Times New Roman" font-size="20">S</text>
+	
+	<ellipse stroke="black" stroke-width="1" fill="none" cx="359.5" cy="228.5" rx="30" ry="30"/>
+	<text x="359.5" y="234.5" text-anchor="middle" font-family="Times New Roman" font-size="20">H</text>
+
+	<path stroke="black" stroke-width="1" fill="none" d="M 186.703,241.725 A 22.5,22.5 0 1 1 186.703,215.275"/>
+	<text x="135.5" y="234.5" text-anchor="middle" font-family="Times New Roman" font-size="20">T</text>
+	<polygon fill="black" stroke-width="1" points="186.703,215.275 183.17,206.527 177.292,214.618"/>
+
+	<polygon stroke="black" stroke-width="1" points="243.5,228.5 329.5,228.5"/>
+	<polygon fill="black" stroke-width="1" points="329.5,228.5 321.5,223.5 321.5,233.5"/>
+	<text x="286.5" y="249.5" text-anchor="middle" font-family="Times New Roman" font-size="20">H</text>
+
+	<path stroke="black" stroke-width="1" fill="none" d="M 233.729,206.548 A 86.808,86.808 0 0 1 339.271,206.548"/>
+	<polygon fill="black" stroke-width="1" points="233.729,206.548 243.12,205.655 237.041,197.715"/>
+	<text x="286.5" y="179.5" text-anchor="middle" font-family="Times New Roman" font-size="20">H</text>
+
+	<path stroke="black" stroke-width="1" fill="none" d="M 342.891,253.268 A 79.31,79.31 0 0 1 230.109,253.268"/>
+	<polygon fill="black" stroke-width="1" points="230.109,253.268 232.179,262.472 239.29,255.44"/>
+	<text x="286.5" y="297.5" text-anchor="middle" font-family="Times New Roman" font-size="20">T</text>
+</svg>

@@ -1,0 +1,555 @@
+[
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "News",
+    "section": "",
+    "text": "Changed site format to Quarto!\n\n\nNov 5, 2026\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/su26-reading/normalized-cuts.html",
+    "href": "notes/su26-reading/normalized-cuts.html",
+    "title": "Normalized Cuts and Cheeger’s Inequality",
+    "section": "",
+    "text": "Writeup Presentation"
+  },
+  {
+    "objectID": "notes/su26-reading/index.html",
+    "href": "notes/su26-reading/index.html",
+    "title": "Reading group",
+    "section": "",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\nJul 1, 2026\n\n\n\n\n\n\n\n\n\n\n\nJun 24, 2026\n\n\n\n\n\n\n\n\n\n\n\nJun 15, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/su26-reading/index.html#schedule-for-readings-with-kyle-enkzhul-and-tai-nguyen",
+    "href": "notes/su26-reading/index.html#schedule-for-readings-with-kyle-enkzhul-and-tai-nguyen",
+    "title": "Reading group",
+    "section": "",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\nJul 1, 2026\n\n\n\n\n\n\n\n\n\n\n\nJun 24, 2026\n\n\n\n\n\n\n\n\n\n\n\nJun 15, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/su26-reading/index.html#write-ups-and-presentations-reading-with-srujan-roplekar",
+    "href": "notes/su26-reading/index.html#write-ups-and-presentations-reading-with-srujan-roplekar",
+    "title": "Reading group",
+    "section": "Write-ups and presentations Reading with Srujan Roplekar",
+    "text": "Write-ups and presentations Reading with Srujan Roplekar\n\n\n\n\n\n\n\nLower Bounds and Impossibility Results\n\n\n\n\n\nJul 5, 2026\n\n\n\n\n\n\n\nWhat’s the big deal with Expanders? (Part 1)\n\n\n\n\n\nJun 21, 2026\n\n\n\n\n\n\n\nPageRank, and Local Graph Partitioning\n\n\n\n\n\nJun 14, 2026\n\n\n\n\n\n\n\nNormalized Cuts and Cheeger’s Inequality\n\n\n\n\n\nJun 7, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/su26-reading/expanders-1.html",
+    "href": "notes/su26-reading/expanders-1.html",
+    "title": "What’s the big deal with Expanders? (Part 1)",
+    "section": "",
+    "text": "Writeup Presentation"
+  },
+  {
+    "objectID": "notes/su26-reading/conductance-search.html",
+    "href": "notes/su26-reading/conductance-search.html",
+    "title": "Effective and Efficient Conductance-Based Community Search at Billion Scale",
+    "section": "",
+    "text": "Presentation"
+  },
+  {
+    "objectID": "notes/fa26-cs421/variants.html",
+    "href": "notes/fa26-cs421/variants.html",
+    "title": "User data types",
+    "section": "",
+    "text": "See variants."
+  },
+  {
+    "objectID": "notes/fa26-cs421/variants.html#polymorphic-variants",
+    "href": "notes/fa26-cs421/variants.html#polymorphic-variants",
+    "title": "User data types",
+    "section": "Polymorphic Variants",
+    "text": "Polymorphic Variants\nConsider the following parametric binary tree, where data is at the leaves.\ntype 'a binTree =\n  Leaf of 'a\n| Node of 'a binTree * 'a binTree ;;\nFor example, the tree\nlet t = Node(Leaf(1), Node(Leaf(2), Leaf(3)));;\nWe can write a map function transforming the tree\nlet rec mapBinTree f tree = match tree with\n| Leaf x -&gt; Leaf (f x)\n| Node (l, r) -&gt; Node(mapBinTree f l, mapBinTree f r);;\ne.g. adding 2 to all leaves:\nlet add2 x = x + 2 in\n  mapBinTree add2 t;;\nor transforming to a different data type\nmapBinTree string_of_int t;;\nSimilarly, we can write a reduction function\nlet rec reduceBinTree f tree id = match tree with\n| Leaf x -&gt; f x id\n| Node (l, r) -&gt;\n    let reduceL = reduceBinTree f l id in\n    reduceBinTree f r reduceL;;\nso that summing up all elements, say,\nlet f x y = x + y in\n  reduceBinTree f t 0;;\nor finding the max element\nlet f x y = if x &gt; y then x else y in\n  reduceBinTree f t 0;;"
+  },
+  {
+    "objectID": "notes/fa26-cs421/variants.html#mutually-recursive-variants",
+    "href": "notes/fa26-cs421/variants.html#mutually-recursive-variants",
+    "title": "User data types",
+    "section": "Mutually recursive variants",
+    "text": "Mutually recursive variants\nThese require mutually recursive functions. Consider implementing a tree where each node can have a variable number of children.\ntype 'a tree =\n  TreeLeaf of 'a\n| TreeNode of 'a treeList \nand 'a treeList =\n  Last of 'a tree\n| More of 'a tree * 'a treeList;;\nNow, say, to get the size, we can do\nlet rec treeSize t = match t with\n  TreeLeaf x -&gt; 1 |\n  TreeNode x -&gt; treeListSize x\nand treeListSize l = match l with\n  Last t -&gt; treeSize t |\n  More (t, r) -&gt; treeSize t + treeListSize r;;\nFor example,\nlet t2 = TreeNode(More(\n  TreeNode(More(TreeLeaf 1, More(TreeLeaf 2, Last(TreeLeaf 3)))),\n  Last(TreeLeaf 4))) in\ntreeSize t2;;"
+  },
+  {
+    "objectID": "notes/fa26-cs421/index.html",
+    "href": "notes/fa26-cs421/index.html",
+    "title": "CS 421: Programming Languages and Compilers",
+    "section": "",
+    "text": "User data types\n\n\nParametric and mutually recursive data types in OCaml.\n\n\n\n\n\nSep 24, 2026\n\n\n\n\n\n\n\nType systems\n\n\nType judgments for a subset of OCaml, monomorphic and polymorphic.\n\n\n\n\n\nSep 30, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "CS 421: Programming Languages and Compilers\n\n\nUndergraduate/Graduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nLecture notes with OCaml cells that run in the browser.\n\n\n\n\n\nAug 1, 2026\n\n\n\n\n\n\n\nReading group\n\n\nUniversity of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nWrite-ups and presentations from summer 2026 reading groups.\n\n\n\n\n\nMay 31, 2026\n\n\n\n\n\n\n\nMining Complex Networks\n\n\nUniversity of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nThese notes very briefly summarize Chapters 2, 3, 5, 6 from Klaminski, Pralat, and Theberge’s book on Mining Complex Networks.\n\n\n\n\n\nMay 8, 2026\n\n\n\n\n\n\n\nPHYS 213: Thermal Physics\n\n\nUndergraduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nIntroduction to thermodynamics…\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "CS 473 Algorithms\n\n\nUndergraduate/Graduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA\n\n\nUndergraduate course assistant in Fall 2025 and Fall 2026.\n\n\n\n\n\nAug 1, 2025\n\n\n\n\n\n\n\nCS 233 Computer Architecture\n\n\nUndergraduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA\n\n\nUndergraduate course assistant in Fall 2024 and Spring 2025.\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/sigma/2026-08-31-intro.html",
+    "href": "talks/sigma/2026-08-31-intro.html",
+    "title": "Introduction; Convex Hulls",
+    "section": "",
+    "text": "Slides Video"
+  },
+  {
+    "objectID": "talks/sigma/2025-12-01-kkt.html",
+    "href": "talks/sigma/2025-12-01-kkt.html",
+    "title": "Linear Time Minimum Spanning Trees",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talks/sigma/2025-04-21-msa.html",
+    "href": "talks/sigma/2025-04-21-msa.html",
+    "title": "Multiple Sequence Alignment",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talks/sigma/2024-11-18-ackermann.html",
+    "href": "talks/sigma/2024-11-18-ackermann.html",
+    "title": "The Inverse Ackermann Function",
+    "section": "",
+    "text": "Slides Video"
+  },
+  {
+    "objectID": "talks/siam/2026-10-09-gurobi.html",
+    "href": "talks/siam/2026-10-09-gurobi.html",
+    "title": "Graph Optimization with Mixed Integer Programming",
+    "section": "",
+    "text": "Slides Video Notebook"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "SIAM talks\n\n\nPresentations · SIAM Undergraduate Seminar at UIUC · Urbana, IL, USA\n\n\nTalks for the SIAM Undergraduate Seminar at UIUC.\n\n\n\n\n\nOct 9, 2026\n\n\n\n\n\n\n\nSIGma talks\n\n\nPresentations · SIGma (UIUC Special Interest Group in Math and Algorithms) · Urbana, IL, USA\n\n\nTalks for the UIUC Special Interest Group in Math and Algorithms.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\nExploring the Effect of Iteration on MAGUS\n\n\nPresentation · CS 581 · Urbana, IL, USA\n\n\nCourse project, Multiple Sequence Alignment, MAGUS, …\n\n\n\n\n\nMay 6, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/vu-le2026improving.html",
+    "href": "publications/vu-le2026improving.html",
+    "title": "Improving community detection with CVC, a new cluster ensemble method",
+    "section": "",
+    "text": "PDF DOI"
+  },
+  {
+    "objectID": "publications/vu-le2026improving.html#abstract",
+    "href": "publications/vu-le2026improving.html#abstract",
+    "title": "Improving community detection with CVC, a new cluster ensemble method",
+    "section": "Abstract",
+    "text": "Abstract\nCommunity detection is an unsupervised learning problem with many applications. In this study, we present Constrained Voting Consensus (CVC), a new ensemble clustering method that is designed to combine multiple clusterings, some of which may only cover a small portion of the network. We demonstrate that combining several dense subgraph clustering methods with standard methods within this ensemble approach produces a more accurate clustering than its constituent clustering methods. We also compare CVC to other ways of combining sets of clusterings, including the median consensus method, and show that CVC achieves higher accuracy and has better robustness. Furthermore, CVC can scale to very large networks with millions of vertices.\n\n\n\n\nBibTeX\n\n@article{vu-le2026improving,\n\ttitle = {Improving community detection with CVC, a new cluster ensemble method},\n\tvolume = {11},\n\tISSN = {2364-8228},\n\turl = {http://dx.doi.org/10.1007/s41109-026-00809-z},\n\tDOI = {10.1007/s41109-026-00809-z},\n\tnumber = {1},\n\tjournal = {Applied Network Science},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Vu-Le, The-Anh and Park, Minhyuk and Chen, Ian and Lamy, João Alfredo Cardoso and Alessi, Tomás and Harb, Elfarouk and Chacko, George and Warnow, Tandy},\n\tyear = {2026},\n\tmonth = jun,\n}"
+  },
+  {
+    "objectID": "publications/vu-le2025using.html",
+    "href": "publications/vu-le2025using.html",
+    "title": "Using stochastic block models for community detection",
+    "section": "",
+    "text": "PDF DOI"
+  },
+  {
+    "objectID": "publications/vu-le2025using.html#abstract",
+    "href": "publications/vu-le2025using.html#abstract",
+    "title": "Using stochastic block models for community detection",
+    "section": "Abstract",
+    "text": "Abstract\nA recent study reported by Park et al. (Improved community detection using stochastic block models, Springer, Heidelberg, 2025) in Complex Networks and their Applications 2024 showed that clusterings from three Stochastic Block Models (SBMs) in graph-tool, a popular software package, often had internally disconnected clusters when used on large real-world or synthetic networks. To address this issue, Park et al. (Improved community detection using stochastic block models, Springer, Heidelberg, 2025) presented a simple technique, Well-Connected Clusters (WCC), that repeatedly finds and removes small edge cuts of size at most \\(\\log_{10} n\\) in clusters, where \\(n\\) is the number of nodes in the cluster, and showed that treatment of graph-tool SBM clusterings with WCC improves accuracy. Here we examine the question of cluster connectivity for clusterings computed using other SBM software or nested SBMs within graph-tool. Our study, using a wide range of real-world and synthetic networks ranging up to more than a million nodes, shows that all tested SBM clustering methods frequently produce communities that are disconnected, and that graph-tool improves on PySBM. We provide insight into why graph-tool degree-corrected SBM clustering produces disconnected clusters by examining the description length formula it uses, and explore the impact of modifications to the description length formula. Finally, we show that WCC generally provides an improvement in accuracy for both flat and nested SBMs, except for cases where nearly all nodes in the network are in very sparse ground-truth clusters. We also demonstrate that WCC scales to networks with millions of nodes.\n\n\n\n\nBibTeX\n\n@article{vu-le2025using,\n\ttitle = {Using stochastic block models for community detection},\n\tvolume = {11},\n\tISSN = {2364-8228},\n\turl = {http://dx.doi.org/10.1007/s41109-025-00747-2},\n\tDOI = {10.1007/s41109-025-00747-2},\n\tnumber = {1},\n\tjournal = {Applied Network Science},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Vu-Le, The-Anh and Park, Minhyuk and Chen, Ian and Warnow, Tandy},\n\tyear = {2025},\n\tmonth = nov,\n}"
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Applied Network Science\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow\n\n\n\n\n\nJune 2026\n\n\n\n\n\n\n\n\nApplied Network Science\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow\n\n\n\n\n\nNovember 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#journal-articles",
+    "href": "publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Applied Network Science\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow\n\n\n\n\n\nJune 2026\n\n\n\n\n\n\n\n\nApplied Network Science\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow\n\n\n\n\n\nNovember 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#conference-papers",
+    "href": "publications/index.html#conference-papers",
+    "title": "Publications",
+    "section": "Conference Papers",
+    "text": "Conference Papers\n\n\n\n\n\nDense Subgraph Clustering and a New Cluster Ensemble Method\n\n\nComplex Networks & Their Applications XIV\n\n\nThe-Anh Vu-Le, João Alfredo Cardoso Lamy, Tomás Alessi, Ian Chen, Minhyuk Park, Elfarouk Harb, George Chacko, Tandy Warnow\n\n\n\n\n\nMay 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#preprints",
+    "href": "publications/index.html#preprints",
+    "title": "Publications",
+    "section": "Preprints",
+    "text": "Preprints\n\n\n\n\n\nImproved Methods for \\(k\\)-Core Community Search\n\n\nSubmitted to CompleNet 2027\n\n\nIan Chen, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko\n\n\n\n\n\nSeptember 2026\n\n\n\n\n\n\n\nModeling citations and cartels\n\n\nPreprint\n\n\nMinhyuk Park, Haotian Yi, Ian Chen, Tandy Warnow, George Chacko\n\n\n\n\n\nApril 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/mindbenders/index.html",
+    "href": "blog/mindbenders/index.html",
+    "title": "Mindbenders",
+    "section": "",
+    "text": "2026 Sept/Oct Mindbenders\n\n\n\npuzzle\n\n\n\nGiven two random balls that intersect, what is the expected volume of their intersection?\n\n\n\n\n\nOct 25, 2026\n\n\n\n\n\n\n\n2026 July Mindbenders\n\n\n\npuzzle\n\n\n\nIf you roll six dice, you could get the same number on every die, or (in contrast) all different numbers.\n\n\n\n\n\nJul 16, 2026\n\n\n\n\n\n\n\n2026 February and March Mindbender\n\n\n\npuzzle\n\npotentials\n\n\n\nToday, I discuss my solutions towards the February and March mindbenders!\n\n\n\n\n\nMar 16, 2026\n\n\n\n\n\n\n\n2026 January Momath Mindbender\n\n\n\nstochastic-processes\n\npuzzle\n\n\n\nConsider a ladybug starting on the 12-hand of the clock.\n\n\n\n\n\nJan 25, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html",
+    "href": "blog/mindbenders/2026-07.html",
+    "title": "2026 July Mindbenders",
+    "section": "",
+    "text": "If you roll six dice, you could get the same number on every die, or (in contrast) all different numbers. What is the probability of getting exactly four distinct numbers? source."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#some-code",
+    "href": "blog/mindbenders/2026-07.html#some-code",
+    "title": "2026 July Mindbenders",
+    "section": "Some code",
+    "text": "Some code\nNot the most efficient, but some pretty clean usage brute-force calculation via the Python standard library.\n&gt; Counter(len(set(x)) for x in it.product(range(6), repeat=6))\nCounter({4: 23400, 3: 10800, 5: 10800, 2: 930, 6: 720, 1: 6})"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#combinatorics",
+    "href": "blog/mindbenders/2026-07.html#combinatorics",
+    "title": "2026 July Mindbenders",
+    "section": "Combinatorics",
+    "text": "Combinatorics\nThere are \\(6^6 = 46'656\\) possible strings of 6 dice. We want to derive an expression for \\(c_k\\), the number of ways for there to be exactly \\(k\\) distinct numbers in that string.\nWe first pick the \\(k\\) distinct numbers, with there being \\(\\binom{6}{k}\\) different ways of doing so. Then, we need to pick the histogram of counts for each of the \\(k\\) numbers. For \\(c_4\\), then this is\n\\[\n  \\binom{6}{4} \\times \\left(\n    \\frac{6!}{1! \\cdot 1! \\cdot 1! \\cdot 3!} \\times \\frac{4!}{3! \\cdot 1!} +\n    \\frac{6!}{1! \\cdot 1! \\cdot 2! \\cdot 2!} \\times \\frac{4!}{2! \\cdot 2!}\n  \\right) = 23'400\n\\]\nAnd the answer is \\(23'400 / 46'656 \\approx 50.2\\%\\). For some reason, \\(c_3 = c_5\\); seems like a coincidence.\nThere are many other ways to do this combinatorially, e.g. with generating functions or inclusion-exclusion. These are besides the point here, but there are some more interesting approaches (many of which were in the pursuit of trying to find an intuitive reason for such a large probability mass)!"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#dynamic-programming",
+    "href": "blog/mindbenders/2026-07.html#dynamic-programming",
+    "title": "2026 July Mindbenders",
+    "section": "Dynamic Programming",
+    "text": "Dynamic Programming\nAnother approach that is maybe less error prone is to do some dynamic programming. Let \\(f(i, j)\\) be the probability that we have \\(i\\) distinct numbers after \\(j\\) rolls. Then, we get the recurrence\n\\[\n  f(i, j) =\n  \\begin{cases}\n    1 & i = j = 1 \\\\\n    0 & i &gt; j \\\\\n    \\frac{i}{6} \\times f(i, j-1) + \\frac{6-i}{6} f(i - 1, j) & \\text{otherwise}\n  \\end{cases}\n\\]\ni.e. we sum up the cases where after a new roll, we get a distinct or not.\n\n\n\nSumming up each column gives a probability of exactly \\(1\\). This also gives us a simpler closed form, namely, we just sum up all the paths! Indeed,\n\\[\nf(i, j) = \\left( \\prod_{k=7-i}^{5} \\frac{k}{6} \\right)\n          \\times\n          \\left( \\sum_{1 \\le k_1 \\le \\ldots \\le k_{j - i} \\le i} \\frac{ k_1 \\cdot \\ldots \\cdot k_{j-i} }{6^{j-i}} \\right)\n\\]\nCalculating \\(f(4, 6)\\), the probability of getting \\(4\\) distinct numbers after \\(6\\) rolls, we have\n\\[\n  f(4, 6) = \\frac{3}{6} \\frac{4}{6} \\frac{5}{6} \\times \\sum_{k_1=1}^4 \\sum_{k_2=k_1}^4 \\frac{k_1 \\cdot k_2}{6^2}\n\\]"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#hitting-times",
+    "href": "blog/mindbenders/2026-07.html#hitting-times",
+    "title": "2026 July Mindbenders",
+    "section": "Hitting Times",
+    "text": "Hitting Times\nLet us consider aa related problem: how many trials does it take until we get \\(k\\) distinct rolls. The number of rolls until we get our first distinct follows \\(\\text{Geometric}(p = 1)\\). Our second distinct element follows \\(\\text{Geometric}(p = 1 - 1/6)\\). In general, to get the \\(k\\) -th distinct, it follows \\(G_k = \\text{Geometric}(p_k = \\frac{7 - k}{6})\\). The expected number of rolls to get \\(k = 1, \\ldots, 6\\) distinct elements are thus:\n\\[\n  1, 2.2, 3.7, 5.7, 8.7, 14.7\n\\]\nBut, if we recall from our introductory statistics classes, this feels a lot like the Poisson and Gamma duality. The probability of counting \\(\\ge 4\\) successes in \\(6\\) rolls is the same as it taking \\(\\le 6\\) rolls to get the \\(4\\) -th success.\nWe can proceed in a similar path, deriving an analogous for the Gamma distribution. In particular, let \\(T_k = G_1 + \\ldots + G_k\\) be the rolls until we get the \\(k\\) -th distinct element. Then, we want to calculate\n\\[\n  \\textbf{Pr}(T_4 \\le 6) - \\textbf{Pr}( T_5 \\le 6 )\n\\]\nThe full calculation is a bit annoying, and I have instead attached it. In short, probability generating functions are useful."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#embeddings",
+    "href": "blog/mindbenders/2026-07.html#embeddings",
+    "title": "2026 July Mindbenders",
+    "section": "Embeddings",
+    "text": "Embeddings\nAn extremely powerful tool in stochastic processes, which I hope to learn more about, is to embed this discrete chain into some more general process. Finally, we restrict our view of that more general process to the events that we care about.\nThis in general is known as Poissonification, and I first saw the idea with context of hashing in a UIUC theory seminar. We suppose we throw \\(m = \\textbf{Poisson}(\\lambda)\\) die, and then condition on the event that \\(m = 6\\). The really elegant result from this is that we avoid the negative correlation of the occupancy indicators \\(X_i\\). In particular, if we look instead at the Multinomial distribution of the counts of each dice, then\n\\[\n\\begin{align*}\n  & \\textbf{Pr}(\\textbf{Multinomial}(m, (p_1, \\ldots, p_6) = (n_1, \\ldots, n_6); m \\sim \\textbf{Poisson}(\\lambda)) \\\\\n  & = e^{- \\lambda} \\frac{\\lambda^m}{m!} \\times \\frac{m!}{\\prod_{i=1}^6 n_i!} \\prod_{i=1}^6 p_i^{n_i} = \\prod_{i=1}^6 e^{- \\lambda p_i} \\frac{(\\lambda p_i)^{n_i}}{n_i!}\n\\end{align*}\n\\]\nwhere we recognize each individual term in the product as the mass function for \\(\\textbf{Poisson}( \\lambda p_i )\\). We not only avoid the negative correlation, but we get pure independence! At this point, by conditioning on \\(m\\), we can do the calculation and get an answer.\nIn fact, if one remembers the construction of a Poisson process, then it should be clear why Possionification leads to this nice independence property. Suppose we set a timer \\(T \\sim \\textbf{Exponential}(\\lambda / 6)\\) independently for each of the \\(6\\) bins. Then, a dice is rolled whenever a timer is fired, and the timer gets reset.\nHere, the waiting time between rolls of the dice follow the minimum of \\(6\\) independent \\(\\textbf{Exponential}(\\lambda / 6)\\) timers, i.e. the gap between each of the each of the dice rolls follows \\(\\textbf{Exponential}(\\lambda)\\). Thus, by the construction of Poisson process, then the number of dice rolls at a given time \\(t\\) follows \\(\\textbf{Poisson}( \\lambda t )\\). Moreover, because exponential random variables are memoryless, then the increment between a dice rolling in each bin follows \\(\\textbf{Exponential}(\\lambda / 6)\\), and again by construction of Poisson, then the number of balls in a given bin follows \\(\\textbf{Poisson}(\\lambda t / 6)\\)."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-01.html",
+    "href": "blog/mindbenders/2026-01.html",
+    "title": "2026 January Momath Mindbender",
+    "section": "",
+    "text": "Puzzle from here. Consider a ladybug starting on the 12-hand of the clock. During each timestep, it will choose to walk either counterclockwise or clockwise, each with 50% probability. What is the probability that the last new number it visits is 6?\nIt will be useful to establish consistent notation. Let \\(p_y\\) be the probability that \\(y\\) is the last new number the ladybug visits. Let \\(X_t\\) be the position of the ladybug. Let \\(T_y\\) be the first time where \\(X_t = y\\).\nI will also use \\(P_x( ... )\\) to denote the probability of an event given the starting point of a random walk of \\(x\\).\n\nGamblers Ruin\nThe first solution I came up with relies on the setup called “Gambler’s Ruin”. Consider a 1-D symmetric random walk starting at \\(0 &lt; x &lt; d\\). I claim that \\(P_x(T_d &lt; T_0) = \\frac{x}{d}\\).\nFirst, observe that \\(E(X_t) = x\\) (this is called a Martingale process). This is because at each time step, we make no expected progress towards either endpoint. Therefore, at time \\(T = \\min( T_d, T_0)\\), then we obtain the equation\n\\[\n  x = E(X_0) = E(X_T) = 0 P(X_T = 0) + d P(X_T = d) = d P(T_d &lt; T_0)\n\\]\nwhich proves our claim.\n\n\nSolution One\nNow, to solve the puzzle, it remains to enumerate some simple cases. Consider the sequence in which the ladybug sees new numbers. Then, in order for 6 to be last, then it must either see 5 before 7 before 6, or 7 before 5 before 6. That is,\n\\[\n  p_6 = P_{12}(T_5 &lt; T_7 &lt; T_6) + P_{12}(T_7 &lt; T_5 &lt; T_6)\n\\]\nWe can decompose\n\\[\n  P_{12}(T_5 &lt; T_7 &lt; T_6) = P_{12}(T_5 &lt; T_7) \\cdot P_5(T_7 &lt; T_6)\n\\]\nand\n\\[\n  P_{12}(T_7 &lt; T_5 &lt; T_6) = P_{12}(T_7 &lt; T_5) \\cdot P_7(T_5 &lt; T_6)\n\\]\nso that plugging in our expression\n\\[\n  p_6 = (1/2) \\cdot (1/11) + (1/2) \\cdot (1/11) = 1/11\n\\]\n\n\nSolution Two\nFollowing this, I immediately noticed that \\(p_1 = p_2 = \\ldots = p_{11} = 1/11\\). All the probabilities are uniform! This hints that there is a simpler explanation.\nIndeed, in order for 6 to be the last new number visited, there must be an arc between 5 to 7, or from 7 to 5. All the steps before reaching either 5 or 7 are superfluous. Therefore, \\(p_x = P_5(T_7 &lt; T_6)\\).\nIn words, the probability of seeing 6 last is the probability of starting to one side of 6 and reaching the other side of 6 without hitting 6. This holds for any starting position.\nNow, as there are 11 probabilities, the final step is to show that they sum to 1. One way of doing this (although there are likely many) is to shift a perspective: instead of varying the starting point, vary the end point. As there must be some number that is the last one visited, those probabilities must add to 1."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Mindbenders\n\n\n\n\n\n\npuzzle\n\n\n\nMy solutions to the MoMath mindbenders.\n\n\n\n\n\nOct 25, 2026\n\n\n\n\n\n\n\nCycle Analysis\n\n\n\n\n\n\nstochastic-processes\n\n\n\nYou get points for non-overlapping pairs of consecutive heads.\n\n\n\n\n\nMar 15, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ian Chen",
+    "section": "",
+    "text": "Hey, I’m Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign. I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Ian Chen",
+    "section": "",
+    "text": "Hey, I’m Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign. I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing."
+  },
+  {
+    "objectID": "index.html#research",
+    "href": "index.html#research",
+    "title": "Ian Chen",
+    "section": "Research",
+    "text": "Research\nMy past research has been focused on Network Science with Tandy Warnow and George Chacko. We are scaling local community detection, also known as community search, towards networks with millions to billions of nodes."
+  },
+  {
+    "objectID": "index.html#special-interest-group-in-math-and-algorithms",
+    "href": "index.html#special-interest-group-in-math-and-algorithms",
+    "title": "Ian Chen",
+    "section": "Special Interest Group in math and algorithms",
+    "text": "Special Interest Group in math and algorithms\nI am a lead for the ACM@UIUC group in math and algorithms! This semester, we are participating in CG:SHOP. See our activities here."
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Ian Chen",
+    "section": "News",
+    "text": "News\n\n\n\n\nChanged site format to Quarto!\n\n\nNov 5, 2026\n\n\n\nNo matching items\n\nAll news"
+  },
+  {
+    "objectID": "blog/cycle.html",
+    "href": "blog/cycle.html",
+    "title": "Cycle Analysis",
+    "section": "",
+    "text": "Consider an infinitely long sequence of coin flips, i.e. with \\(p\\) probability heads and \\(1-p\\) probability tails. You get points for non-overlapping pairs of consecutive heads. How many points do you expect to obtain per flip? That is, what is the limit for the ratio of the number of points over number of flips?\nFor example, the sequence \\(HHTHHH\\) gets \\(2\\) points. With \\(6\\) flips, the average score is \\(1/3\\)."
+  },
+  {
+    "objectID": "blog/cycle.html#markov-chains",
+    "href": "blog/cycle.html#markov-chains",
+    "title": "Cycle Analysis",
+    "section": "Markov Chains",
+    "text": "Markov Chains\nWhat we have just done is find the stationary distribution of the following Markov Chain:\n\n\n\nThe arcs represent the state changes after a coin flip. We want to find to find the long-term probability of being in the \\(HH\\) state.\nLet \\(P(x, y)\\) be the probability of transitioning between states \\(x\\) and \\(y\\) (zero if there is no arc). Then, a stationary distribution satisfies the recurrence\n\\[\n\\pi_y = \\sum_x \\pi_x P(x, y)\n\\]"
+  },
+  {
+    "objectID": "blog/cycle.html#notation",
+    "href": "blog/cycle.html#notation",
+    "title": "Cycle Analysis",
+    "section": "Notation",
+    "text": "Notation\nLet us introduce some notation. - \\(X_m\\), the state of the markov chain after \\(m\\) steps - \\(P^m(x,y)\\) be the probability of moving from state \\(x\\) to \\(y\\) in exactly \\(m\\) steps. - \\(N_n(x,y) = \\sum_{m=1}^n 1_{y}(X_m)\\), the number of visits to state \\(y\\) in \\(n\\) steps, starting at state \\(x\\). - \\(G_n(x,y) = E(N_n(x,y)) = \\sum_{m=1}^n P^m(x,y)\\), the expected number of visits to \\(y\\) from \\(x\\) in \\(n\\) steps. - \\(T_{x,y}^r = \\min \\{ n \\ge 1 \\mid N_n(x,y) \\ge r \\}\\), the earliest time to hit \\(y\\) exactly \\(r\\) times - \\(m_{x,y} = E(T_{x,y}^1)\\), the expected time to hit \\(y\\) starting at state \\(x\\), i.e. the hitting time\nFor brevity, \\(m_y = m_{y,y}, T_y = T_{y,y},\\)…"
+  },
+  {
+    "objectID": "blog/cycle.html#hitting-times-and-stationary-distribution",
+    "href": "blog/cycle.html#hitting-times-and-stationary-distribution",
+    "title": "Cycle Analysis",
+    "section": "Hitting Times and Stationary Distribution",
+    "text": "Hitting Times and Stationary Distribution\nRecall we want to find \\(\\pi_y\\), the stationary distribution of the markov chain.\nTheorem: The stationary distribution is the reciprocal of the hitting time.\n\\[\n\\pi_y = \\frac{1}{m_y} = \\lim_{n \\to \\infty} \\frac{N_n(y)}{n}\n\\]\nproof: First, we show the second equality, that the ratio \\(N_n(y, y) / n\\) approaches \\(1/m_{y}\\). For \\(i \\ge 1\\), we consider \\(\\omega^i = T_{y}^i - T_{y}^{i-1}\\), the marginal time to cycle back to \\(y\\) for the \\(i\\)-th time. Since our transitions are memoryless, then \\(\\omega^i\\) are iid. Now, by the law of large numbers,\n\\[\n\\frac{T_{y}^k}{k} = \\frac{1}{k} \\sum_{i=1}^k \\omega^i \\to E(\\omega) = m_{y}\n\\]\nFinally,\n\\[\n\\frac{T_{y}^{N_n(y)}}{N_n(y)} \\le \\frac{n}{N_n(y)} \\le \\frac{T_y^{N_n(y) + 1}}{N_n(y) + 1}\n\\]\nwhere the left and right both converge to \\(m_y\\). Thus, \\(\\frac{n}{N_n(y)}\\), and moreover \\(\\frac{n}{G_n(y)}\\), both converge to \\(m_y\\) as well.\nNow, for the first equality, note that for any \\(m\\), \\(\\pi_y = \\sum_{x \\in S} \\pi(x) P^{m}(x,y)\\). Therefore, when we sum over \\(m\\), we have\n\\[\n\\pi_y = \\frac{1}{n} \\sum_{m=1}^n \\sum_{x \\in S} \\pi(x) P^m(x,y) = \\sum_{x \\in S} \\pi(x) \\frac{G_n(x,y)}{n}\n\\]\nMoreover, this holds as \\(n \\to \\infty\\), so recalling that \\(\\sum_x \\pi(x) = 1\\), then we find that\n\\[\n  \\pi_y = \\lim_{n \\to \\infty} \\sum_{x \\in S} \\frac{G_n(x,y)}{n} \\pi(x) = \\sum_{x \\in S} \\pi(x) \\frac{1}{m_y} = \\frac{1}{m_y}\n\\]\nThus concludes the proof."
+  },
+  {
+    "objectID": "blog/cycle.html#computing-hitting-times-using-cycles",
+    "href": "blog/cycle.html#computing-hitting-times-using-cycles",
+    "title": "Cycle Analysis",
+    "section": "Computing Hitting Times using Cycles",
+    "text": "Computing Hitting Times using Cycles\nThe hitting time \\(m_y\\) is the expected number of steps starting at \\(y\\) before reaching \\(y\\) again. We can compute this by enumerating all (possibly countable infinite) cycles, computing the probability of taking it, and find the expected length.\nI illustrate this by example. Consider the following two state Markov chain with states \\(T\\) and \\(H\\). Let \\(P(T, H) = p\\), \\(P(H, T) = q\\), and self loops \\(1-p\\) and \\(1-q\\) respectively.\n\n\n\nTo find the hitting time (and therefore, the stationary distribution) \\(m_T\\), then we have the following cycles: \\(e_4\\), \\(e_1 e_3\\), \\(e_1 e_2 e_3\\), \\(e_1 e_2 e_2 e_3\\), …\nTherefore, we can find the average cycle length, i.e. the hitting time, as\n\\[\n\\begin{aligned}\nm_T & = p(e_4) \\cdot 1 + p(e_1 e_3) \\cdot 2 + p(e_1 e_2 e_3) \\cdot 3 + p(e_1 e_2 e_2 e_3) \\cdot 4 + \\ldots \\\\\n    & = (1-p) + \\sum_{\\ell=0}^\\infty (\\ell + 2) pq (1-q)^\\ell \\\\\n    & = (1-p) + 2pq + p(1-q) \\sum_{\\ell = 0}^\\infty (\\ell + 2) q(1-q)^{\\ell - 1} \\\\\n    & = (1-p) + 2pq + p(1-q) (2 + 1/q) = \\frac{p + q}{q}\n\\end{aligned}\n\\]\nThus, \\(\\pi_T = \\frac{p}{p+q}\\).\nWe can now find \\(\\pi_H\\) in one of several ways. First, \\(\\pi_H + \\pi_T = 1\\), so that \\(\\pi_H = \\frac{p}{p+q}\\).\nAlternatively, we can note that \\(\\pi_H / \\pi_T\\) is the averaged number of times we visit \\(H\\) in the above cycles. That is,\n\\[\n\\begin{aligned}\n\\frac{\\pi_H}{\\pi_T} & = p(e_4) \\cdot 0 + p(e_1 e_3) \\cdot 1 + p(e_1 e_2 e_3) \\cdot 2 + \\ldots \\\\\n                & = \\sum_{\\ell=0}^\\infty (\\ell + 1) pq (1-q)^\\ell \\\\\n                & = pq + p(1-q) \\sum_{\\ell = 0}^\\infty (\\ell + 1) q(1-q)^{\\ell - 1} \\\\\n                & = pq + p(1-q) (1 + 1/q) = \\frac{p}{q}\n\\end{aligned}\n\\]\nso that indeed, \\(\\pi_H = \\frac{p}{q} \\frac{q}{p+q} = \\frac{p}{p+q}\\).\nWe can summarize this procedure into the following theorem:\nTheorem: Let \\(x\\) be any state in a finite irreducible Markov chain, and \\(C_x\\) be all cycles from \\(x\\). Then, for any state \\(y\\),\n\\[\n\\pi_y = \\frac{ \\text{average visits to } y \\text{ in } C_x }{ \\text{average length of } C_x }\n\\]\nNote that here, we say cycles to allow repeated links, but passing through the start state exactly once.\nproof: We partition the walk into stages, where each stage is delimited by a cycle in \\(C_x\\). Then, \\(N_n(y)\\) is sum of visits to \\(y\\) in the \\(k\\)-th stage.\n\\[\n\\frac{N_n(y)}{n} = \\frac{N_n(y)}{G_n(x) m_x} = \\frac{1}{m_x} \\frac{N_n(x)}{G_n(x)} \\frac{1}{N_n(x)} \\sum_{k=1}^{N_n(x)} ( \\text{visits to } y \\text{ in } k \\text{-th cycle} )\n\\]\nNow, \\(\\frac{N_n(x)}{G_n(x)} \\to 1\\), and \\(\\frac{1}{N_n(x)} \\sum_{k=1}^{N_n(x)} (..)\\) approaches the average visits to \\(y\\) in \\(C_x\\). Moreover, the LHS approaches \\(\\pi_y\\), and \\(m_x\\) is the average length of \\(C_x\\).\nThus, taking limits, indeed\n\\[\n\\pi_y = \\frac{ \\text{average visits to } y \\text{ in } C_x }{ \\text{average length of } C_x }\n\\]"
+  },
+  {
+    "objectID": "blog/cycle.html#acknowledgements",
+    "href": "blog/cycle.html#acknowledgements",
+    "title": "Cycle Analysis",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThe cycle analysis technique was introduced to me by my friend taking CS 438 at UIUC. Many probablistic networking protocols exhibit simple irreducible behavior which lend themselves nicely to such analysis."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-03.html",
+    "href": "blog/mindbenders/2026-03.html",
+    "title": "2026 February and March Mindbender",
+    "section": "",
+    "text": "Today, I discuss my solutions towards the February and March mindbenders! The puzzles can be found here."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-03.html#puzzle-statement",
+    "href": "blog/mindbenders/2026-03.html#puzzle-statement",
+    "title": "2026 February and March Mindbender",
+    "section": "Puzzle Statement",
+    "text": "Puzzle Statement\nConsider an integer 2-D grid. A bacterium begins at the origin. Each bacteria may divide; that is, a bacterium at the point \\((x, y)\\) can be replaced by one at \\((x+1, y)\\) and \\((x, y+1)\\), supposing those two squares were previously bacteria-free. Roughly, how many divisions must take place before the closed box with corners at \\((0,0), (0,3), (3,3)\\), and \\((3,0)\\) is clear of bacteria?"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-03.html#an-attempt-via-dynamic-programming",
+    "href": "blog/mindbenders/2026-03.html#an-attempt-via-dynamic-programming",
+    "title": "2026 February and March Mindbender",
+    "section": "An attempt via dynamic programming",
+    "text": "An attempt via dynamic programming\nFirst was via dynamic programming. Let \\(f(w, h)\\) be the amount of divisions for a bacteria to clear a \\(w \\times h\\) grid. The problem asks to find \\(f(4,4)\\).\nIf \\(w = h = 1\\), then it takes only one division. Otherwise, after one division, the top bacteria must clear a \\(w \\times (h-1)\\) grid, and the right bacteria must clear a \\((w-1) \\times h\\) grid. Thus, the recurrence I formulated is:\n\\[\nf(w, h) =\n\\begin{cases}\n  1 & w = h = 1 \\\\\n  1 + f(w-1, h) + f(w, h-1) & \\text{otherwise}\n\\end{cases}\n\\]\n\n\n\nh  w\n1\n2\n3\n4\n\n\n\n\n1\n1\n2\n3\n4\n\n\n2\n2\n5\n9\n14\n\n\n3\n3\n9\n19\n34\n\n\n4\n4\n14\n34\n69\n\n\n\nNote that the general solution is that\n\\[\nf(w, h) = \\binom{w+h}{w} - 1\n\\]\nThis does not work. After a bacteria clears the grid, it does not magically disappear. In other words, I cannot isolate the two bacteria separately."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-03.html#simulations",
+    "href": "blog/mindbenders/2026-03.html#simulations",
+    "title": "2026 February and March Mindbender",
+    "section": "Simulations",
+    "text": "Simulations\nOk, at this point I gave up and wrote a simple simulation to see how long it would take. In a loop, I would: - check if there are any bacteria in the \\(w \\times h\\) grid - try to get that bacteria to divide - if there was a bacteria in the way, then recurse to split that other bacteria\nSo I wrote this up and ran it. Then waited. Then waited. Then waited…\nAt this point, I got suspicious. Looking through the states, it seemed that I entered an infinite recursive descent."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-03.html#the-solution",
+    "href": "blog/mindbenders/2026-03.html#the-solution",
+    "title": "2026 February and March Mindbender",
+    "section": "The Solution",
+    "text": "The Solution\nFinally, it got through in my head that it may not be possible to clear the grid. How would I prove this?\nI recalled a similar problem my friend showed me. Similar, there was an integer grid of bacteria, but now there were infinite bacteria at every coordinate \\((x, y)\\) for \\(x \\le 0\\). They divide in a peculiar way, with two (orthogonally) adjacent bacteria mating to spawn a new bacteria. That is, there are two ways they can divide: - a bacteria at \\((x, y)\\) and \\((x+1, y)\\) being replaced with \\((x+2, y)\\) - a bacteria at \\((x, y)\\) and \\((x, y+1)\\) being replaced with \\((x, y+2)\\) The question is can a bacteria reach \\(x=5\\)?\nA general approach towards solving such problems is to find invariants. Suppose each configuration of bacteria has some potential that is maintained by these divisions. I’ll leave the solution to this related problem hidden, but as a hint, the golden ratio shows up!\nSuppose we assign a value to each grid \\((x, y)\\), so that \\(\\varphi(x,y) = 2^{-(x+y)}\\). The potential is the sum of \\(\\varphi\\) over occupied grid positions. With this, upon a split,\n\\[\n\\varphi(x,y) = \\varphi(x+1, y) + \\varphi(x,y+1)\n\\]\nso that the potential is constant! The starting potential is \\(1\\). What must be the potential be if the \\(4 \\times 4\\) grid was empty? Well, there can be at most one bacteria on each grid square, so\n\\[\n\\begin{aligned}\n  \\varphi& \\le \\sum_{x, y \\ge 0} \\varphi(x, y) - \\sum_{0 \\le x, y \\le 3} \\varphi(x, y) \\\\\n       & = \\sum_{x=0}^\\infty 2^{-x} \\sum_{y=0}^\\infty 2^{-y} - \\frac{225}{64} \\\\\n       & = 2 \\sum_{x=0}^\\infty 2^{-x}  - \\frac{225}{64} = 4 - \\frac{225}{64} = \\frac{31}{64} &lt; 1\n\\end{aligned}\n\\]\nSo the potential must decrease! However, divisions do not change the potential, so it is impossible to clear the grid.\nNote that even clearing a \\(3 \\times 3\\) grid is impossible, as the remaining potential adds up to \\(\\frac{30}{32} &lt; 1\\)."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-03.html#pigeonhole-and-solution",
+    "href": "blog/mindbenders/2026-03.html#pigeonhole-and-solution",
+    "title": "2026 February and March Mindbender",
+    "section": "Pigeonhole and Solution",
+    "text": "Pigeonhole and Solution\nUnfortunately, I have seen this puzzle before as an application of the pigeonhole principle.\nThe first observation to make is that the disjointness only means that you need to choose two distinct subsets. That is, given two overlapping but distinct subsets that add to the same sum, then removing the overlapping numbers would find a winning pair of disjoint subsets.\nGiven 10 numbers \\(x_1, \\ldots, x_10\\), there are \\(2^{10} - 2 = 1022\\) possible subsets (ignoring trivial ones). However, any subset must sum to at least \\(1+2+\\ldots+10 = 55\\), and at most \\(100+99+\\ldots+91 = 955\\), so there are \\(901\\) possible sums. As \\(1022\\) subsets must have a range of \\(901\\) values, two of them must have the same sum, by pigeonhole!\nPick those two subsets, remove the overlapping values, and thus you can always find two disjoint non-empty subsets of the same value!"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-10.html",
+    "href": "blog/mindbenders/2026-10.html",
+    "title": "2026 Sept/Oct Mindbenders",
+    "section": "",
+    "text": "It has been too long since my last post, so let’s get back into it with some easy. Given two random balls that intersect in \\(\\mathbb{R}^d\\); what is the expected volume of their intersection?\nOf course, the above is actually underspecified (see Bertrands paradox). More precisely, we specify that we have a ball at the origin, and a second ball sampled uniformly with center inside the ball of radius \\(2\\).\n\n\nSomehow, I managed to overcomplicate this quite a bit. So first, consider \\(d=1\\). By symmetry, we can assume WLOG that the random ball always has positive center. Thus, an integral obtains the answer\n\\[\n  \\int_{0}^1 (0.5) (2-x) \\text{d}x + \\int_1^2 (0.5) (x - 1) \\text{d}x = 1\n\\]\nwhere \\((2-x)\\) and \\((x-1)\\) are the lengths of intersection between two intervals of length \\(2\\), for \\(x\\) center less than 1 or between 1 and 2 respectively, and \\(0.5\\) is the probability density at any point.\nA slightly nicer, but equivalent integral, is to consider the left endpoint from \\(-1\\) to \\(1\\), so that the area of intersection is always \\(1-x\\):\n\\[\n  \\int_{-1}^1 (0.5) (1-x) \\text{d}x = 1\n\\]\nThis approach does not extend to 2D easily (lots of gross algebra). Somehow, I thought there were a few things that should make this nice:\n\nwe have two objects that are the same shape\nthe particular object is a sphere, which is nicely symmetric\n\nI wanted to use both of these properties, and so what I thought was to consider a random process with both of these intervals. Originally, I wanted them to have centers anywhere in the plane, but then the density functions are hard to define. Thus, I tried having them be contained in some region \\(A(r)\\), where \\(r\\) is some scaling factor that I will have limit towards \\(\\infty\\).\nI remembered that the expected distance between two points in a rectangle in \\(\\mathbb{R}^d\\) can be calculated (which is relevant in k-nearest neighbors, with the curse of dimensionality)&gt; Thus, intuitively, I thought that this meant we can calculate the probability of them intersecting, and use the decomposition\n\\[\n\\begin{align}\n  \\textbf{Ev}(\\text{area of union}) & = \\textbf{Ev}(\\text{area of union} \\mid \\text{intersect}) \\textbf{P}(\\text{intersect}) \\\\\n                                    & + \\textbf{Ev}(\\text{area of union} \\mid \\text{not intersect}) \\textbf{P}(\\text{not intersect})\n\\end{align}\n\\]\nNow, given that two balls don’t intersect, the area of union is easy (just the sum). The area of union given they intersect is what we want to find. So, what remains is to find the probability of not intersecting (which is perhaps a simpler integral, of which I doing in the past), and also the area of the union. Then, this area of union can be calculated using linearity of expectation; as each ball is placed independently, if \\(p\\) is the probability that a point is not covered by one ball, then \\(p^2\\) is the probability that it is not covered by both.\nDoing this calculation… is messy and I started realizing there is probably some better way. Indeed, because I am already using linearity of expectation, looking at the probability of each point, it is actually easy to calculate it directly!\n\n\n\nConsider again the process where we place a unit disk with center uniformly chosen from the disk of radius \\(2\\). We know any point \\(p\\) in the intersection (with this random disk, and the disk at the origin) is within the disk of radius \\(1\\) from the origin. Then, for this point, we can consider the probability that its in the intersection, and then sum up over all points in the unit ball.\nNow, consider where must the second ball be in order for \\(p\\) to be in the intersection – the center must be in the unit ball centered at \\(p\\)! The probability that this is the case is exactly \\(2^{-d}\\), as this is the ratio of the volume of a unit ball (the success space) over the volume of a ball of radius \\(2\\) (the sample space). Putting this together, we obtain an answer of\n\\[\n  \\frac{\\pi^{d/2}}{\\Gamma(d/2 + 1) \\cdot 2^d}\n\\]\nwhich comes from the volume of a unit ball embedded in \\(\\mathbb{R}^d\\).\nI tried to exploit too much structure in the problem, before trying more straightforward methods. Think about what is relevant; work out some examples!"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-10.html#october",
+    "href": "blog/mindbenders/2026-10.html#october",
+    "title": "2026 Sept/Oct Mindbenders",
+    "section": "",
+    "text": "It has been too long since my last post, so let’s get back into it with some easy. Given two random balls that intersect in \\(\\mathbb{R}^d\\); what is the expected volume of their intersection?\nOf course, the above is actually underspecified (see Bertrands paradox). More precisely, we specify that we have a ball at the origin, and a second ball sampled uniformly with center inside the ball of radius \\(2\\).\n\n\nSomehow, I managed to overcomplicate this quite a bit. So first, consider \\(d=1\\). By symmetry, we can assume WLOG that the random ball always has positive center. Thus, an integral obtains the answer\n\\[\n  \\int_{0}^1 (0.5) (2-x) \\text{d}x + \\int_1^2 (0.5) (x - 1) \\text{d}x = 1\n\\]\nwhere \\((2-x)\\) and \\((x-1)\\) are the lengths of intersection between two intervals of length \\(2\\), for \\(x\\) center less than 1 or between 1 and 2 respectively, and \\(0.5\\) is the probability density at any point.\nA slightly nicer, but equivalent integral, is to consider the left endpoint from \\(-1\\) to \\(1\\), so that the area of intersection is always \\(1-x\\):\n\\[\n  \\int_{-1}^1 (0.5) (1-x) \\text{d}x = 1\n\\]\nThis approach does not extend to 2D easily (lots of gross algebra). Somehow, I thought there were a few things that should make this nice:\n\nwe have two objects that are the same shape\nthe particular object is a sphere, which is nicely symmetric\n\nI wanted to use both of these properties, and so what I thought was to consider a random process with both of these intervals. Originally, I wanted them to have centers anywhere in the plane, but then the density functions are hard to define. Thus, I tried having them be contained in some region \\(A(r)\\), where \\(r\\) is some scaling factor that I will have limit towards \\(\\infty\\).\nI remembered that the expected distance between two points in a rectangle in \\(\\mathbb{R}^d\\) can be calculated (which is relevant in k-nearest neighbors, with the curse of dimensionality)&gt; Thus, intuitively, I thought that this meant we can calculate the probability of them intersecting, and use the decomposition\n\\[\n\\begin{align}\n  \\textbf{Ev}(\\text{area of union}) & = \\textbf{Ev}(\\text{area of union} \\mid \\text{intersect}) \\textbf{P}(\\text{intersect}) \\\\\n                                    & + \\textbf{Ev}(\\text{area of union} \\mid \\text{not intersect}) \\textbf{P}(\\text{not intersect})\n\\end{align}\n\\]\nNow, given that two balls don’t intersect, the area of union is easy (just the sum). The area of union given they intersect is what we want to find. So, what remains is to find the probability of not intersecting (which is perhaps a simpler integral, of which I doing in the past), and also the area of the union. Then, this area of union can be calculated using linearity of expectation; as each ball is placed independently, if \\(p\\) is the probability that a point is not covered by one ball, then \\(p^2\\) is the probability that it is not covered by both.\nDoing this calculation… is messy and I started realizing there is probably some better way. Indeed, because I am already using linearity of expectation, looking at the probability of each point, it is actually easy to calculate it directly!\n\n\n\nConsider again the process where we place a unit disk with center uniformly chosen from the disk of radius \\(2\\). We know any point \\(p\\) in the intersection (with this random disk, and the disk at the origin) is within the disk of radius \\(1\\) from the origin. Then, for this point, we can consider the probability that its in the intersection, and then sum up over all points in the unit ball.\nNow, consider where must the second ball be in order for \\(p\\) to be in the intersection – the center must be in the unit ball centered at \\(p\\)! The probability that this is the case is exactly \\(2^{-d}\\), as this is the ratio of the volume of a unit ball (the success space) over the volume of a ball of radius \\(2\\) (the sample space). Putting this together, we obtain an answer of\n\\[\n  \\frac{\\pi^{d/2}}{\\Gamma(d/2 + 1) \\cdot 2^d}\n\\]\nwhich comes from the volume of a unit ball embedded in \\(\\mathbb{R}^d\\).\nI tried to exploit too much structure in the problem, before trying more straightforward methods. Think about what is relevant; work out some examples!"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-10.html#september",
+    "href": "blog/mindbenders/2026-10.html#september",
+    "title": "2026 Sept/Oct Mindbenders",
+    "section": "September",
+    "text": "September\nGiven a 10-digit number, ending in an odd number excluding \\(5\\), show that there is a multiple that consists only of ones.\nI have no idea what p-adic numbers are, but I’ve seen visuals that remind me of this. In any case, the following documents my stream-of-thoughts for solving this puzzle.\n\nattempts\nTaking my lesson from October, I considered some examples. First, I wondered if the \\(10\\)-digit in the problem was significant, so I tried some fewer-digit numbers. For \\(3\\), then \\(111\\) is a multiple.\nFor \\(7\\), then it was not obvious how to find a multiple with all ones. Suppose there is a multiple, say \\(y\\). But we know that the first digit of \\(y\\) must be a \\(3\\). Then, \\(3 \\times 7 = 21\\), and we actually know the next digit of \\(y\\) must be a \\(7\\) (so that the second digit of \\(yx\\) is a \\(1\\)). Then, \\(73 \\times 7 = 511\\), and the next digit must be an \\(8\\) (so the \\(3\\)rd digit of \\(yx\\) is a \\(1\\)). Repeating this, we find \\(15873 \\times 7 = 111111\\).\nActually, we are building up each digit of \\(y\\) step by step. And each digit of \\(y\\) is forced to be what we say it is (note that it is not unique, as this process can be continued step by step). Thus, we have an algorithm for finding it, if it exists, we just have to characterize if it can ever fail, or ever fail to terminate.\nNow, to prove an algorithm terminates, usually we can find some sort of potential function that is bounded, and goes down at some rate. Of course, finding these is not typically quite difficult.\nSo, what could go wrong with the algorithm? Let’s give some more notation here. Let \\(z_k\\) be the first \\(k\\) digits of \\(z\\) (starting from least significant), which we are building up incrementally. If the first non-one digit of \\((xy)\\) is strictly less than \\(k\\), then we’re screwed (since adding more digits can never change a digit before \\(k\\)). We’re safe in this regard; inductively, we start from \\(k=0\\), and at each step of adding another digit to \\(y\\), we create at least one more \\(1\\) of \\((xy)_k\\).\nThus, we won’t ever get into a failing state. But it is still hard to argue that this process terminates.\nOne idea I had is to consider the most significant non-one digits (as they’re the only real signal from our process), and argue that number always decreases in some metric. This number definitely does not always decrease (e.g. for \\(x = 7\\), then we go from \\(2\\) to \\(5\\) to \\(6\\) to \\(4\\) to \\(1\\), after which we terminate). It seems to have the never increase the number of digits, and this is actually easy to show: if \\(z\\) is this number, then \\(cz\\) for \\(c &lt; 10\\) has at most one more digit than \\(z\\), and since the last digit is trimmed off in the process, we found a non-increasing. We have the first thing we need: something that is bounded.\nAll that’s left is to argue that we can never visit the same number twice, and we win. Suppose we do visit the same number twice, then let \\(y_1\\) be when we first visit it, and \\(y_2 \\circ y_1\\) the second time (where \\(\\circ\\) denotes string concat). Writing this equationally, we have \\((y_2 \\circ y_1) \\times x = (y_1 \\times x) \\circ (1 \\circ \\ldots \\circ 1)\\), but this actually means that \\(y_2\\) is all ones. Moreover, as its a circle, adding another repetition of \\(y_2\\) would also return back to the same potential. This means that our greedy algorithm will continually pick \\(1\\), which is absurd.\nWe are done! We have constructed a greedy algorithm that for any positive odd number \\(x\\) not divisible by \\(5\\), will find a multiple that is all ones. To do this, it incrementally builds the factor digit by digit. At each step of the algorithm, the number of non-one digits never increases, and also the number formed by the non-one digits is always distinct, and so this process terminates."
+  },
+  {
+    "objectID": "publications/chen2026improved.html",
+    "href": "publications/chen2026improved.html",
+    "title": "Improved Methods for \\(k\\)-Core Community Search",
+    "section": "",
+    "text": "PDF arXiv"
+  },
+  {
+    "objectID": "publications/chen2026improved.html#abstract",
+    "href": "publications/chen2026improved.html#abstract",
+    "title": "Improved Methods for \\(k\\)-Core Community Search",
+    "section": "Abstract",
+    "text": "Abstract\nCommunity search based on user-specified query nodes is complementary to community finding or graph clustering. Prior work in community search is divided into optimizing for external separateness or internal cohesiveness, which does not scale well networks of over a billion edges. We present SteinerKCore, a new scalable k-core based community search algorithm for multi-vertex queries. We also present Par-ShellStruct, a parallel algorithm for building the ShellStruct data structure used for k-core community search. We show that our implementations in Icebug, an open-source toolkit for large-scale network analysis, are both more efficient and more scalable than comparative tools, being able to perform on a benchmark network of 273M and 5.1B edges using just 64GB RAM and under 4 hours runtime with 16 CPUs.\n\n\n\n\nBibTeX\n\n@online{chen2026improved,\n  title = {Improved Methods for $k$-Core Community Search},\n  author = {Chen, Ian and Yi, Haotian and Sharma, Arun and Warnow, Tandy and Chacko, George},\n  year = {2026},\n  month = sep,\n  eprint = {2609.17822},\n  eprinttype = {arxiv},\n  addendum = {Submitted to CompleNet 2027},\n}"
+  },
+  {
+    "objectID": "publications/park2026modeling.html",
+    "href": "publications/park2026modeling.html",
+    "title": "Modeling citations and cartels",
+    "section": "",
+    "text": "PDF DOI"
+  },
+  {
+    "objectID": "publications/park2026modeling.html#abstract",
+    "href": "publications/park2026modeling.html#abstract",
+    "title": "Modeling citations and cartels",
+    "section": "Abstract",
+    "text": "Abstract\nCitation data are widely used to inform researchers and administrators. Interpreting the results of citation analysis is non-trivial on account of uncertainty around motivations for citation, varied disciplinary practices, data quality, standards for quality, and the lack of ground truths. In-silico approaches that harness autonomous behavior and randomness offer an option in this regard. We have developed an agent-based model of citation that allows us to parsimoniously model citation dynamics at article and author levels. We characterize the model through baseline simulations, sensitivity, and ablation analysis. We also model the behavior of cartels that seek to manipulate citations. We observe an early advantage to cartels that is lost over time implying that, on balance, cartel membership may offer less than its members hope for but may still be incentivizing for some who enroll in such membership.\n\n\n\n\nBibTeX\n\n@misc{park2026modeling,\n\ttitle = {Modeling citations and cartels},\n\turl = {http://dx.doi.org/10.21203/rs.3.rs-9270520/v1},\n\tDOI = {10.21203/rs.3.rs-9270520/v1},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Park, Minhyuk and Yi, Haotian and Chen, Ian and Warnow, Tandy and Chacko, George},\n\tyear = {2026},\n\tmonth = apr,\n\thowpublished = {Preprint},\n}"
+  },
+  {
+    "objectID": "publications/vu-le2026dense.html",
+    "href": "publications/vu-le2026dense.html",
+    "title": "Dense Subgraph Clustering and a New Cluster Ensemble Method",
+    "section": "",
+    "text": "PDF DOI"
+  },
+  {
+    "objectID": "publications/vu-le2026dense.html#abstract",
+    "href": "publications/vu-le2026dense.html#abstract",
+    "title": "Dense Subgraph Clustering and a New Cluster Ensemble Method",
+    "section": "Abstract",
+    "text": "Abstract\nWe propose DSC-Flow-Iter, a new community detection algorithm that is based on iterative extraction of dense subgraphs. Although DSC-Flow-Iter leaves many nodes unclustered, it is competitive with leading methods and has high-precision and low-recall, making it complementary to modularity-based methods that typically have high recall but lower precision. Based on this observation, we introduce a novel cluster ensemble technique that combines DSC-Flow-Iter with modularity-based clustering, to provide improved accuracy. We show that our proposed pipeline, which uses this ensemble technique, outperforms its individual components and improves upon the baseline techniques on a large collection of synthetic networks.\n\n\n\n\nBibTeX\n\n@inbook{vu-le2026dense,\n\ttitle = {Dense Subgraph Clustering and a New Cluster Ensemble Method},\n\tISBN = {9783032167194},\n\tISSN = {1860-9503},\n\turl = {http://dx.doi.org/10.1007/978-3-032-16719-4_3},\n\tDOI = {10.1007/978-3-032-16719-4_3},\n\tbooktitle = {Complex Networks \\& Their Applications XIV},\n\tpublisher = {Springer Nature Switzerland},\n\tauthor = {Vu-Le, The-Anh and Lamy, João Alfredo Cardoso and Alessi, Tomás and Chen, Ian and Park, Minhyuk and Harb, Elfarouk and Chacko, George and Warnow, Tandy},\n\tyear = {2026},\n\tmonth = may,\n\tpages = {29-40},\n}"
+  },
+  {
+    "objectID": "talks/2025-05-06-magus.html",
+    "href": "talks/2025-05-06-magus.html",
+    "title": "Exploring the Effect of Iteration on MAGUS",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talks/siam/2026-04-03-parallel.html",
+    "href": "talks/siam/2026-04-03-parallel.html",
+    "title": "Parallel Connectivity and Shortest Paths",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talks/siam/index.html",
+    "href": "talks/siam/index.html",
+    "title": "SIAM talks",
+    "section": "",
+    "text": "Graph Optimization with Mixed Integer Programming\n\n\nMixed integer programming and Gurobi.\n\n\n\n\n\nOct 9, 2026\n\n\n\n\n\n\n\nParallel Connectivity and Shortest Paths\n\n\nNear-linear work algorithms for connectivity and single-source shortest paths (SSSP) have been known since before the 1950s. In this talk, we will describe approaches to increase their parallelism, including coarsening algorithms for connectivity, and incremental stepping algorithms for SSSP.\n\n\n\n\n\nApr 3, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/sigma/2025-02-03-debruijn.html",
+    "href": "talks/sigma/2025-02-03-debruijn.html",
+    "title": "DeBruijn Graphs",
+    "section": "",
+    "text": "Slides Video"
+  },
+  {
+    "objectID": "talks/sigma/2025-09-14-reservoir.html",
+    "href": "talks/sigma/2025-09-14-reservoir.html",
+    "title": "Generating a Random Sample and Introduction to Discrete Probability",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talks/sigma/2026-02-23-dynamic-conn.html",
+    "href": "talks/sigma/2026-02-23-dynamic-conn.html",
+    "title": "Dynamic Graph Connectivity",
+    "section": "",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talks/sigma/index.html",
+    "href": "talks/sigma/index.html",
+    "title": "SIGma talks",
+    "section": "",
+    "text": "Introduction; Convex Hulls\n\n\nThe first SIGma meeting of Fall 2026, with Mihir Tandon and Franklin Zhang.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\nDynamic Graph Connectivity\n\n\nIn a static graph, checking whether nodes are in the connected component takes linear time. I will describe the Kapron, King, Mountjoy algorithm supporting polylog time updates and queries.\n\n\n\n\n\nFeb 23, 2026\n\n\n\n\n\n\n\nLinear Time Minimum Spanning Trees\n\n\nKarger-Klein-Tarjan randomized algorithm for computing minimum spanning trees in linear expected time.\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\nGenerating a Random Sample and Introduction to Discrete Probability\n\n\nSampling with replacement, quickly.\n\n\n\n\n\nSep 14, 2025\n\n\n\n\n\n\n\nMultiple Sequence Alignment\n\n\nMultiple sequence alignment, maximum weight trace, dynamic programing, heuristics…\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\nDeBruijn Graphs\n\n\nElementary graph theory, De Bruijn sequences, and genome assembly…\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\nThe Inverse Ackermann Function\n\n\nRecursion, Inverse Ackermann, Union-Find, Range-Minimum Queries…\n\n\n\n\n\nNov 18, 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/fa24-phys213.html",
+    "href": "notes/fa24-phys213.html",
+    "title": "PHYS 213: Thermal Physics",
+    "section": "",
+    "text": "Notes"
+  },
+  {
+    "objectID": "notes/mining-networks.html",
+    "href": "notes/mining-networks.html",
+    "title": "Mining Complex Networks",
+    "section": "",
+    "text": "Notes"
+  },
+  {
+    "objectID": "notes/fa26-cs421/type-systems.html",
+    "href": "notes/fa26-cs421/type-systems.html",
+    "title": "Type systems",
+    "section": "",
+    "text": "First, we specify a subset of the OCaml grammar subset. Associativity and precedence are not described here, and a description can be found in the Bison grammar picoml-stepper/interpreter/picoml.y.\nThis note will describe the static semantics of our language. In particular, each expression has a type \\(\\tau\\) of possible data values. Our (sound) type system will a type for each expression, such that the dynamic value will always be in the type of \\(\\tau\\).\nTowards this, the main rule is the type judgment.\nwhere \\(\\Gamma\\) is our type environment (a context mapping variables to types), \\(e\\) is an expression, and \\(\\tau\\) is some type. Then, under the type environemnt and a set of preconditions (above the bar), then we prove that \\(e\\) has type \\(\\tau\\). A sound program has expressions for which the judgement \\(\\emptyset \\vdash e : \\tau\\) is derivable. We will use \\(\\Gamma_1 + \\Gamma_2\\) to denote \\(\\Gamma_1 \\cup (\\Gamma_2 \\setminus \\Gamma_1)\\) (note that this is not commutative).\nNote that this is closely related to the idea of a logic system. Types correspond to propositions, and terms correspond to proofs. This is known as the Curry-Howard isomorphism; we will see that functions correspond to implication, and application corresponds to modus ponens."
+  },
+  {
+    "objectID": "notes/fa26-cs421/type-systems.html#a-monomorphic-type-system",
+    "href": "notes/fa26-cs421/type-systems.html#a-monomorphic-type-system",
+    "title": "Type systems",
+    "section": "A monomorphic type system",
+    "text": "A monomorphic type system\nFirst, we give the rules for a very simple type system, in which each variable provably has a unique type. In contrast, a polymorphic type system can give a variable distinct types, as we will see later.\nlet x = fun y -&gt; y + 2;;\nUnder our type system, we will assign \\(x\\) the type \\(\\textsf{int} \\mapsto \\textsf{int}\\). Informally, if \\(x\\) is the type \\(\\textsf{int} \\mapsto \\textsf{int}\\), then the binder \\(y\\) gets type \\(\\textsf{int}\\), and the \\(+\\) operator will also return an integer. This is an example of a type derivation, and we will now provide judgements for proving the type of an expression (though we do not show soundness or completeness).\nFirst, we can specify boolean constants\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the above rule, \\(\\Gamma\\) is a meta-variable. Rather than writing a rule for every possible type environment, we write a schema in terms of \\(\\Gamma\\). Note that the rules themselves are still in terms of the concrete syntax as before.\nAs another example of a meta-variable, say \\(n\\) is an integral constant, so that the rule says that \\(1\\) is an integer, \\(2\\) is an integer, and so on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeriving the type of a variable involves looking in the type context.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnother interesting example is to determine the type of a pair \\((e_1, e_2)\\). This rule has a precondition, that \\(e_1: \\tau_1\\) and \\(e_2: \\tau_2\\), and once these are set, then \\((e_1, e_2)\\) has type \\(\\tau_1 * \\tau_2\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSo to derive the type of \\((1, \\texttt{false})\\), then we have to first derive the type of both components \\(1\\) and \\(\\texttt{false}\\). Indeed, it is typed is \\(\\textsf{int} * \\textsf{bool}\\).\n(1, false)\nand we can write a derivation for this as follows:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWriting out the rules for the rest of our expression constructors is straightforward and intuitive.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAt this point, it is prudent to prove properties about the system we have thus given. One important property is that each \\(x: \\tau \\in \\Gamma\\) has a unique \\(\\tau\\). We will not prove it here, but intead illustrate these with a more in-depth example, showing (almost) all of our judgements.\n\nExamples\nlet rec f x = if x &lt;= 1 then 1 else x * f (x - 1) in f 3;;\nWe want to prove that this expression has type \\(\\textsf{int}\\). We work backwards from the conclusion; our judgment rules are syntax driven and so there is only one possible rule to apply at each step.\nFirst, the has two premises. The second is straightforward to derive: we first derive the types of both terms of the application \\(f\\) and \\(3\\) using the variable and constant rules respectively, before applying the application rule.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe other premise is a bit more involved. There are the function rules, and then the conditional, in which the three expressions have to be typed. The base case is trivial.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet \\(\\Gamma_1 = \\left\\{ x: \\textsf{int}, f: \\textsf{int} \\to \\textsf{int} \\right\\}\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAs far as the predicate of the \\(\\textsf{if}\\), we can indeed verify it types to a \\(\\textsf{bool}\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnd as for the other side, we verify that it matches with the true branch of the if, namely that it also evaluates to an \\(\\textsf{int}\\)."
+  },
+  {
+    "objectID": "notes/fa26-cs421/type-systems.html#a-polymorphic-type-system",
+    "href": "notes/fa26-cs421/type-systems.html#a-polymorphic-type-system",
+    "title": "Type systems",
+    "section": "A polymorphic type system",
+    "text": "A polymorphic type system\nThe type system described above is very limited. Consider for example, the following expression:\nlet id x = x in (id 1, id false)\nWhat type is \\(\\texttt{id}\\)? For the first element of the pair, it seems like we need \\(\\texttt{id}: \\textsf{int} \\to \\textsf{int}\\), but for the second element, it seems like we need \\(\\texttt{id}: \\textsf{bool} \\to \\textsf{bool}\\). We need a more powerful type system to express the possibility for \\(\\texttt{id}\\) to be both!\nlet id x = x\nWe see that OCaml gives \\(\\texttt{id}\\) the type signature 'a -&gt; 'a It is instructive to think of this as sugar for the universally quantified type \\(\\forall(\\alpha . \\alpha \\to \\alpha)\\). We read this as the type is now a function taking a type as an argument, and in general denote as \\(\\forall(t . \\tau)\\).\nIn this system, beyond our basic and compound types in the monomorphic type system, we also introduce type variables (in OCaml, prefixed with a ', and in our mathematics, we use lowercase greek letters). Finally, every type has a universal quantifier dictating the bound variables.\nIn particular, consider the grammar for the types:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNow, type judgements are still over monotypes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBut, as type environments are now mappings from variables to polytypes, they will hold more power. With this, we can consider the first judgment that must change: variables.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwhere \\(\\varphi\\) is a function replacing each \\(\\alpha_i\\) with a monotype. For example, if the type environment is \\(\\left\\{ x: \\alpha \\right\\}\\), then \\(x: \\textsf{int}\\) can be derived, and \\(x: \\textsf{bool}\\) too.\nThe second judgment that must change is in assigning new variables in a let (i.e. modifying the type environment); we need to be able to create polytypes from monotypes. To do this, consider a new function\n\\[\n    \\mathbf{Gen}(\\tau, \\Gamma): \\textsf{Monotype} \\times \\textsf{Environment} \\to \\textsf{Polytype}\n\\]\nwhich will bind all the free variables in \\(\\tau\\) that are not in \\(\\Gamma\\). Namely, the free variables of monomorphic types are the type variables, of polymorphic types must remove the quantified vars, and for an environment, all free variables over the range.\nNow, the modifications to the grammar are simple, with only the following rules changing.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExamples\nTo illustrate this, we shall consider three examples.\nfun y -&gt; let f = fun x -&gt; y in (f 1, f true);;\nWe can derive the type as follows. In the second premise of LetIn, \\(f\\) is bound to \\(\\mathbf{Gen}(\\beta \\to \\alpha, \\left\\{ y: \\forall . \\alpha \\right\\}) = \\forall \\beta . \\beta \\to \\alpha\\); only \\(\\beta\\) is quantified, since \\(\\alpha\\) is free in the environment.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the derived type is \\(\\alpha * \\alpha\\); the output of \\(f\\) must be the same type even though it is a polytype. In contrast, consider the following, whose output pair type is \\(\\alpha * \\beta\\).\nfun y -&gt; let rec f = fun x -&gt; f x in (f 1, f true);;\nWe can derive the type as follows.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhere in the first premise, the type environment is \\(\\Gamma_1 = \\left\\{ f: \\forall . \\delta \\to \\varepsilon, y: \\forall . \\alpha \\right\\}\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nand in the second premise, let \\(\\Gamma_2 = \\left\\{ f: \\forall \\delta, \\varepsilon . \\delta \\to \\varepsilon, y: \\forall . \\alpha \\right\\}\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnd for the final example, we note that the following does not type check.\nlet rec f = fun x -&gt; f (x, x);;\nIndeed, we fail at the argument of the recursive call.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe type of \\(f\\) is not quantified inside its own body, so its input type is fixed to \\(\\alpha\\). The premise \\(\\left\\{ x: \\forall . \\alpha, f: \\forall . \\alpha \\to \\beta \\right\\} \\vdash (x, x) : \\alpha\\) has no derivation: the pair rule only derives \\((x, x) : \\alpha * \\alpha\\), and no monotype \\(\\alpha\\) is equal to \\(\\alpha * \\alpha\\).\nThe above is a case of our type system not allowing polymorphic recursion. However, OCaml does allow this when the types are explicitly written. Apparently, polymorphic recursion makes type inference undecidable.\nlet rec f: 'a . 'a -&gt; int = fun x -&gt; f (x, x);;\nIndeed, this can be very powerful. Consider the following representation of a perfect binary tree, with values at the leaves.\ntype 'a perfect = Leaf of 'a | Node of ('a * 'a) perfect;;\nWe might want to find the depth for a perfect tree. A typical way might be to use mutual recursion for the two cases. However, it is more elegant to use the same depth function that is polymorphic, from a 'a perfect to ('a * 'a) perfect in the recursive call.\nlet rec depth : 'a . 'a perfect -&gt; int =\nfun t -&gt; match t with\n  | Leaf _ -&gt; 0\n  | Node t -&gt; 1 + depth t in\nlet t = Node (Node (Leaf ((1, 2), (3, 4)))) in\n    depth t;;"
+  },
+  {
+    "objectID": "notes/su26-reading/community-applications.html",
+    "href": "notes/su26-reading/community-applications.html",
+    "title": "Applications of Community Detection",
+    "section": "",
+    "text": "Presentation"
+  },
+  {
+    "objectID": "notes/su26-reading/dynamic-graphs.html",
+    "href": "notes/su26-reading/dynamic-graphs.html",
+    "title": "Datastructures for Dynamic Graphs",
+    "section": "",
+    "text": "Presentation"
+  },
+  {
+    "objectID": "notes/su26-reading/hypergraph-modularity.html",
+    "href": "notes/su26-reading/hypergraph-modularity.html",
+    "title": "Modularity based community detection in hypergraphs",
+    "section": "",
+    "text": "Presentation"
+  },
+  {
+    "objectID": "notes/su26-reading/lower-bounds.html",
+    "href": "notes/su26-reading/lower-bounds.html",
+    "title": "Lower Bounds and Impossibility Results",
+    "section": "",
+    "text": "Writeup Presentation"
+  },
+  {
+    "objectID": "notes/su26-reading/pagerank.html",
+    "href": "notes/su26-reading/pagerank.html",
+    "title": "PageRank, and Local Graph Partitioning",
+    "section": "",
+    "text": "Writeup Presentation"
+  }
+]

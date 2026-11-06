@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Ian Chen</title>
+<link>https://ianchen3.github.io/blog/</link>
+<atom:link href="https://ianchen3.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Sun, 25 Oct 2026 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Mindbenders</title>
+  <link>https://ianchen3.github.io/blog/mindbenders/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="cHV6emxl" data-listing-date-sort="1792904400000" data-listing-file-modified-sort="1793927787772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1360">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../blog/mindbenders/2026-10.html" class="no-external">2026 Sept/Oct Mindbenders</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHV6emxl'); return false;">puzzle</div>
+
+</div>
+<div class="delink listing-description"><a href="../../blog/mindbenders/2026-10.html" class="no-external">
+<p>Given two random balls that intersect, what is the expected volume of their intersection?</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../blog/mindbenders/2026-10.html" class="no-external">
+<div class="listing-date">
+Oct 25, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="cHV6emxl" data-listing-date-sort="1784178000000" data-listing-file-modified-sort="1793927787772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1463">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../blog/mindbenders/2026-07.html" class="no-external">2026 July Mindbenders</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHV6emxl'); return false;">puzzle</div>
+
+</div>
+<div class="delink listing-description"><a href="../../blog/mindbenders/2026-07.html" class="no-external">
+<p>If you roll six dice, you could get the same number on every die, or (in contrast) all different numbers.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../blog/mindbenders/2026-07.html" class="no-external">
+<div class="listing-date">
+Jul 16, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="cHV6emxlJTJDcG90ZW50aWFscw==" data-listing-date-sort="1773637200000" data-listing-file-modified-sort="1793927787772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="830">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../blog/mindbenders/2026-03.html" class="no-external">2026 February and March Mindbender</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHV6emxl'); return false;">puzzle</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cG90ZW50aWFscw=='); return false;">potentials</div>
+
+</div>
+<div class="delink listing-description"><a href="../../blog/mindbenders/2026-03.html" class="no-external">
+<p>Today, I discuss my solutions towards the February and March mindbenders!</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../blog/mindbenders/2026-03.html" class="no-external">
+<div class="listing-date">
+Mar 16, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="c3RvY2hhc3RpYy1wcm9jZXNzZXMlMkNwdXp6bGU=" data-listing-date-sort="1769320800000" data-listing-file-modified-sort="1793927787772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../blog/mindbenders/2026-01.html" class="no-external">2026 January Momath Mindbender</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3RvY2hhc3RpYy1wcm9jZXNzZXM='); return false;">stochastic-processes</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHV6emxl'); return false;">puzzle</div>
+
+</div>
+<div class="delink listing-description"><a href="../../blog/mindbenders/2026-01.html" class="no-external">
+<p>Consider a ladybug starting on the 12-hand of the clock.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../blog/mindbenders/2026-01.html" class="no-external">
+<div class="listing-date">
+Jan 25, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div> ]]></description>
+  <category>puzzle</category>
+  <guid>https://ianchen3.github.io/blog/mindbenders/</guid>
+  <pubDate>Sun, 25 Oct 2026 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Cycle Analysis</title>
+  <link>https://ianchen3.github.io/blog/cycle.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Consider an infinitely long sequence of coin flips, i.e.&nbsp;with <img src="https://latex.codecogs.com/png.latex?p"> probability heads and <img src="https://latex.codecogs.com/png.latex?1-p"> probability tails. You get points for non-overlapping pairs of consecutive heads. How many points do you expect to obtain per flip? That is, what is the limit for the ratio of the number of points over number of flips?</p>
+<p>For example, the sequence <img src="https://latex.codecogs.com/png.latex?HHTHHH"> gets <img src="https://latex.codecogs.com/png.latex?2"> points. With <img src="https://latex.codecogs.com/png.latex?6"> flips, the average score is <img src="https://latex.codecogs.com/png.latex?1/3">.</p>
+From a quick <a href="../files/blog/cycle/consecutive_heads.R">simulation</a> with <img src="https://latex.codecogs.com/png.latex?p=1/2">, (flips on the <img src="https://latex.codecogs.com/png.latex?x">-axis, on a square-root scale), it seems like the ratio converges to <img src="https://latex.codecogs.com/png.latex?1/6">. Let us show that analytically.
+<div style="text-align: center;">
+<p><img src="https://ianchen3.github.io/files/blog/cycle/points_timeline.jpg"></p>
+</div>
+<section id="solution-via-mutual-recursion" class="level1">
+<h1>Solution via Mutual Recursion</h1>
+<p>Consider a (sufficiently large) index <img src="https://latex.codecogs.com/png.latex?n"> in our sequence. The quantity we want to find is the probability that the <img src="https://latex.codecogs.com/png.latex?n">-th coin flip gains one additional point.</p>
+<p>There are three possible cases: - the <img src="https://latex.codecogs.com/png.latex?(n-1)">-th flip was tails (state T) - the <img src="https://latex.codecogs.com/png.latex?(n-1)">-th flip was heads, and did not gain a point (state H) - the <img src="https://latex.codecogs.com/png.latex?(n-1)">-th flip was heads, and gained a point (state HH)</p>
+<p>For <img src="https://latex.codecogs.com/png.latex?n"> large, the probabilities are <em>stationary</em>, meaning that flipping one more coin does not change their probabilities. Of course, <img src="https://latex.codecogs.com/png.latex?%5Cpi_T">, probability of being in state <img src="https://latex.codecogs.com/png.latex?T">, is <img src="https://latex.codecogs.com/png.latex?(1-p)">, the probability of flipping tails. Under the stationary distribution, we also have the relations</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Cpi_H%20=%20p%20%5Cpi_T%20+%20p%20%5Cpi_%7BHH%7D%20=%20p(1-p)%20+%20p%20%5Cpi_%7BHH%7D%0A%20%20%5Cqquad%0A%20%20%5Cpi_%7BHH%7D%20=%20p%20%5Cpi_H%0A"></p>
+<p>The first relation says that the <img src="https://latex.codecogs.com/png.latex?H"> state can come from flipping heads from either the <img src="https://latex.codecogs.com/png.latex?T"> or <img src="https://latex.codecogs.com/png.latex?HH"> states. The second relation says that to get to the <img src="https://latex.codecogs.com/png.latex?HH"> state, we must flip heads from the <img src="https://latex.codecogs.com/png.latex?H"> state.</p>
+<p>To solve this recurrence, we can unroll:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Cpi_H%20=%20p(1-p)%20+%20p%5E2%20%5Cpi_H%20%5Cimplies%20%5Cpi_H%20=%20%5Cfrac%7Bp%7D%7B1+p%7D%0A"></p>
+<p>and therefore, <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7BHH%7D%20=%20%5Cfrac%7Bp%5E2%7D%7B1+p%7D">, the solution to our puzzle. For a fair coin (<img src="https://latex.codecogs.com/png.latex?p%20=%200.5">), then <img src="https://latex.codecogs.com/png.latex?%5Cpi_%7BHH%7D%20=%20%5Cfrac%7B1%7D%7B6%7D">.</p>
+<section id="markov-chains" class="level2">
+<h2 class="anchored" data-anchor-id="markov-chains">Markov Chains</h2>
+What we have just done is find the stationary distribution of the following Markov Chain:
+<div style="text-align: center;">
+<p><img src="https://ianchen3.github.io/files/blog/cycle/fsm1.svg" alt="Markov Chain using States"></p>
+</div>
+<p>The arcs represent the state changes after a coin flip. We want to find to find the long-term probability of being in the <img src="https://latex.codecogs.com/png.latex?HH"> state.</p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?P(x,%20y)"> be the probability of transitioning between states <img src="https://latex.codecogs.com/png.latex?x"> and <img src="https://latex.codecogs.com/png.latex?y"> (zero if there is no arc). Then, a stationary distribution satisfies the recurrence</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cpi_y%20=%20%5Csum_x%20%5Cpi_x%20P(x,%20y)%0A"></p>
+</section>
+</section>
+<section id="towards-a-generalization" class="level1">
+<h1>Towards a Generalization</h1>
+<p>In this problem, we gain points whenever we visit a state. It is straightforward to generalize to gaining points whenever we visit one of a set of states, by just adding the probabilities!</p>
+However, what if we want to gain points instead on an arc? For example, we can represent this three state markov chain instead using two states, where we get points on the top edge.
+<div style="text-align: center;">
+<p><img src="https://ianchen3.github.io/files/blog/cycle/fsm2.svg" alt="Markov Chain using Edges"></p>
+</div>
+<p>As a computer scientist, I care about finite state Markov chains. For irreducible chains (i.e.&nbsp;corresponding to strongly connected digraphs), there is an alternative way of finding these probabilities.</p>
+<section id="notation" class="level2">
+<h2 class="anchored" data-anchor-id="notation">Notation</h2>
+<p>Let us introduce some notation. - <img src="https://latex.codecogs.com/png.latex?X_m">, the state of the markov chain after <img src="https://latex.codecogs.com/png.latex?m"> steps - <img src="https://latex.codecogs.com/png.latex?P%5Em(x,y)"> be the probability of moving from state <img src="https://latex.codecogs.com/png.latex?x"> to <img src="https://latex.codecogs.com/png.latex?y"> in exactly <img src="https://latex.codecogs.com/png.latex?m"> steps. - <img src="https://latex.codecogs.com/png.latex?N_n(x,y)%20=%20%5Csum_%7Bm=1%7D%5En%201_%7By%7D(X_m)">, the number of visits to state <img src="https://latex.codecogs.com/png.latex?y"> in <img src="https://latex.codecogs.com/png.latex?n"> steps, starting at state <img src="https://latex.codecogs.com/png.latex?x">. - <img src="https://latex.codecogs.com/png.latex?G_n(x,y)%20=%20E(N_n(x,y))%20=%20%5Csum_%7Bm=1%7D%5En%20P%5Em(x,y)">, the expected number of visits to <img src="https://latex.codecogs.com/png.latex?y"> from <img src="https://latex.codecogs.com/png.latex?x"> in <img src="https://latex.codecogs.com/png.latex?n"> steps. - <img src="https://latex.codecogs.com/png.latex?T_%7Bx,y%7D%5Er%20=%20%5Cmin%20%5C%7B%20n%20%5Cge%201%20%5Cmid%20N_n(x,y)%20%5Cge%20r%20%5C%7D">, the earliest time to hit <img src="https://latex.codecogs.com/png.latex?y"> exactly <img src="https://latex.codecogs.com/png.latex?r"> times - <img src="https://latex.codecogs.com/png.latex?m_%7Bx,y%7D%20=%20E(T_%7Bx,y%7D%5E1)">, the expected time to hit <img src="https://latex.codecogs.com/png.latex?y"> starting at state <img src="https://latex.codecogs.com/png.latex?x">, i.e.&nbsp;the hitting time</p>
+<p>For brevity, <img src="https://latex.codecogs.com/png.latex?m_y%20=%20m_%7By,y%7D,%20T_y%20=%20T_%7By,y%7D,">…</p>
+</section>
+<section id="hitting-times-and-stationary-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="hitting-times-and-stationary-distribution">Hitting Times and Stationary Distribution</h2>
+<p>Recall we want to find <img src="https://latex.codecogs.com/png.latex?%5Cpi_y">, the stationary distribution of the markov chain.</p>
+<p><strong>Theorem:</strong> <em>The stationary distribution is the reciprocal of the hitting time.</em></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cpi_y%20=%20%5Cfrac%7B1%7D%7Bm_y%7D%20=%20%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20%5Cfrac%7BN_n(y)%7D%7Bn%7D%0A"></p>
+<p><strong>proof:</strong> First, we show the second equality, that the ratio <img src="https://latex.codecogs.com/png.latex?N_n(y,%20y)%20/%20n"> approaches <img src="https://latex.codecogs.com/png.latex?1/m_%7By%7D">. For <img src="https://latex.codecogs.com/png.latex?i%20%5Cge%201">, we consider <img src="https://latex.codecogs.com/png.latex?%5Comega%5Ei%20=%20T_%7By%7D%5Ei%20-%20T_%7By%7D%5E%7Bi-1%7D">, the marginal time to cycle back to <img src="https://latex.codecogs.com/png.latex?y"> for the <img src="https://latex.codecogs.com/png.latex?i">-th time. Since our transitions are memoryless, then <img src="https://latex.codecogs.com/png.latex?%5Comega%5Ei"> are iid. Now, by the law of large numbers,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BT_%7By%7D%5Ek%7D%7Bk%7D%20=%20%5Cfrac%7B1%7D%7Bk%7D%20%5Csum_%7Bi=1%7D%5Ek%20%5Comega%5Ei%20%5Cto%20E(%5Comega)%20=%20m_%7By%7D%0A"></p>
+<p>Finally,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BT_%7By%7D%5E%7BN_n(y)%7D%7D%7BN_n(y)%7D%20%5Cle%20%5Cfrac%7Bn%7D%7BN_n(y)%7D%20%5Cle%20%5Cfrac%7BT_y%5E%7BN_n(y)%20+%201%7D%7D%7BN_n(y)%20+%201%7D%0A"></p>
+<p>where the left and right both converge to <img src="https://latex.codecogs.com/png.latex?m_y">. Thus, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bn%7D%7BN_n(y)%7D">, and moreover <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bn%7D%7BG_n(y)%7D">, both converge to <img src="https://latex.codecogs.com/png.latex?m_y"> as well.</p>
+<p>Now, for the first equality, note that for any <img src="https://latex.codecogs.com/png.latex?m">, <img src="https://latex.codecogs.com/png.latex?%5Cpi_y%20=%20%5Csum_%7Bx%20%5Cin%20S%7D%20%5Cpi(x)%20P%5E%7Bm%7D(x,y)">. Therefore, when we sum over <img src="https://latex.codecogs.com/png.latex?m">, we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cpi_y%20=%20%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bm=1%7D%5En%20%5Csum_%7Bx%20%5Cin%20S%7D%20%5Cpi(x)%20P%5Em(x,y)%20=%20%5Csum_%7Bx%20%5Cin%20S%7D%20%5Cpi(x)%20%5Cfrac%7BG_n(x,y)%7D%7Bn%7D%0A"></p>
+<p>Moreover, this holds as <img src="https://latex.codecogs.com/png.latex?n%20%5Cto%20%5Cinfty">, so recalling that <img src="https://latex.codecogs.com/png.latex?%5Csum_x%20%5Cpi(x)%20=%201">, then we find that</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%5Cpi_y%20=%20%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20%5Csum_%7Bx%20%5Cin%20S%7D%20%5Cfrac%7BG_n(x,y)%7D%7Bn%7D%20%5Cpi(x)%20=%20%5Csum_%7Bx%20%5Cin%20S%7D%20%5Cpi(x)%20%5Cfrac%7B1%7D%7Bm_y%7D%20=%20%5Cfrac%7B1%7D%7Bm_y%7D%0A"></p>
+<p>Thus concludes the proof.</p>
+</section>
+<section id="computing-hitting-times-using-cycles" class="level2">
+<h2 class="anchored" data-anchor-id="computing-hitting-times-using-cycles">Computing Hitting Times using Cycles</h2>
+<p>The hitting time <img src="https://latex.codecogs.com/png.latex?m_y"> is the expected number of steps starting at <img src="https://latex.codecogs.com/png.latex?y"> before reaching <img src="https://latex.codecogs.com/png.latex?y"> again. We can compute this by enumerating all (possibly countable infinite) cycles, computing the probability of taking it, and find the expected length.</p>
+I illustrate this by example. Consider the following two state Markov chain with states <img src="https://latex.codecogs.com/png.latex?T"> and <img src="https://latex.codecogs.com/png.latex?H">. Let <img src="https://latex.codecogs.com/png.latex?P(T,%20H)%20=%20p">, <img src="https://latex.codecogs.com/png.latex?P(H,%20T)%20=%20q">, and self loops <img src="https://latex.codecogs.com/png.latex?1-p"> and <img src="https://latex.codecogs.com/png.latex?1-q"> respectively.
+<div style="text-align: center;">
+<p><img src="https://ianchen3.github.io/files/blog/cycle/fsm3.svg" alt="Bernoulli Markov Chain"></p>
+</div>
+<p>To find the hitting time (and therefore, the stationary distribution) <img src="https://latex.codecogs.com/png.latex?m_T">, then we have the following cycles: <img src="https://latex.codecogs.com/png.latex?e_4">, <img src="https://latex.codecogs.com/png.latex?e_1%20e_3">, <img src="https://latex.codecogs.com/png.latex?e_1%20e_2%20e_3">, <img src="https://latex.codecogs.com/png.latex?e_1%20e_2%20e_2%20e_3">, …</p>
+<p>Therefore, we can find the average cycle length, i.e.&nbsp;the hitting time, as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Am_T%20&amp;%20=%20p(e_4)%20%5Ccdot%201%20+%20p(e_1%20e_3)%20%5Ccdot%202%20+%20p(e_1%20e_2%20e_3)%20%5Ccdot%203%20+%20p(e_1%20e_2%20e_2%20e_3)%20%5Ccdot%204%20+%20%5Cldots%20%5C%5C%0A%20%20%20%20&amp;%20=%20(1-p)%20+%20%5Csum_%7B%5Cell=0%7D%5E%5Cinfty%20(%5Cell%20+%202)%20pq%20(1-q)%5E%5Cell%20%5C%5C%0A%20%20%20%20&amp;%20=%20(1-p)%20+%202pq%20+%20p(1-q)%20%5Csum_%7B%5Cell%20=%200%7D%5E%5Cinfty%20(%5Cell%20+%202)%20q(1-q)%5E%7B%5Cell%20-%201%7D%20%5C%5C%0A%20%20%20%20&amp;%20=%20(1-p)%20+%202pq%20+%20p(1-q)%20(2%20+%201/q)%20=%20%5Cfrac%7Bp%20+%20q%7D%7Bq%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p>Thus, <img src="https://latex.codecogs.com/png.latex?%5Cpi_T%20=%20%5Cfrac%7Bp%7D%7Bp+q%7D">.</p>
+<p>We can now find <img src="https://latex.codecogs.com/png.latex?%5Cpi_H"> in one of several ways. First, <img src="https://latex.codecogs.com/png.latex?%5Cpi_H%20+%20%5Cpi_T%20=%201">, so that <img src="https://latex.codecogs.com/png.latex?%5Cpi_H%20=%20%5Cfrac%7Bp%7D%7Bp+q%7D">.</p>
+<p>Alternatively, we can note that <img src="https://latex.codecogs.com/png.latex?%5Cpi_H%20/%20%5Cpi_T"> is the averaged number of times we visit <img src="https://latex.codecogs.com/png.latex?H"> in the above cycles. That is,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cfrac%7B%5Cpi_H%7D%7B%5Cpi_T%7D%20&amp;%20=%20p(e_4)%20%5Ccdot%200%20+%20p(e_1%20e_3)%20%5Ccdot%201%20+%20p(e_1%20e_2%20e_3)%20%5Ccdot%202%20+%20%5Cldots%20%5C%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&amp;%20=%20%5Csum_%7B%5Cell=0%7D%5E%5Cinfty%20(%5Cell%20+%201)%20pq%20(1-q)%5E%5Cell%20%5C%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&amp;%20=%20pq%20+%20p(1-q)%20%5Csum_%7B%5Cell%20=%200%7D%5E%5Cinfty%20(%5Cell%20+%201)%20q(1-q)%5E%7B%5Cell%20-%201%7D%20%5C%5C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&amp;%20=%20pq%20+%20p(1-q)%20(1%20+%201/q)%20=%20%5Cfrac%7Bp%7D%7Bq%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p>so that indeed, <img src="https://latex.codecogs.com/png.latex?%5Cpi_H%20=%20%5Cfrac%7Bp%7D%7Bq%7D%20%5Cfrac%7Bq%7D%7Bp+q%7D%20=%20%5Cfrac%7Bp%7D%7Bp+q%7D">.</p>
+<p>We can summarize this procedure into the following theorem:</p>
+<p><strong>Theorem:</strong> <em>Let <img src="https://latex.codecogs.com/png.latex?x"> be any state in a finite irreducible Markov chain, and <img src="https://latex.codecogs.com/png.latex?C_x"> be all cycles from <img src="https://latex.codecogs.com/png.latex?x">. Then, for any state <img src="https://latex.codecogs.com/png.latex?y">,</em></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cpi_y%20=%20%5Cfrac%7B%20%5Ctext%7Baverage%20visits%20to%20%7D%20y%20%5Ctext%7B%20in%20%7D%20C_x%20%7D%7B%20%5Ctext%7Baverage%20length%20of%20%7D%20C_x%20%7D%0A"></p>
+<p>Note that here, we say cycles to allow repeated links, but passing through the start state exactly once.</p>
+<p><strong>proof:</strong> We partition the walk into stages, where each stage is delimited by a cycle in <img src="https://latex.codecogs.com/png.latex?C_x">. Then, <img src="https://latex.codecogs.com/png.latex?N_n(y)"> is sum of visits to <img src="https://latex.codecogs.com/png.latex?y"> in the <img src="https://latex.codecogs.com/png.latex?k">-th stage.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7BN_n(y)%7D%7Bn%7D%20=%20%5Cfrac%7BN_n(y)%7D%7BG_n(x)%20m_x%7D%20=%20%5Cfrac%7B1%7D%7Bm_x%7D%20%5Cfrac%7BN_n(x)%7D%7BG_n(x)%7D%20%5Cfrac%7B1%7D%7BN_n(x)%7D%20%5Csum_%7Bk=1%7D%5E%7BN_n(x)%7D%20(%20%5Ctext%7Bvisits%20to%20%7D%20y%20%5Ctext%7B%20in%20%7D%20k%20%5Ctext%7B-th%20cycle%7D%20)%0A"></p>
+<p>Now, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7BN_n(x)%7D%7BG_n(x)%7D%20%5Cto%201">, and <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7BN_n(x)%7D%20%5Csum_%7Bk=1%7D%5E%7BN_n(x)%7D%20(..)"> approaches the average visits to <img src="https://latex.codecogs.com/png.latex?y"> in <img src="https://latex.codecogs.com/png.latex?C_x">. Moreover, the LHS approaches <img src="https://latex.codecogs.com/png.latex?%5Cpi_y">, and <img src="https://latex.codecogs.com/png.latex?m_x"> is the average length of <img src="https://latex.codecogs.com/png.latex?C_x">.</p>
+<p>Thus, taking limits, indeed</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cpi_y%20=%20%5Cfrac%7B%20%5Ctext%7Baverage%20visits%20to%20%7D%20y%20%5Ctext%7B%20in%20%7D%20C_x%20%7D%7B%20%5Ctext%7Baverage%20length%20of%20%7D%20C_x%20%7D%0A"></p>
+</section>
+</section>
+<section id="points-on-links" class="level1">
+<h1>Points on Links</h1>
+<p>Let us return to our two-state Markov chain, where we get a point whenever taking the <img src="https://latex.codecogs.com/png.latex?H%20%5Coverset%7BH%7D%7B%5Cto%7D%20S"> link.</p>
+<div style="text-align: center;">
+<p><img src="https://ianchen3.github.io/files/blog/cycle/fsm4.svg" alt="Markov Chain using Edges"></p>
+</div>
+<p>In general, as we can bisect links into states, then for any start state <img src="https://latex.codecogs.com/png.latex?x">,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Baverage%20points%7D%20=%20%5Cfrac%7B%20%5Ctext%7Baverage%20points%20in%20%7D%20C_x%20%7D%7B%20%5Ctext%7Baverage%20length%20of%20%7D%20C_x%20%7D%0A"></p>
+<p>Now, we have the cycles <img src="https://latex.codecogs.com/png.latex?T">, <img src="https://latex.codecogs.com/png.latex?HT">, and <img src="https://latex.codecogs.com/png.latex?HH"> with probabilities <img src="https://latex.codecogs.com/png.latex?1-p">, <img src="https://latex.codecogs.com/png.latex?p(1-p)">, and <img src="https://latex.codecogs.com/png.latex?p%5E2"> respectively. The average cycle length is <img src="https://latex.codecogs.com/png.latex?1%20%5Ccdot%20(1-p)%20+%202%20%5Ccdot%20p(1-p)%20+%202%20%5Ccdot%20p%5E2%20=%201%20+%20p">. The average points per cycle is <img src="https://latex.codecogs.com/png.latex?0%20%5Ccdot%20(1-p)%20+%200%20%5Ccdot%20p(1-p)%20+%201%20%5Ccdot%20p%5E2%20=%20p%5E2">. Finally,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Baverage%20points%7D%20=%20%5Cfrac%7Bp%5E2%7D%7B1+p%7D%0A"></p>
+<p>Indeed this is the same solution as via mutual recursion!</p>
+</section>
+<section id="concluding-remarks" class="level1">
+<h1>Concluding Remarks</h1>
+<p>Here, we discussed a probability question that could be represented by finding the stationary probability of an irreducible Markov chain. Then, we described an alternative approach that often leads to smaller Markov chains!</p>
+<p>When the underlying digraph is not strongly connected, then this analysis does NOT work. In particular, the start state now matters.</p>
+<p>Addressing this, we need to consider the probability of ending up at each of the strongly connected components. The general way of handling this is to represent each connected component as an absorbing state, with <img src="https://latex.codecogs.com/png.latex?Q"> the new transition probability. Then, the probability of ending at state <img src="https://latex.codecogs.com/png.latex?t"> is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ%5E0(s,t)%20+%20Q%5E1(s,t)%20+%20Q%5E2(s,%20t)%20+%20%5Cldots%20=%20(1-Q)%5E%7B-1%7D(s,%20t)%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bm=0%7D%5E%5Cinfty%20A%5Em%20=%20(1-A)%5E%7B-1%7D"> by Geometric series formula. <img src="https://latex.codecogs.com/png.latex?(1-Q)%5E%7B-1%7D"> is called the fundamental matrix.</p>
+<p>Apparently, this is a special case of a renewal-reward process.</p>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>The cycle analysis technique was introduced to me by my friend taking CS 438 at UIUC. Many probablistic networking protocols exhibit simple irreducible behavior which lend themselves nicely to such analysis.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>stochastic-processes</category>
+  <guid>https://ianchen3.github.io/blog/cycle.html</guid>
+  <pubDate>Sun, 15 Mar 2026 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,99 @@
+[
+  {
+    "listing": "/news/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/su26-reading/index.html",
+    "items": [
+      "/notes/su26-reading/dynamic-graphs.html",
+      "/notes/su26-reading/community-applications.html",
+      "/notes/su26-reading/hypergraph-modularity.html",
+      "/notes/su26-reading/conductance-search.html",
+      "/notes/su26-reading/lower-bounds.html",
+      "/notes/su26-reading/expanders-1.html",
+      "/notes/su26-reading/pagerank.html",
+      "/notes/su26-reading/normalized-cuts.html"
+    ]
+  },
+  {
+    "listing": "/notes/fa26-cs421/index.html",
+    "items": [
+      "/notes/fa26-cs421/variants.html",
+      "/notes/fa26-cs421/type-systems.html"
+    ]
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/fa26-cs421/index.html",
+      "/notes/su26-reading/index.html",
+      "/notes/mining-networks.html",
+      "/notes/fa24-phys213.html"
+    ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": [
+      "/teaching/2025-fall-teaching.html",
+      "/teaching/2024-fall-teaching.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/siam/index.html",
+      "/talks/sigma/index.html",
+      "/talks/2025-05-06-magus.html"
+    ]
+  },
+  {
+    "listing": "/publications/index.html",
+    "items": [
+      "/publications/vu-le2026improving.html",
+      "/publications/vu-le2025using.html",
+      "/publications/vu-le2026dense.html",
+      "/publications/chen2026improved.html",
+      "/publications/park2026modeling.html"
+    ]
+  },
+  {
+    "listing": "/blog/mindbenders/index.html",
+    "items": [
+      "/blog/mindbenders/2026-10.html",
+      "/blog/mindbenders/2026-07.html",
+      "/blog/mindbenders/2026-03.html",
+      "/blog/mindbenders/2026-01.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/mindbenders/index.html",
+      "/blog/cycle.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/talks/siam/index.html",
+    "items": [
+      "/talks/siam/2026-10-09-gurobi.html",
+      "/talks/siam/2026-04-03-parallel.html"
+    ]
+  },
+  {
+    "listing": "/talks/sigma/index.html",
+    "items": [
+      "/talks/sigma/2026-08-31-intro.html",
+      "/talks/sigma/2026-02-23-dynamic-conn.html",
+      "/talks/sigma/2025-12-01-kkt.html",
+      "/talks/sigma/2025-09-14-reservoir.html",
+      "/talks/sigma/2025-04-21-msa.html",
+      "/talks/sigma/2025-02-03-debruijn.html",
+      "/talks/sigma/2024-11-18-ackermann.html"
+    ]
+  }
+]
