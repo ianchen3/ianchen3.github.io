@@ -50,9 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ae04ffad102959328e6765b970355e2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-f3f027cb620ed1996bb917f6bbfffaf9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-ae04ffad102959328e6765b970355e2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-abd85a7e032d2ac6522eba048ef3527e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-614f46e71ee1d5d5336409deb1772568.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-abd85a7e032d2ac6522eba048ef3527e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -90,9 +90,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-shortcodes","listing-format","listing-theme","listing-respect-user-color-scheme","listing-toc","listing-filters","listing-execute","listing-engines","listing-language","listing-bibliography","listing-date-format","listing-suppress-bibliography","listing-title","listing-subtitle","listing-date","listing-category","listing-description","listing-nocite","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -118,9 +118,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-shortcodes","listing-format","listing-theme","listing-respect-user-color-scheme","listing-toc","listing-filters","listing-execute","listing-engines","listing-language","listing-bibliography","listing-date-format","listing-suppress-bibliography","listing-title","listing-subtitle","listing-date","listing-category","listing-description","listing-nocite","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -146,9 +146,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-shortcodes","listing-format","listing-theme","listing-respect-user-color-scheme","listing-toc","listing-filters","listing-execute","listing-engines","listing-language","listing-bibliography","listing-date-format","listing-suppress-bibliography","listing-title","listing-subtitle","listing-date","listing-category","listing-description","listing-nocite","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -458,47 +458,31 @@ window.Quarto = {
 
 <section id="journal-articles" class="level2">
 <h2 class="anchored" data-anchor-id="journal-articles">Journal Articles</h2>
-<div id="listing-manuscripts" class="quarto-listing quarto-listing-container-default">
+<div id="listing-manuscripts" class="quarto-listing quarto-listing-container-custom">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1780290000000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../publications/vu-le2026improving.html" class="no-external">Improving community detection with CVC, a new cluster ensemble method</a>
-</h3>
+<div class="quarto-post" data-index="0" data-listing-date-sort="1780290000000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114">
+<section id="improving-community-detection-with-cvc-a-new-cluster-ensemble-method" class="level3 no-anchor listing-title unlisted body">
+<h3 class="no-anchor listing-title unlisted" data-anchor-id="improving-community-detection-with-cvc-a-new-cluster-ensemble-method"><a href="../publications/vu-le2026improving.html">Improving community detection with CVC, a new cluster ensemble method</a></h3>
 <div class="listing-subtitle">
-<a href="../publications/vu-le2026improving.html" class="no-external">Applied Network Science</a>
+<p>Applied Network Science · June 2026</p>
 </div>
-<div class="delink listing-description"><a href="../publications/vu-le2026improving.html" class="no-external">
-<p>The-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow</p>
-</a></div>
+<div class="listing-description">
+<p>The-Anh Vu-Le, Minhyuk Park, <u>Ian Chen</u>, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow</p>
 </div>
-<div class="metadata">
-<a href="../publications/vu-le2026improving.html" class="no-external">
-<div class="listing-date">
-June 2026
+<p><a href="../files/publications/vu-le2026improving/paper.pdf" class="btn btn-outline-secondary btn-sm">Paper</a> <a href="../publications/vu-le2026improving.html#bibtex" class="btn btn-outline-secondary btn-sm">BibTeX</a> <a href="../publications/vu-le2026improving.html" class="btn btn-outline-secondary btn-sm">HTML</a></p>
+</section>
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1761973200000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../publications/vu-le2025using.html" class="no-external">Using stochastic block models for community detection</a>
-</h3>
+<div class="quarto-post" data-index="1" data-listing-date-sort="1761973200000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
+<section id="using-stochastic-block-models-for-community-detection" class="level3 no-anchor listing-title unlisted body">
+<h3 class="no-anchor listing-title unlisted" data-anchor-id="using-stochastic-block-models-for-community-detection"><a href="../publications/vu-le2025using.html">Using stochastic block models for community detection</a></h3>
 <div class="listing-subtitle">
-<a href="../publications/vu-le2025using.html" class="no-external">Applied Network Science</a>
+<p>Applied Network Science · November 2025</p>
 </div>
-<div class="delink listing-description"><a href="../publications/vu-le2025using.html" class="no-external">
-<p>The-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow</p>
-</a></div>
+<div class="listing-description">
+<p>The-Anh Vu-Le, Minhyuk Park, <u>Ian Chen</u>, Tandy Warnow</p>
 </div>
-<div class="metadata">
-<a href="../publications/vu-le2025using.html" class="no-external">
-<div class="listing-date">
-November 2025
-</div>
-</a>
-</div>
+<p><a href="../files/publications/vu-le2025using/paper.pdf" class="btn btn-outline-secondary btn-sm">Paper</a> <a href="../publications/vu-le2025using.html#bibtex" class="btn btn-outline-secondary btn-sm">BibTeX</a> <a href="../publications/vu-le2025using.html" class="btn btn-outline-secondary btn-sm">HTML</a></p>
+</section>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -506,27 +490,19 @@ November 2025
 </section>
 <section id="conference-papers" class="level2">
 <h2 class="anchored" data-anchor-id="conference-papers">Conference Papers</h2>
-<div id="listing-conferences" class="quarto-listing quarto-listing-container-default">
+<div id="listing-conferences" class="quarto-listing quarto-listing-container-custom">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1777611600000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../publications/vu-le2026dense.html" class="no-external">Dense Subgraph Clustering and a New Cluster Ensemble Method</a>
-</h3>
+<div class="quarto-post" data-index="0" data-listing-date-sort="1777611600000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<section id="dense-subgraph-clustering-and-a-new-cluster-ensemble-method" class="level3 no-anchor listing-title unlisted body">
+<h3 class="no-anchor listing-title unlisted" data-anchor-id="dense-subgraph-clustering-and-a-new-cluster-ensemble-method"><a href="../publications/vu-le2026dense.html">Dense Subgraph Clustering and a New Cluster Ensemble Method</a></h3>
 <div class="listing-subtitle">
-<a href="../publications/vu-le2026dense.html" class="no-external">Complex Networks &amp; Their Applications XIV</a>
+<p>Complex Networks &amp; Their Applications XIV · May 2026</p>
 </div>
-<div class="delink listing-description"><a href="../publications/vu-le2026dense.html" class="no-external">
-<p>The-Anh Vu-Le, João Alfredo Cardoso Lamy, Tomás Alessi, Ian Chen, Minhyuk Park, Elfarouk Harb, George Chacko, Tandy Warnow</p>
-</a></div>
+<div class="listing-description">
+<p>The-Anh Vu-Le, João Alfredo Cardoso Lamy, Tomás Alessi, <u>Ian Chen</u>, Minhyuk Park, Elfarouk Harb, George Chacko, Tandy Warnow</p>
 </div>
-<div class="metadata">
-<a href="../publications/vu-le2026dense.html" class="no-external">
-<div class="listing-date">
-May 2026
-</div>
-</a>
-</div>
+<p><a href="../files/publications/vu-le2026dense/paper.pdf" class="btn btn-outline-secondary btn-sm">Paper</a> <a href="../publications/vu-le2026dense.html#bibtex" class="btn btn-outline-secondary btn-sm">BibTeX</a> <a href="../publications/vu-le2026dense.html" class="btn btn-outline-secondary btn-sm">HTML</a></p>
+</section>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -534,47 +510,31 @@ May 2026
 </section>
 <section id="preprints" class="level2">
 <h2 class="anchored" data-anchor-id="preprints">Preprints</h2>
-<div id="listing-preprints" class="quarto-listing quarto-listing-container-default">
+<div id="listing-preprints" class="quarto-listing quarto-listing-container-custom">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1788238800000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../publications/chen2026improved.html" class="no-external">Improved Methods for <span class="math inline">\(k\)</span>-Core Community Search</a>
-</h3>
+<div class="quarto-post" data-index="0" data-listing-date-sort="1788238800000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
+<section id="improved-methods-for-k-core-community-search" class="level3 no-anchor listing-title unlisted body">
+<h3 class="no-anchor listing-title unlisted" data-anchor-id="improved-methods-for-k-core-community-search"><a href="../publications/chen2026improved.html">Improved Methods for <span class="math inline">\(k\)</span>-Core Community Search</a></h3>
 <div class="listing-subtitle">
-<a href="../publications/chen2026improved.html" class="no-external">Submitted to CompleNet 2027</a>
+<p>Submitted to CompleNet 2027 · September 2026</p>
 </div>
-<div class="delink listing-description"><a href="../publications/chen2026improved.html" class="no-external">
-<p>Ian Chen, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko</p>
-</a></div>
+<div class="listing-description">
+<p><u>Ian Chen</u>, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko</p>
 </div>
-<div class="metadata">
-<a href="../publications/chen2026improved.html" class="no-external">
-<div class="listing-date">
-September 2026
+<p><a href="../files/publications/chen2026improved/paper.pdf" class="btn btn-outline-secondary btn-sm">Paper</a> <a href="../publications/chen2026improved.html#bibtex" class="btn btn-outline-secondary btn-sm">BibTeX</a> <a href="../publications/chen2026improved.html" class="btn btn-outline-secondary btn-sm">HTML</a></p>
+</section>
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1775019600000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../publications/park2026modeling.html" class="no-external">Modeling citations and cartels</a>
-</h3>
+<div class="quarto-post" data-index="1" data-listing-date-sort="1775019600000" data-listing-file-modified-sort="1793927787836" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141">
+<section id="modeling-citations-and-cartels" class="level3 no-anchor listing-title unlisted body">
+<h3 class="no-anchor listing-title unlisted" data-anchor-id="modeling-citations-and-cartels"><a href="../publications/park2026modeling.html">Modeling citations and cartels</a></h3>
 <div class="listing-subtitle">
-<a href="../publications/park2026modeling.html" class="no-external">Preprint</a>
+<p>Preprint · April 2026</p>
 </div>
-<div class="delink listing-description"><a href="../publications/park2026modeling.html" class="no-external">
-<p>Minhyuk Park, Haotian Yi, Ian Chen, Tandy Warnow, George Chacko</p>
-</a></div>
+<div class="listing-description">
+<p>Minhyuk Park, Haotian Yi, <u>Ian Chen</u>, Tandy Warnow, George Chacko</p>
 </div>
-<div class="metadata">
-<a href="../publications/park2026modeling.html" class="no-external">
-<div class="listing-date">
-April 2026
-</div>
-</a>
-</div>
+<p><a href="../files/publications/park2026modeling/paper.pdf" class="btn btn-outline-secondary btn-sm">Paper</a> <a href="../publications/park2026modeling.html#bibtex" class="btn btn-outline-secondary btn-sm">BibTeX</a> <a href="../publications/park2026modeling.html" class="btn btn-outline-secondary btn-sm">HTML</a></p>
+</section>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -1005,7 +965,7 @@ April 2026
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Site last updated 2026-11-05</p>
+<p>Site last updated 2026-11-06</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
