@@ -1,0 +1,9 @@
+---
+title: "Drawing Graphs and Tutte's Theorem"
+subtitle: "SIGma"
+date: 2026-11-09
+description: "In which we discuss the theory behind common graph drawing methods (e.g. implemented in popular software like NetworkX or GraphTool), and prove Tutte's theorem for a strictly-convex planar embedding of 3-vertex-connected graphs."
+---
+
+[Slides](/files/talks/sigma/2026-11-09-tutte/slides.pdf)
+[Video](https://youtu.be/8AxnPbvexF4)
