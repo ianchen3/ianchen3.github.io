@@ -40,11 +40,30 @@
     ]
   },
   {
-    "listing": "/talks/index.html",
+    "listing": "/talks/siam/index.html",
     "items": [
-      "/talks/siam/index.html",
-      "/talks/sigma/index.html",
-      "/talks/2025-05-06-magus.html"
+      "/talks/siam/2026-10-09-gurobi.html",
+      "/talks/siam/2026-04-03-parallel.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/mindbenders/index.html",
+      "/blog/cycle.html"
+    ]
+  },
+  {
+    "listing": "/blog/mindbenders/index.html",
+    "items": [
+      "/blog/mindbenders/2026-10.html",
+      "/blog/mindbenders/2026-07.html",
+      "/blog/mindbenders/2026-03.html",
+      "/blog/mindbenders/2026-01.html"
     ]
   },
   {
@@ -58,35 +77,17 @@
     ]
   },
   {
-    "listing": "/blog/mindbenders/index.html",
+    "listing": "/talks/index.html",
     "items": [
-      "/blog/mindbenders/2026-10.html",
-      "/blog/mindbenders/2026-07.html",
-      "/blog/mindbenders/2026-03.html",
-      "/blog/mindbenders/2026-01.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/mindbenders/index.html",
-      "/blog/cycle.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
-    "listing": "/talks/siam/index.html",
-    "items": [
-      "/talks/siam/2026-10-09-gurobi.html",
-      "/talks/siam/2026-04-03-parallel.html"
+      "/talks/siam/index.html",
+      "/talks/sigma/index.html",
+      "/talks/2025-05-06-magus.html"
     ]
   },
   {
     "listing": "/talks/sigma/index.html",
     "items": [
+      "/talks/sigma/2026-11-09-tutte.html",
       "/talks/sigma/2026-08-31-intro.html",
       "/talks/sigma/2026-02-23-dynamic-conn.html",
       "/talks/sigma/2025-12-01-kkt.html",
