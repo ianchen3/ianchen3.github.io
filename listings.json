@@ -47,14 +47,13 @@
     ]
   },
   {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
-    "listing": "/blog/index.html",
+    "listing": "/publications/index.html",
     "items": [
-      "/blog/mindbenders/index.html",
-      "/blog/cycle.html"
+      "/publications/vu-le2026improving.html",
+      "/publications/vu-le2025using.html",
+      "/publications/vu-le2026dense.html",
+      "/publications/chen2026improved.html",
+      "/publications/park2026modeling.html"
     ]
   },
   {
@@ -67,18 +66,20 @@
     ]
   },
   {
-    "listing": "/publications/index.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/publications/vu-le2026improving.html",
-      "/publications/vu-le2025using.html",
-      "/publications/vu-le2026dense.html",
-      "/publications/chen2026improved.html",
-      "/publications/park2026modeling.html"
+      "/blog/mindbenders/index.html",
+      "/blog/cycle.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
   },
   {
     "listing": "/talks/index.html",
     "items": [
+      "/talks/2026-12-02-rdx.html",
       "/talks/siam/index.html",
       "/talks/sigma/index.html",
       "/talks/2025-05-06-magus.html"
