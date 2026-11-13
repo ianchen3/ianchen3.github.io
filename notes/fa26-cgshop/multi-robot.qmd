@@ -1,0 +1,28 @@
+---
+title: "2027 CG:SHOP: multi-robot cover"
+subtitle: "CG:SHOP 2027"
+date: 2026-11-05
+bibliography: refs.bib
+---
+
+In the previous weeks, we've been focusing on the single-robot case, with either a square-cutter or circle-cutter.
+There is a very rich space in determining how to split the problem so that we can load-balance across multiple-robots.
+Namely, as in CG:SHOP 2027, we will consider the makespan objective: minimize the maximum length.
+In particular, our main tool will be an approximation algorithm for TreeCover: cover a graph using $k$ trees minimizing the maximum size of any tree.
+See original paper: [@zheng2010multirobot].
+
+**problem formulation**
+
+The terrain consists of "large" cells, each binary (visitable or not), with each large cell a $2 \times 2$ grid of small cells.
+Let $n$ be the number of visitable small cells.
+There are many variations here that we can consider:
+
+- Weighted (large cells weight $w_i \in \Z^{\ge 1}$) or unweighted (large cells weight $4$) cases, where the cost of a move is the average of its start and end.
+- Robots are non-blocking (they can occupy the same cell); robots are sized as small cells.
+- Each robot is given an initial cell for each robot.
+- Without return (paths) or with return (tours).
+
+And as typical, we consider the make-span objective (minimize the max length).
+Unsurprisingly, the problem is proven to be NP-hard, by reduction from 3-partition (split an array of length $3m$ into $m$ sets, all of equal weight and of size $3$) [@zheng2010multirobot].
+
+See [full notes](/files/notes/fa26-cgshop/11-05/notes.pdf).

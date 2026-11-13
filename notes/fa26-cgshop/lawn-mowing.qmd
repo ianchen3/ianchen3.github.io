@@ -1,0 +1,13 @@
+---
+title: "2027 CG:SHOP: lawn mowing approximation"
+subtitle: "CG:SHOP 2027"
+date: 2026-10-26
+bibliography: refs.bib
+---
+
+Last week, we discussed the traveling salesman problem (TSP), which (as in lawn mowing) seeks the shortest tour to cover some object.
+The distinction is that TSP runs on a combinatorial object, while lawn mowing is a geometric problem on the plane.
+My goal today is to illustrate the thought process behind generalization, through an instructive case study in [@arkin2000approximation].
+While the specific results are not the main point, they will also be used in future weeks.
+
+See [full notes](/files/notes/fa26-cgshop/10-26/notes.pdf).

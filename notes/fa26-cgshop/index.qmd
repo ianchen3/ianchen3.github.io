@@ -1,0 +1,10 @@
+---
+title: "CG:SHOP: solving hard optimization problems"
+subtitle: "ACM Special Interest Group in math and algorithms · University of Illinois Urbana-Champaign · Urbana, IL, USA"
+date: 2026-10-22
+description: "Meeting minutes for on SIGma activities; theory team"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  fields: [date, title]
+---

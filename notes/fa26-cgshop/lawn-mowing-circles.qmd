@@ -1,0 +1,28 @@
+---
+title: "2027 CG:SHOP: lawn mowing with circles"
+subtitle: "CG:SHOP 2027"
+date: 2026-10-29
+bibliography: refs.bib
+---
+
+Now, we want to generalize lawn-mowing to shapes that are not necessarily a unit-square cutter.
+Remember that this unit-square cutter allowed us to reduce our problem to TSP, so that the order of visiting the grid exactly specifies the tour.
+For other shapes (namely, a circle), it is not as clear, and moreover, we would have no idea how to relate such a path to the optimal solution.
+
+As such, we have two problems to tackle:
+
+- how do we turn tours of a unit-square into tours of other shapes (the unit-circle)
+- and how do we bound the approximation ratio of such a procedure?
+
+I want to briefly emphasize, once again, that this is hard![^hard]
+The optimal circle-cutter tour can do anything: not axis-aligned, and even the optimal tour has endpoints that are incredibly difficult to calculate (as discussed in [@fekete2023lawn], roots of 16th-degree polynomials[^integers]).
+Compare to the case last week, where everything was integers, and it worked out much nicer.
+
+[^hard]: that doesn't mean the state-of-the-art is difficult to understand, but just appreciate the ingenuity that comes into coming up with such ideas.
+[^integers]: the algebraic complexity of circles is also cited as why CG:SHOP formulated instances with integers only.
+
+**key observation:**
+Our avenue forward will be to consider local "patterns" of the unit-square tour, and figure out how to cover those patterns with the unit-circle.
+Then, we can lower-bound the optimal unit-circle tour by the optimal unit-square tour, which we already have tools to analyze (from last week, namely via the traveling salesman problem).
+
+See [full notes](/files/notes/fa26-cgshop/10-29/notes.pdf).

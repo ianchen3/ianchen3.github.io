@@ -1,0 +1,40 @@
+---
+title: "2027 CG:SHOP: background"
+subtitle: "CG:SHOP 2027"
+date: 2026-10-22
+bibliography: refs.bib
+---
+
+Note: the following text is a mixture of what I said, what I think I said, and what I wish I said.
+As such, there may be small discrepancies from the lecture.
+Of course, there may be errors, and there is no peer-review.
+
+This semester, we are preparing a submission for CG:SHOP [@cgshop], part of the annual Symposium on Computational Geometry (SoCG).
+The problem for this year is *multi-robot lawn mowing*:
+
+- **input**: axis-aligned polygonal regions $R$ (lawn) and $\chi$ (cutter), and a parameter $k$
+- **output**: axis-aligned tours $\tau_1, \ldots, \tau_k$ such that $\bigcup_{i \in \arange{k}} \bigcup_{p_j \in \tau_i} \chi(p_j) \supseteq R$, minimizing $\max_{i \in \arange{k}} \abs{\tau_i}$
+
+Here, I am using the notation $\arange{k} = \set{1, \ldots, k}$, $\chi(p)$ to denote placing the cutter centered at point $p$.
+All regions are in the plane $\R^2$.
+For this problem in particular, each edge of a region has integer side lengths, and so do the output tours (I will refer to this as integrality).
+See the 2nd meeting ([www.cstheory.org/meetings/](https://www.cstheory.org/meetings/)) for a slides/video description.
+
+Now, this is a difficult problem to try and reason about.
+For example, some of the challenges include:
+
+- an infinite amount of potential tours and different regions;
+  moreover without integrality, it is uncountable!
+- arbitrary regions $R$ and $\chi$ that can be non-convex or be any other nasty shapes
+- combinatorial explosion from planning $k$ simultaneous tours
+
+Therefore, for the first few weeks, we shall focus on some special cases which are a bit easier to think about.
+For example, we could:
+
+- only consider one robot at a time (avoiding the combinatorial explosion)
+- or restrict the shape of the cutter $\chi$ or the region
+
+or there are many other simplifications, as we will later see.
+For today (and next week), we will restrict $\chi$ to be a unit square and consider only $k=1$ (one robot).
+
+See [full notes](/files/notes/fa26-cgshop/10-22/notes.pdf).

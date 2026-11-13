@@ -3,7 +3,7 @@ title: "Notes"
 listing:
   contents: "*.qmd"
   exclude:
-    subtitle: ["CS 421", "Reading group"]
+    subtitle: ["CS 421", "Reading group", "CG:SHOP 2027"]
   sort: "date desc"
   fields: [date, title, subtitle, description]
 ---
