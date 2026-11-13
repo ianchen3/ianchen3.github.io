@@ -24,65 +24,12 @@
     ]
   },
   {
-    "listing": "/notes/index.html",
+    "listing": "/notes/fa26-cgshop/index.html",
     "items": [
-      "/notes/fa26-cs421/index.html",
-      "/notes/su26-reading/index.html",
-      "/notes/mining-networks.html",
-      "/notes/fa24-phys213.html"
-    ]
-  },
-  {
-    "listing": "/teaching/index.html",
-    "items": [
-      "/teaching/2025-fall-teaching.html",
-      "/teaching/2024-fall-teaching.html"
-    ]
-  },
-  {
-    "listing": "/talks/siam/index.html",
-    "items": [
-      "/talks/siam/2026-10-09-gurobi.html",
-      "/talks/siam/2026-04-03-parallel.html"
-    ]
-  },
-  {
-    "listing": "/publications/index.html",
-    "items": [
-      "/publications/vu-le2026improving.html",
-      "/publications/vu-le2025using.html",
-      "/publications/vu-le2026dense.html",
-      "/publications/chen2026improved.html",
-      "/publications/park2026modeling.html"
-    ]
-  },
-  {
-    "listing": "/blog/mindbenders/index.html",
-    "items": [
-      "/blog/mindbenders/2026-10.html",
-      "/blog/mindbenders/2026-07.html",
-      "/blog/mindbenders/2026-03.html",
-      "/blog/mindbenders/2026-01.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/mindbenders/index.html",
-      "/blog/cycle.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
-    "listing": "/talks/index.html",
-    "items": [
-      "/talks/2026-12-02-rdx.html",
-      "/talks/siam/index.html",
-      "/talks/sigma/index.html",
-      "/talks/2025-05-06-magus.html"
+      "/notes/fa26-cgshop/multi-robot.html",
+      "/notes/fa26-cgshop/lawn-mowing-circles.html",
+      "/notes/fa26-cgshop/lawn-mowing.html",
+      "/notes/fa26-cgshop/background.html"
     ]
   },
   {
@@ -96,6 +43,69 @@
       "/talks/sigma/2025-04-21-msa.html",
       "/talks/sigma/2025-02-03-debruijn.html",
       "/talks/sigma/2024-11-18-ackermann.html"
+    ]
+  },
+  {
+    "listing": "/talks/index.html",
+    "items": [
+      "/talks/2026-12-02-rdx.html",
+      "/talks/siam/index.html",
+      "/talks/sigma/index.html",
+      "/talks/2025-05-06-magus.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/mindbenders/index.html",
+      "/blog/cycle.html"
+    ]
+  },
+  {
+    "listing": "/blog/mindbenders/index.html",
+    "items": [
+      "/blog/mindbenders/2026-10.html",
+      "/blog/mindbenders/2026-07.html",
+      "/blog/mindbenders/2026-03.html",
+      "/blog/mindbenders/2026-01.html"
+    ]
+  },
+  {
+    "listing": "/publications/index.html",
+    "items": [
+      "/publications/vu-le2026improving.html",
+      "/publications/vu-le2025using.html",
+      "/publications/vu-le2026dense.html",
+      "/publications/chen2026improved.html",
+      "/publications/park2026modeling.html"
+    ]
+  },
+  {
+    "listing": "/talks/siam/index.html",
+    "items": [
+      "/talks/siam/2026-10-09-gurobi.html",
+      "/talks/siam/2026-04-03-parallel.html"
+    ]
+  },
+  {
+    "listing": "/teaching/index.html",
+    "items": [
+      "/teaching/2025-fall-teaching.html",
+      "/teaching/2024-fall-teaching.html"
+    ]
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/fa26-cgshop/index.html",
+      "/notes/fa26-cs421/index.html",
+      "/notes/su26-reading/index.html",
+      "/notes/mining-networks.html",
+      "/notes/fa24-phys213.html"
     ]
   }
 ]

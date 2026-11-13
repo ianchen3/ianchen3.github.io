@@ -77,263 +77,151 @@
     "text": "User data types\n\n\nParametric and mutually recursive data types in OCaml.\n\n\n\n\n\nSep 24, 2026\n\n\n\n\n\n\n\nType systems\n\n\nType judgments for a subset of OCaml, monomorphic and polymorphic.\n\n\n\n\n\nSep 30, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
+    "objectID": "notes/fa26-cgshop/lawn-mowing.html",
+    "href": "notes/fa26-cgshop/lawn-mowing.html",
+    "title": "2027 CG:SHOP: lawn mowing approximation",
     "section": "",
-    "text": "CS 421: Programming Languages and Compilers\n\n\nUndergraduate/Graduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nLecture notes with OCaml cells that run in the browser.\n\n\n\n\n\nAug 1, 2026\n\n\n\n\n\n\n\nReading group\n\n\nUniversity of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nWrite-ups and presentations from summer 2026 reading groups.\n\n\n\n\n\nMay 31, 2026\n\n\n\n\n\n\n\nMining Complex Networks\n\n\nUniversity of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nThese notes very briefly summarize Chapters 2, 3, 5, 6 from Klaminski, Pralat, and Theberge’s book on Mining Complex Networks.\n\n\n\n\n\nMay 8, 2026\n\n\n\n\n\n\n\nPHYS 213: Thermal Physics\n\n\nUndergraduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nIntroduction to thermodynamics…\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\nNo matching items"
+    "text": "Last week, we discussed the traveling salesman problem (TSP), which (as in lawn mowing) seeks the shortest tour to cover some object. The distinction is that TSP runs on a combinatorial object, while lawn mowing is a geometric problem on the plane. My goal today is to illustrate the thought process behind generalization, through an instructive case study in (Arkin et al. 2000). While the specific results are not the main point, they will also be used in future weeks.\nSee full notes.\n\n\n\n\nReferences\n\nArkin, Esther M., Sándor P. Fekete, and Joseph S. B. Mitchell. 2000. “Approximation Algorithms for Lawn Mowing and Milling.” Computational Geometry 17 (1): 25–50. https://doi.org/https://doi.org/10.1016/S0925-7721(00)00015-8."
   },
   {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Teaching",
+    "objectID": "notes/fa26-cgshop/index.html",
+    "href": "notes/fa26-cgshop/index.html",
+    "title": "CG:SHOP: solving hard optimization problems",
     "section": "",
-    "text": "CS 473 Algorithms\n\n\nUndergraduate/Graduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA\n\n\nUndergraduate course assistant in Fall 2025 and Fall 2026.\n\n\n\n\n\nAug 1, 2025\n\n\n\n\n\n\n\nCS 233 Computer Architecture\n\n\nUndergraduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA\n\n\nUndergraduate course assistant in Fall 2024 and Spring 2025.\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\nNo matching items"
+    "text": "2027 CG:SHOP: multi-robot cover\n\n\n\n\n\nNov 5, 2026\n\n\n\n\n\n\n\n2027 CG:SHOP: lawn mowing with circles\n\n\n\n\n\nOct 29, 2026\n\n\n\n\n\n\n\n2027 CG:SHOP: lawn mowing approximation\n\n\n\n\n\nOct 26, 2026\n\n\n\n\n\n\n\n2027 CG:SHOP: background\n\n\n\n\n\nOct 22, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "talks/sigma/2026-11-09-tutte.html",
-    "href": "talks/sigma/2026-11-09-tutte.html",
-    "title": "Drawing Graphs and Tutte’s Theorem",
+    "objectID": "notes/mining-networks.html",
+    "href": "notes/mining-networks.html",
+    "title": "Mining Complex Networks",
+    "section": "",
+    "text": "Notes"
+  },
+  {
+    "objectID": "notes/fa24-phys213.html",
+    "href": "notes/fa24-phys213.html",
+    "title": "PHYS 213: Thermal Physics",
+    "section": "",
+    "text": "Notes"
+  },
+  {
+    "objectID": "talks/sigma/index.html",
+    "href": "talks/sigma/index.html",
+    "title": "SIGma talks",
+    "section": "",
+    "text": "Drawing Graphs and Tutte’s Theorem\n\n\nIn which we discuss the theory behind common graph drawing methods (e.g. implemented in popular software like NetworkX or GraphTool), and prove Tutte’s theorem for a strictly-convex planar embedding of 3-vertex-connected graphs.\n\n\n\n\n\nNov 9, 2026\n\n\n\n\n\n\n\nIntroduction; Convex Hulls\n\n\nThe first SIGma meeting of Fall 2026, with Mihir Tandon and Franklin Zhang.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\nDynamic Graph Connectivity\n\n\nIn a static graph, checking whether nodes are in the connected component takes linear time. I will describe the Kapron, King, Mountjoy algorithm supporting polylog time updates and queries.\n\n\n\n\n\nFeb 23, 2026\n\n\n\n\n\n\n\nLinear Time Minimum Spanning Trees\n\n\nKarger-Klein-Tarjan randomized algorithm for computing minimum spanning trees in linear expected time.\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\nGenerating a Random Sample and Introduction to Discrete Probability\n\n\nSampling with replacement, quickly.\n\n\n\n\n\nSep 14, 2025\n\n\n\n\n\n\n\nMultiple Sequence Alignment\n\n\nMultiple sequence alignment, maximum weight trace, dynamic programing, heuristics…\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\nDeBruijn Graphs\n\n\nElementary graph theory, De Bruijn sequences, and genome assembly…\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\nThe Inverse Ackermann Function\n\n\nRecursion, Inverse Ackermann, Union-Find, Range-Minimum Queries…\n\n\n\n\n\nNov 18, 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/sigma/2026-08-31-intro.html",
+    "href": "talks/sigma/2026-08-31-intro.html",
+    "title": "Introduction; Convex Hulls",
     "section": "",
     "text": "Slides Video"
   },
   {
-    "objectID": "talks/sigma/2026-02-23-dynamic-conn.html",
-    "href": "talks/sigma/2026-02-23-dynamic-conn.html",
-    "title": "Dynamic Graph Connectivity",
+    "objectID": "talks/sigma/2025-12-01-kkt.html",
+    "href": "talks/sigma/2025-12-01-kkt.html",
+    "title": "Linear Time Minimum Spanning Trees",
     "section": "",
     "text": "Slides"
   },
   {
-    "objectID": "talks/sigma/2025-09-14-reservoir.html",
-    "href": "talks/sigma/2025-09-14-reservoir.html",
-    "title": "Generating a Random Sample and Introduction to Discrete Probability",
+    "objectID": "talks/sigma/2025-04-21-msa.html",
+    "href": "talks/sigma/2025-04-21-msa.html",
+    "title": "Multiple Sequence Alignment",
     "section": "",
     "text": "Slides"
   },
   {
-    "objectID": "talks/sigma/2025-02-03-debruijn.html",
-    "href": "talks/sigma/2025-02-03-debruijn.html",
-    "title": "DeBruijn Graphs",
+    "objectID": "talks/sigma/2024-11-18-ackermann.html",
+    "href": "talks/sigma/2024-11-18-ackermann.html",
+    "title": "The Inverse Ackermann Function",
     "section": "",
     "text": "Slides Video"
   },
   {
-    "objectID": "talks/siam/index.html",
-    "href": "talks/siam/index.html",
-    "title": "SIAM talks",
+    "objectID": "talks/siam/2026-10-09-gurobi.html",
+    "href": "talks/siam/2026-10-09-gurobi.html",
+    "title": "Graph Optimization with Mixed Integer Programming",
     "section": "",
-    "text": "Graph Optimization with Mixed Integer Programming\n\n\nMixed integer programming and Gurobi.\n\n\n\n\n\nOct 9, 2026\n\n\n\n\n\n\n\nParallel Connectivity and Shortest Paths\n\n\nNear-linear work algorithms for connectivity and single-source shortest paths (SSSP) have been known since before the 1950s. In this talk, we will describe approaches to increase their parallelism, including coarsening algorithms for connectivity, and incremental stepping algorithms for SSSP.\n\n\n\n\n\nApr 3, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Slides Video Notebook"
   },
   {
-    "objectID": "talks/siam/2026-04-03-parallel.html",
-    "href": "talks/siam/2026-04-03-parallel.html",
-    "title": "Parallel Connectivity and Shortest Paths",
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Remote Direct Code Execution\n\n\nECE 509/CS 598 · Urbana, IL, USA\n\n\n3 minute lightning talk for Programmable and High Speed Networks\n\n\n\n\n\nDec 2, 2026\n\n\n\n\n\n\n\nSIAM talks\n\n\nPresentations · SIAM Undergraduate Seminar at UIUC · Urbana, IL, USA\n\n\nTalks for the SIAM Undergraduate Seminar at UIUC.\n\n\n\n\n\nOct 9, 2026\n\n\n\n\n\n\n\nSIGma talks\n\n\nPresentations · SIGma (UIUC Special Interest Group in Math and Algorithms) · Urbana, IL, USA\n\n\nTalks for the UIUC Special Interest Group in Math and Algorithms.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\nExploring the Effect of Iteration on MAGUS\n\n\nPresentation · CS 581 · Urbana, IL, USA\n\n\nCourse project, Multiple Sequence Alignment, MAGUS, …\n\n\n\n\n\nMay 6, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/2025-05-06-magus.html",
+    "href": "talks/2025-05-06-magus.html",
+    "title": "Exploring the Effect of Iteration on MAGUS",
     "section": "",
     "text": "Slides"
   },
   {
-    "objectID": "talks/2026-12-02-rdx.html",
-    "href": "talks/2026-12-02-rdx.html",
-    "title": "Remote Direct Code Execution",
-    "section": "",
-    "text": "Slides"
-  },
-  {
-    "objectID": "publications/vu-le2026improving.html",
-    "href": "publications/vu-le2026improving.html",
-    "title": "Improving community detection with CVC, a new cluster ensemble method",
+    "objectID": "publications/vu-le2026dense.html",
+    "href": "publications/vu-le2026dense.html",
+    "title": "Dense Subgraph Clustering and a New Cluster Ensemble Method",
     "section": "",
     "text": "PDF DOI"
   },
   {
-    "objectID": "publications/vu-le2026improving.html#abstract",
-    "href": "publications/vu-le2026improving.html#abstract",
-    "title": "Improving community detection with CVC, a new cluster ensemble method",
+    "objectID": "publications/vu-le2026dense.html#abstract",
+    "href": "publications/vu-le2026dense.html#abstract",
+    "title": "Dense Subgraph Clustering and a New Cluster Ensemble Method",
     "section": "Abstract",
-    "text": "Abstract\nCommunity detection is an unsupervised learning problem with many applications. In this study, we present Constrained Voting Consensus (CVC), a new ensemble clustering method that is designed to combine multiple clusterings, some of which may only cover a small portion of the network. We demonstrate that combining several dense subgraph clustering methods with standard methods within this ensemble approach produces a more accurate clustering than its constituent clustering methods. We also compare CVC to other ways of combining sets of clusterings, including the median consensus method, and show that CVC achieves higher accuracy and has better robustness. Furthermore, CVC can scale to very large networks with millions of vertices.\n\n\n\n\nBibTeX\n\n@article{vu-le2026improving,\n\ttitle = {Improving community detection with CVC, a new cluster ensemble method},\n\tvolume = {11},\n\tISSN = {2364-8228},\n\turl = {http://dx.doi.org/10.1007/s41109-026-00809-z},\n\tDOI = {10.1007/s41109-026-00809-z},\n\tnumber = {1},\n\tjournal = {Applied Network Science},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Vu-Le, The-Anh and Park, Minhyuk and Chen, Ian and Lamy, João Alfredo Cardoso and Alessi, Tomás and Harb, Elfarouk and Chacko, George and Warnow, Tandy},\n\tyear = {2026},\n\tmonth = jun,\n}"
+    "text": "Abstract\nWe propose DSC-Flow-Iter, a new community detection algorithm that is based on iterative extraction of dense subgraphs. Although DSC-Flow-Iter leaves many nodes unclustered, it is competitive with leading methods and has high-precision and low-recall, making it complementary to modularity-based methods that typically have high recall but lower precision. Based on this observation, we introduce a novel cluster ensemble technique that combines DSC-Flow-Iter with modularity-based clustering, to provide improved accuracy. We show that our proposed pipeline, which uses this ensemble technique, outperforms its individual components and improves upon the baseline techniques on a large collection of synthetic networks.\n\n\n\n\nBibTeX\n\n@inbook{vu-le2026dense,\n\ttitle = {Dense Subgraph Clustering and a New Cluster Ensemble Method},\n\tISBN = {9783032167194},\n\tISSN = {1860-9503},\n\turl = {http://dx.doi.org/10.1007/978-3-032-16719-4_3},\n\tDOI = {10.1007/978-3-032-16719-4_3},\n\tbooktitle = {Complex Networks \\& Their Applications XIV},\n\tpublisher = {Springer Nature Switzerland},\n\tauthor = {Vu-Le, The-Anh and Lamy, João Alfredo Cardoso and Alessi, Tomás and Chen, Ian and Park, Minhyuk and Harb, Elfarouk and Chacko, George and Warnow, Tandy},\n\tyear = {2026},\n\tmonth = may,\n\tpages = {29-40},\n}"
   },
   {
-    "objectID": "publications/vu-le2025using.html",
-    "href": "publications/vu-le2025using.html",
-    "title": "Using stochastic block models for community detection",
+    "objectID": "publications/park2026modeling.html",
+    "href": "publications/park2026modeling.html",
+    "title": "Modeling citations and cartels",
     "section": "",
     "text": "PDF DOI"
   },
   {
-    "objectID": "publications/vu-le2025using.html#abstract",
-    "href": "publications/vu-le2025using.html#abstract",
-    "title": "Using stochastic block models for community detection",
+    "objectID": "publications/park2026modeling.html#abstract",
+    "href": "publications/park2026modeling.html#abstract",
+    "title": "Modeling citations and cartels",
     "section": "Abstract",
-    "text": "Abstract\nA recent study reported by Park et al. (Improved community detection using stochastic block models, Springer, Heidelberg, 2025) in Complex Networks and their Applications 2024 showed that clusterings from three Stochastic Block Models (SBMs) in graph-tool, a popular software package, often had internally disconnected clusters when used on large real-world or synthetic networks. To address this issue, Park et al. (Improved community detection using stochastic block models, Springer, Heidelberg, 2025) presented a simple technique, Well-Connected Clusters (WCC), that repeatedly finds and removes small edge cuts of size at most \\(\\log_{10} n\\) in clusters, where \\(n\\) is the number of nodes in the cluster, and showed that treatment of graph-tool SBM clusterings with WCC improves accuracy. Here we examine the question of cluster connectivity for clusterings computed using other SBM software or nested SBMs within graph-tool. Our study, using a wide range of real-world and synthetic networks ranging up to more than a million nodes, shows that all tested SBM clustering methods frequently produce communities that are disconnected, and that graph-tool improves on PySBM. We provide insight into why graph-tool degree-corrected SBM clustering produces disconnected clusters by examining the description length formula it uses, and explore the impact of modifications to the description length formula. Finally, we show that WCC generally provides an improvement in accuracy for both flat and nested SBMs, except for cases where nearly all nodes in the network are in very sparse ground-truth clusters. We also demonstrate that WCC scales to networks with millions of nodes.\n\n\n\n\nBibTeX\n\n@article{vu-le2025using,\n\ttitle = {Using stochastic block models for community detection},\n\tvolume = {11},\n\tISSN = {2364-8228},\n\turl = {http://dx.doi.org/10.1007/s41109-025-00747-2},\n\tDOI = {10.1007/s41109-025-00747-2},\n\tnumber = {1},\n\tjournal = {Applied Network Science},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Vu-Le, The-Anh and Park, Minhyuk and Chen, Ian and Warnow, Tandy},\n\tyear = {2025},\n\tmonth = nov,\n}"
+    "text": "Abstract\nCitation data are widely used to inform researchers and administrators. Interpreting the results of citation analysis is non-trivial on account of uncertainty around motivations for citation, varied disciplinary practices, data quality, standards for quality, and the lack of ground truths. In-silico approaches that harness autonomous behavior and randomness offer an option in this regard. We have developed an agent-based model of citation that allows us to parsimoniously model citation dynamics at article and author levels. We characterize the model through baseline simulations, sensitivity, and ablation analysis. We also model the behavior of cartels that seek to manipulate citations. We observe an early advantage to cartels that is lost over time implying that, on balance, cartel membership may offer less than its members hope for but may still be incentivizing for some who enroll in such membership.\n\n\n\n\nBibTeX\n\n@misc{park2026modeling,\n\ttitle = {Modeling citations and cartels},\n\turl = {http://dx.doi.org/10.21203/rs.3.rs-9270520/v1},\n\tDOI = {10.21203/rs.3.rs-9270520/v1},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Park, Minhyuk and Yi, Haotian and Chen, Ian and Warnow, Tandy and Chacko, George},\n\tyear = {2026},\n\tmonth = apr,\n\thowpublished = {Preprint},\n}"
   },
   {
-    "objectID": "publications/index.html",
-    "href": "publications/index.html",
-    "title": "Publications",
+    "objectID": "publications/chen2026improved.html",
+    "href": "publications/chen2026improved.html",
+    "title": "Improved Methods for \\(k\\)-Core Community Search",
     "section": "",
-    "text": "Applied Network Science · June 2026\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\n\n\n\nApplied Network Science · November 2025\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
+    "text": "PDF arXiv"
   },
   {
-    "objectID": "publications/index.html#journal-articles",
-    "href": "publications/index.html#journal-articles",
-    "title": "Publications",
+    "objectID": "publications/chen2026improved.html#abstract",
+    "href": "publications/chen2026improved.html#abstract",
+    "title": "Improved Methods for \\(k\\)-Core Community Search",
+    "section": "Abstract",
+    "text": "Abstract\nCommunity search based on user-specified query nodes is complementary to community finding or graph clustering. Prior work in community search is divided into optimizing for external separateness or internal cohesiveness, which does not scale well networks of over a billion edges. We present SteinerKCore, a new scalable k-core based community search algorithm for multi-vertex queries. We also present Par-ShellStruct, a parallel algorithm for building the ShellStruct data structure used for k-core community search. We show that our implementations in Icebug, an open-source toolkit for large-scale network analysis, are both more efficient and more scalable than comparative tools, being able to perform on a benchmark network of 273M and 5.1B edges using just 64GB RAM and under 4 hours runtime with 16 CPUs.\n\n\n\n\nBibTeX\n\n@online{chen2026improved,\n  title = {Improved Methods for $k$-Core Community Search},\n  author = {Chen, Ian and Yi, Haotian and Sharma, Arun and Warnow, Tandy and Chacko, George},\n  year = {2026},\n  month = sep,\n  eprint = {2609.17822},\n  eprinttype = {arxiv},\n  addendum = {Submitted to CompleNet 2027},\n}"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-10.html",
+    "href": "blog/mindbenders/2026-10.html",
+    "title": "2026 Sept/Oct Mindbenders",
     "section": "",
-    "text": "Applied Network Science · June 2026\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\n\n\n\nApplied Network Science · November 2025\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
+    "text": "It has been too long since my last post, so let’s get back into it with some easy. Given two random balls that intersect in \\(\\mathbb{R}^d\\); what is the expected volume of their intersection?\nOf course, the above is actually underspecified (see Bertrands paradox). More precisely, we specify that we have a ball at the origin, and a second ball sampled uniformly with center inside the ball of radius \\(2\\).\n\n\nSomehow, I managed to overcomplicate this quite a bit. So first, consider \\(d=1\\). By symmetry, we can assume WLOG that the random ball always has positive center. Thus, an integral obtains the answer\n\\[\n  \\int_{0}^1 (0.5) (2-x) \\text{d}x + \\int_1^2 (0.5) (x - 1) \\text{d}x = 1\n\\]\nwhere \\((2-x)\\) and \\((x-1)\\) are the lengths of intersection between two intervals of length \\(2\\), for \\(x\\) center less than 1 or between 1 and 2 respectively, and \\(0.5\\) is the probability density at any point.\nA slightly nicer, but equivalent integral, is to consider the left endpoint from \\(-1\\) to \\(1\\), so that the area of intersection is always \\(1-x\\):\n\\[\n  \\int_{-1}^1 (0.5) (1-x) \\text{d}x = 1\n\\]\nThis approach does not extend to 2D easily (lots of gross algebra). Somehow, I thought there were a few things that should make this nice:\n\nwe have two objects that are the same shape\nthe particular object is a sphere, which is nicely symmetric\n\nI wanted to use both of these properties, and so what I thought was to consider a random process with both of these intervals. Originally, I wanted them to have centers anywhere in the plane, but then the density functions are hard to define. Thus, I tried having them be contained in some region \\(A(r)\\), where \\(r\\) is some scaling factor that I will have limit towards \\(\\infty\\).\nI remembered that the expected distance between two points in a rectangle in \\(\\mathbb{R}^d\\) can be calculated (which is relevant in k-nearest neighbors, with the curse of dimensionality)&gt; Thus, intuitively, I thought that this meant we can calculate the probability of them intersecting, and use the decomposition\n\\[\n\\begin{align}\n  \\textbf{Ev}(\\text{area of union}) & = \\textbf{Ev}(\\text{area of union} \\mid \\text{intersect}) \\textbf{P}(\\text{intersect}) \\\\\n                                    & + \\textbf{Ev}(\\text{area of union} \\mid \\text{not intersect}) \\textbf{P}(\\text{not intersect})\n\\end{align}\n\\]\nNow, given that two balls don’t intersect, the area of union is easy (just the sum). The area of union given they intersect is what we want to find. So, what remains is to find the probability of not intersecting (which is perhaps a simpler integral, of which I doing in the past), and also the area of the union. Then, this area of union can be calculated using linearity of expectation; as each ball is placed independently, if \\(p\\) is the probability that a point is not covered by one ball, then \\(p^2\\) is the probability that it is not covered by both.\nDoing this calculation… is messy and I started realizing there is probably some better way. Indeed, because I am already using linearity of expectation, looking at the probability of each point, it is actually easy to calculate it directly!\n\n\n\nConsider again the process where we place a unit disk with center uniformly chosen from the disk of radius \\(2\\). We know any point \\(p\\) in the intersection (with this random disk, and the disk at the origin) is within the disk of radius \\(1\\) from the origin. Then, for this point, we can consider the probability that its in the intersection, and then sum up over all points in the unit ball.\nNow, consider where must the second ball be in order for \\(p\\) to be in the intersection – the center must be in the unit ball centered at \\(p\\)! The probability that this is the case is exactly \\(2^{-d}\\), as this is the ratio of the volume of a unit ball (the success space) over the volume of a ball of radius \\(2\\) (the sample space). Putting this together, we obtain an answer of\n\\[\n  \\frac{\\pi^{d/2}}{\\Gamma(d/2 + 1) \\cdot 2^d}\n\\]\nwhich comes from the volume of a unit ball embedded in \\(\\mathbb{R}^d\\).\nI tried to exploit too much structure in the problem, before trying more straightforward methods. Think about what is relevant; work out some examples!"
   },
   {
-    "objectID": "publications/index.html#conference-papers",
-    "href": "publications/index.html#conference-papers",
-    "title": "Publications",
-    "section": "Conference Papers",
-    "text": "Conference Papers\n\n\n\n\nDense Subgraph Clustering and a New Cluster Ensemble Method\n\nComplex Networks & Their Applications XIV · May 2026\n\n\nThe-Anh Vu-Le, João Alfredo Cardoso Lamy, Tomás Alessi, Ian Chen, Minhyuk Park, Elfarouk Harb, George Chacko, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "publications/index.html#preprints",
-    "href": "publications/index.html#preprints",
-    "title": "Publications",
-    "section": "Preprints",
-    "text": "Preprints\n\n\n\n\nImproved Methods for \\(k\\)-Core Community Search\n\nSubmitted to CompleNet 2027 · September 2026\n\n\nIan Chen, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko\n\nPaper BibTeX HTML\n\n\n\n\nModeling citations and cartels\n\nPreprint · April 2026\n\n\nMinhyuk Park, Haotian Yi, Ian Chen, Tandy Warnow, George Chacko\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "blog/mindbenders/index.html",
-    "href": "blog/mindbenders/index.html",
-    "title": "Mindbenders",
+    "objectID": "blog/mindbenders/2026-10.html#october",
+    "href": "blog/mindbenders/2026-10.html#october",
+    "title": "2026 Sept/Oct Mindbenders",
     "section": "",
-    "text": "2026 Sept/Oct Mindbenders\n\n\n\npuzzle\n\n\n\nGiven two random balls that intersect, what is the expected volume of their intersection?\n\n\n\n\n\nOct 25, 2026\n\n\n\n\n\n\n\n2026 July Mindbenders\n\n\n\npuzzle\n\n\n\nIf you roll six dice, you could get the same number on every die, or (in contrast) all different numbers.\n\n\n\n\n\nJul 16, 2026\n\n\n\n\n\n\n\n2026 February and March Mindbender\n\n\n\npuzzle\n\npotentials\n\n\n\nToday, I discuss my solutions towards the February and March mindbenders!\n\n\n\n\n\nMar 16, 2026\n\n\n\n\n\n\n\n2026 January Momath Mindbender\n\n\n\nstochastic-processes\n\npuzzle\n\n\n\nConsider a ladybug starting on the 12-hand of the clock.\n\n\n\n\n\nJan 25, 2026\n\n\n\n\n\nNo matching items"
+    "text": "It has been too long since my last post, so let’s get back into it with some easy. Given two random balls that intersect in \\(\\mathbb{R}^d\\); what is the expected volume of their intersection?\nOf course, the above is actually underspecified (see Bertrands paradox). More precisely, we specify that we have a ball at the origin, and a second ball sampled uniformly with center inside the ball of radius \\(2\\).\n\n\nSomehow, I managed to overcomplicate this quite a bit. So first, consider \\(d=1\\). By symmetry, we can assume WLOG that the random ball always has positive center. Thus, an integral obtains the answer\n\\[\n  \\int_{0}^1 (0.5) (2-x) \\text{d}x + \\int_1^2 (0.5) (x - 1) \\text{d}x = 1\n\\]\nwhere \\((2-x)\\) and \\((x-1)\\) are the lengths of intersection between two intervals of length \\(2\\), for \\(x\\) center less than 1 or between 1 and 2 respectively, and \\(0.5\\) is the probability density at any point.\nA slightly nicer, but equivalent integral, is to consider the left endpoint from \\(-1\\) to \\(1\\), so that the area of intersection is always \\(1-x\\):\n\\[\n  \\int_{-1}^1 (0.5) (1-x) \\text{d}x = 1\n\\]\nThis approach does not extend to 2D easily (lots of gross algebra). Somehow, I thought there were a few things that should make this nice:\n\nwe have two objects that are the same shape\nthe particular object is a sphere, which is nicely symmetric\n\nI wanted to use both of these properties, and so what I thought was to consider a random process with both of these intervals. Originally, I wanted them to have centers anywhere in the plane, but then the density functions are hard to define. Thus, I tried having them be contained in some region \\(A(r)\\), where \\(r\\) is some scaling factor that I will have limit towards \\(\\infty\\).\nI remembered that the expected distance between two points in a rectangle in \\(\\mathbb{R}^d\\) can be calculated (which is relevant in k-nearest neighbors, with the curse of dimensionality)&gt; Thus, intuitively, I thought that this meant we can calculate the probability of them intersecting, and use the decomposition\n\\[\n\\begin{align}\n  \\textbf{Ev}(\\text{area of union}) & = \\textbf{Ev}(\\text{area of union} \\mid \\text{intersect}) \\textbf{P}(\\text{intersect}) \\\\\n                                    & + \\textbf{Ev}(\\text{area of union} \\mid \\text{not intersect}) \\textbf{P}(\\text{not intersect})\n\\end{align}\n\\]\nNow, given that two balls don’t intersect, the area of union is easy (just the sum). The area of union given they intersect is what we want to find. So, what remains is to find the probability of not intersecting (which is perhaps a simpler integral, of which I doing in the past), and also the area of the union. Then, this area of union can be calculated using linearity of expectation; as each ball is placed independently, if \\(p\\) is the probability that a point is not covered by one ball, then \\(p^2\\) is the probability that it is not covered by both.\nDoing this calculation… is messy and I started realizing there is probably some better way. Indeed, because I am already using linearity of expectation, looking at the probability of each point, it is actually easy to calculate it directly!\n\n\n\nConsider again the process where we place a unit disk with center uniformly chosen from the disk of radius \\(2\\). We know any point \\(p\\) in the intersection (with this random disk, and the disk at the origin) is within the disk of radius \\(1\\) from the origin. Then, for this point, we can consider the probability that its in the intersection, and then sum up over all points in the unit ball.\nNow, consider where must the second ball be in order for \\(p\\) to be in the intersection – the center must be in the unit ball centered at \\(p\\)! The probability that this is the case is exactly \\(2^{-d}\\), as this is the ratio of the volume of a unit ball (the success space) over the volume of a ball of radius \\(2\\) (the sample space). Putting this together, we obtain an answer of\n\\[\n  \\frac{\\pi^{d/2}}{\\Gamma(d/2 + 1) \\cdot 2^d}\n\\]\nwhich comes from the volume of a unit ball embedded in \\(\\mathbb{R}^d\\).\nI tried to exploit too much structure in the problem, before trying more straightforward methods. Think about what is relevant; work out some examples!"
   },
   {
-    "objectID": "blog/mindbenders/2026-07.html",
-    "href": "blog/mindbenders/2026-07.html",
-    "title": "2026 July Mindbenders",
-    "section": "",
-    "text": "If you roll six dice, you could get the same number on every die, or (in contrast) all different numbers. What is the probability of getting exactly four distinct numbers? source."
-  },
-  {
-    "objectID": "blog/mindbenders/2026-07.html#some-code",
-    "href": "blog/mindbenders/2026-07.html#some-code",
-    "title": "2026 July Mindbenders",
-    "section": "Some code",
-    "text": "Some code\nNot the most efficient, but some pretty clean usage brute-force calculation via the Python standard library.\n&gt; Counter(len(set(x)) for x in it.product(range(6), repeat=6))\nCounter({4: 23400, 3: 10800, 5: 10800, 2: 930, 6: 720, 1: 6})"
-  },
-  {
-    "objectID": "blog/mindbenders/2026-07.html#combinatorics",
-    "href": "blog/mindbenders/2026-07.html#combinatorics",
-    "title": "2026 July Mindbenders",
-    "section": "Combinatorics",
-    "text": "Combinatorics\nThere are \\(6^6 = 46'656\\) possible strings of 6 dice. We want to derive an expression for \\(c_k\\), the number of ways for there to be exactly \\(k\\) distinct numbers in that string.\nWe first pick the \\(k\\) distinct numbers, with there being \\(\\binom{6}{k}\\) different ways of doing so. Then, we need to pick the histogram of counts for each of the \\(k\\) numbers. For \\(c_4\\), then this is\n\\[\n  \\binom{6}{4} \\times \\left(\n    \\frac{6!}{1! \\cdot 1! \\cdot 1! \\cdot 3!} \\times \\frac{4!}{3! \\cdot 1!} +\n    \\frac{6!}{1! \\cdot 1! \\cdot 2! \\cdot 2!} \\times \\frac{4!}{2! \\cdot 2!}\n  \\right) = 23'400\n\\]\nAnd the answer is \\(23'400 / 46'656 \\approx 50.2\\%\\). For some reason, \\(c_3 = c_5\\); seems like a coincidence.\nThere are many other ways to do this combinatorially, e.g. with generating functions or inclusion-exclusion. These are besides the point here, but there are some more interesting approaches (many of which were in the pursuit of trying to find an intuitive reason for such a large probability mass)!"
-  },
-  {
-    "objectID": "blog/mindbenders/2026-07.html#dynamic-programming",
-    "href": "blog/mindbenders/2026-07.html#dynamic-programming",
-    "title": "2026 July Mindbenders",
-    "section": "Dynamic Programming",
-    "text": "Dynamic Programming\nAnother approach that is maybe less error prone is to do some dynamic programming. Let \\(f(i, j)\\) be the probability that we have \\(i\\) distinct numbers after \\(j\\) rolls. Then, we get the recurrence\n\\[\n  f(i, j) =\n  \\begin{cases}\n    1 & i = j = 1 \\\\\n    0 & i &gt; j \\\\\n    \\frac{i}{6} \\times f(i, j-1) + \\frac{6-i}{6} f(i - 1, j) & \\text{otherwise}\n  \\end{cases}\n\\]\ni.e. we sum up the cases where after a new roll, we get a distinct or not.\n\n\n\nSumming up each column gives a probability of exactly \\(1\\). This also gives us a simpler closed form, namely, we just sum up all the paths! Indeed,\n\\[\nf(i, j) = \\left( \\prod_{k=7-i}^{5} \\frac{k}{6} \\right)\n          \\times\n          \\left( \\sum_{1 \\le k_1 \\le \\ldots \\le k_{j - i} \\le i} \\frac{ k_1 \\cdot \\ldots \\cdot k_{j-i} }{6^{j-i}} \\right)\n\\]\nCalculating \\(f(4, 6)\\), the probability of getting \\(4\\) distinct numbers after \\(6\\) rolls, we have\n\\[\n  f(4, 6) = \\frac{3}{6} \\frac{4}{6} \\frac{5}{6} \\times \\sum_{k_1=1}^4 \\sum_{k_2=k_1}^4 \\frac{k_1 \\cdot k_2}{6^2}\n\\]"
-  },
-  {
-    "objectID": "blog/mindbenders/2026-07.html#hitting-times",
-    "href": "blog/mindbenders/2026-07.html#hitting-times",
-    "title": "2026 July Mindbenders",
-    "section": "Hitting Times",
-    "text": "Hitting Times\nLet us consider aa related problem: how many trials does it take until we get \\(k\\) distinct rolls. The number of rolls until we get our first distinct follows \\(\\text{Geometric}(p = 1)\\). Our second distinct element follows \\(\\text{Geometric}(p = 1 - 1/6)\\). In general, to get the \\(k\\) -th distinct, it follows \\(G_k = \\text{Geometric}(p_k = \\frac{7 - k}{6})\\). The expected number of rolls to get \\(k = 1, \\ldots, 6\\) distinct elements are thus:\n\\[\n  1, 2.2, 3.7, 5.7, 8.7, 14.7\n\\]\nBut, if we recall from our introductory statistics classes, this feels a lot like the Poisson and Gamma duality. The probability of counting \\(\\ge 4\\) successes in \\(6\\) rolls is the same as it taking \\(\\le 6\\) rolls to get the \\(4\\) -th success.\nWe can proceed in a similar path, deriving an analogous for the Gamma distribution. In particular, let \\(T_k = G_1 + \\ldots + G_k\\) be the rolls until we get the \\(k\\) -th distinct element. Then, we want to calculate\n\\[\n  \\textbf{Pr}(T_4 \\le 6) - \\textbf{Pr}( T_5 \\le 6 )\n\\]\nThe full calculation is a bit annoying, and I have instead attached it. In short, probability generating functions are useful."
-  },
-  {
-    "objectID": "blog/mindbenders/2026-07.html#embeddings",
-    "href": "blog/mindbenders/2026-07.html#embeddings",
-    "title": "2026 July Mindbenders",
-    "section": "Embeddings",
-    "text": "Embeddings\nAn extremely powerful tool in stochastic processes, which I hope to learn more about, is to embed this discrete chain into some more general process. Finally, we restrict our view of that more general process to the events that we care about.\nThis in general is known as Poissonification, and I first saw the idea with context of hashing in a UIUC theory seminar. We suppose we throw \\(m = \\textbf{Poisson}(\\lambda)\\) die, and then condition on the event that \\(m = 6\\). The really elegant result from this is that we avoid the negative correlation of the occupancy indicators \\(X_i\\). In particular, if we look instead at the Multinomial distribution of the counts of each dice, then\n\\[\n\\begin{align*}\n  & \\textbf{Pr}(\\textbf{Multinomial}(m, (p_1, \\ldots, p_6) = (n_1, \\ldots, n_6); m \\sim \\textbf{Poisson}(\\lambda)) \\\\\n  & = e^{- \\lambda} \\frac{\\lambda^m}{m!} \\times \\frac{m!}{\\prod_{i=1}^6 n_i!} \\prod_{i=1}^6 p_i^{n_i} = \\prod_{i=1}^6 e^{- \\lambda p_i} \\frac{(\\lambda p_i)^{n_i}}{n_i!}\n\\end{align*}\n\\]\nwhere we recognize each individual term in the product as the mass function for \\(\\textbf{Poisson}( \\lambda p_i )\\). We not only avoid the negative correlation, but we get pure independence! At this point, by conditioning on \\(m\\), we can do the calculation and get an answer.\nIn fact, if one remembers the construction of a Poisson process, then it should be clear why Possionification leads to this nice independence property. Suppose we set a timer \\(T \\sim \\textbf{Exponential}(\\lambda / 6)\\) independently for each of the \\(6\\) bins. Then, a dice is rolled whenever a timer is fired, and the timer gets reset.\nHere, the waiting time between rolls of the dice follow the minimum of \\(6\\) independent \\(\\textbf{Exponential}(\\lambda / 6)\\) timers, i.e. the gap between each of the each of the dice rolls follows \\(\\textbf{Exponential}(\\lambda)\\). Thus, by the construction of Poisson process, then the number of dice rolls at a given time \\(t\\) follows \\(\\textbf{Poisson}( \\lambda t )\\). Moreover, because exponential random variables are memoryless, then the increment between a dice rolling in each bin follows \\(\\textbf{Exponential}(\\lambda / 6)\\), and again by construction of Poisson, then the number of balls in a given bin follows \\(\\textbf{Poisson}(\\lambda t / 6)\\)."
-  },
-  {
-    "objectID": "blog/mindbenders/2026-01.html",
-    "href": "blog/mindbenders/2026-01.html",
-    "title": "2026 January Momath Mindbender",
-    "section": "",
-    "text": "Puzzle from here. Consider a ladybug starting on the 12-hand of the clock. During each timestep, it will choose to walk either counterclockwise or clockwise, each with 50% probability. What is the probability that the last new number it visits is 6?\nIt will be useful to establish consistent notation. Let \\(p_y\\) be the probability that \\(y\\) is the last new number the ladybug visits. Let \\(X_t\\) be the position of the ladybug. Let \\(T_y\\) be the first time where \\(X_t = y\\).\nI will also use \\(P_x( ... )\\) to denote the probability of an event given the starting point of a random walk of \\(x\\).\n\nGamblers Ruin\nThe first solution I came up with relies on the setup called “Gambler’s Ruin”. Consider a 1-D symmetric random walk starting at \\(0 &lt; x &lt; d\\). I claim that \\(P_x(T_d &lt; T_0) = \\frac{x}{d}\\).\nFirst, observe that \\(E(X_t) = x\\) (this is called a Martingale process). This is because at each time step, we make no expected progress towards either endpoint. Therefore, at time \\(T = \\min( T_d, T_0)\\), then we obtain the equation\n\\[\n  x = E(X_0) = E(X_T) = 0 P(X_T = 0) + d P(X_T = d) = d P(T_d &lt; T_0)\n\\]\nwhich proves our claim.\n\n\nSolution One\nNow, to solve the puzzle, it remains to enumerate some simple cases. Consider the sequence in which the ladybug sees new numbers. Then, in order for 6 to be last, then it must either see 5 before 7 before 6, or 7 before 5 before 6. That is,\n\\[\n  p_6 = P_{12}(T_5 &lt; T_7 &lt; T_6) + P_{12}(T_7 &lt; T_5 &lt; T_6)\n\\]\nWe can decompose\n\\[\n  P_{12}(T_5 &lt; T_7 &lt; T_6) = P_{12}(T_5 &lt; T_7) \\cdot P_5(T_7 &lt; T_6)\n\\]\nand\n\\[\n  P_{12}(T_7 &lt; T_5 &lt; T_6) = P_{12}(T_7 &lt; T_5) \\cdot P_7(T_5 &lt; T_6)\n\\]\nso that plugging in our expression\n\\[\n  p_6 = (1/2) \\cdot (1/11) + (1/2) \\cdot (1/11) = 1/11\n\\]\n\n\nSolution Two\nFollowing this, I immediately noticed that \\(p_1 = p_2 = \\ldots = p_{11} = 1/11\\). All the probabilities are uniform! This hints that there is a simpler explanation.\nIndeed, in order for 6 to be the last new number visited, there must be an arc between 5 to 7, or from 7 to 5. All the steps before reaching either 5 or 7 are superfluous. Therefore, \\(p_x = P_5(T_7 &lt; T_6)\\).\nIn words, the probability of seeing 6 last is the probability of starting to one side of 6 and reaching the other side of 6 without hitting 6. This holds for any starting position.\nNow, as there are 11 probabilities, the final step is to show that they sum to 1. One way of doing this (although there are likely many) is to shift a perspective: instead of varying the starting point, vary the end point. As there must be some number that is the last one visited, those probabilities must add to 1."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Mindbenders\n\n\n\n\n\n\npuzzle\n\n\n\nMy solutions to the MoMath mindbenders.\n\n\n\n\n\nOct 25, 2026\n\n\n\n\n\n\n\nCycle Analysis\n\n\n\n\n\n\nstochastic-processes\n\n\n\nYou get points for non-overlapping pairs of consecutive heads.\n\n\n\n\n\nMar 15, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ian Chen",
-    "section": "",
-    "text": "Hey, I’m Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign. I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Ian Chen",
-    "section": "",
-    "text": "Hey, I’m Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign. I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing."
-  },
-  {
-    "objectID": "index.html#research",
-    "href": "index.html#research",
-    "title": "Ian Chen",
-    "section": "Research",
-    "text": "Research\nMy past research has been focused on Network Science with Tandy Warnow and George Chacko. We are scaling local community detection, also known as community search, towards networks with millions to billions of nodes."
-  },
-  {
-    "objectID": "index.html#special-interest-group-in-math-and-algorithms",
-    "href": "index.html#special-interest-group-in-math-and-algorithms",
-    "title": "Ian Chen",
-    "section": "Special Interest Group in math and algorithms",
-    "text": "Special Interest Group in math and algorithms\nI am a lead for the ACM@UIUC group in math and algorithms! This semester, we are participating in CG:SHOP. See our activities here."
-  },
-  {
-    "objectID": "index.html#news",
-    "href": "index.html#news",
-    "title": "Ian Chen",
-    "section": "News",
-    "text": "News\n\n\n\n\nChanged site format to Quarto!\n\n\nNov 5, 2026\n\n\n\nNo matching items\n\nAll news"
-  },
-  {
-    "objectID": "blog/cycle.html",
-    "href": "blog/cycle.html",
-    "title": "Cycle Analysis",
-    "section": "",
-    "text": "Consider an infinitely long sequence of coin flips, i.e. with \\(p\\) probability heads and \\(1-p\\) probability tails. You get points for non-overlapping pairs of consecutive heads. How many points do you expect to obtain per flip? That is, what is the limit for the ratio of the number of points over number of flips?\nFor example, the sequence \\(HHTHHH\\) gets \\(2\\) points. With \\(6\\) flips, the average score is \\(1/3\\)."
-  },
-  {
-    "objectID": "blog/cycle.html#markov-chains",
-    "href": "blog/cycle.html#markov-chains",
-    "title": "Cycle Analysis",
-    "section": "Markov Chains",
-    "text": "Markov Chains\nWhat we have just done is find the stationary distribution of the following Markov Chain:\n\n\n\nThe arcs represent the state changes after a coin flip. We want to find to find the long-term probability of being in the \\(HH\\) state.\nLet \\(P(x, y)\\) be the probability of transitioning between states \\(x\\) and \\(y\\) (zero if there is no arc). Then, a stationary distribution satisfies the recurrence\n\\[\n\\pi_y = \\sum_x \\pi_x P(x, y)\n\\]"
-  },
-  {
-    "objectID": "blog/cycle.html#notation",
-    "href": "blog/cycle.html#notation",
-    "title": "Cycle Analysis",
-    "section": "Notation",
-    "text": "Notation\nLet us introduce some notation. - \\(X_m\\), the state of the markov chain after \\(m\\) steps - \\(P^m(x,y)\\) be the probability of moving from state \\(x\\) to \\(y\\) in exactly \\(m\\) steps. - \\(N_n(x,y) = \\sum_{m=1}^n 1_{y}(X_m)\\), the number of visits to state \\(y\\) in \\(n\\) steps, starting at state \\(x\\). - \\(G_n(x,y) = E(N_n(x,y)) = \\sum_{m=1}^n P^m(x,y)\\), the expected number of visits to \\(y\\) from \\(x\\) in \\(n\\) steps. - \\(T_{x,y}^r = \\min \\{ n \\ge 1 \\mid N_n(x,y) \\ge r \\}\\), the earliest time to hit \\(y\\) exactly \\(r\\) times - \\(m_{x,y} = E(T_{x,y}^1)\\), the expected time to hit \\(y\\) starting at state \\(x\\), i.e. the hitting time\nFor brevity, \\(m_y = m_{y,y}, T_y = T_{y,y},\\)…"
-  },
-  {
-    "objectID": "blog/cycle.html#hitting-times-and-stationary-distribution",
-    "href": "blog/cycle.html#hitting-times-and-stationary-distribution",
-    "title": "Cycle Analysis",
-    "section": "Hitting Times and Stationary Distribution",
-    "text": "Hitting Times and Stationary Distribution\nRecall we want to find \\(\\pi_y\\), the stationary distribution of the markov chain.\nTheorem: The stationary distribution is the reciprocal of the hitting time.\n\\[\n\\pi_y = \\frac{1}{m_y} = \\lim_{n \\to \\infty} \\frac{N_n(y)}{n}\n\\]\nproof: First, we show the second equality, that the ratio \\(N_n(y, y) / n\\) approaches \\(1/m_{y}\\). For \\(i \\ge 1\\), we consider \\(\\omega^i = T_{y}^i - T_{y}^{i-1}\\), the marginal time to cycle back to \\(y\\) for the \\(i\\)-th time. Since our transitions are memoryless, then \\(\\omega^i\\) are iid. Now, by the law of large numbers,\n\\[\n\\frac{T_{y}^k}{k} = \\frac{1}{k} \\sum_{i=1}^k \\omega^i \\to E(\\omega) = m_{y}\n\\]\nFinally,\n\\[\n\\frac{T_{y}^{N_n(y)}}{N_n(y)} \\le \\frac{n}{N_n(y)} \\le \\frac{T_y^{N_n(y) + 1}}{N_n(y) + 1}\n\\]\nwhere the left and right both converge to \\(m_y\\). Thus, \\(\\frac{n}{N_n(y)}\\), and moreover \\(\\frac{n}{G_n(y)}\\), both converge to \\(m_y\\) as well.\nNow, for the first equality, note that for any \\(m\\), \\(\\pi_y = \\sum_{x \\in S} \\pi(x) P^{m}(x,y)\\). Therefore, when we sum over \\(m\\), we have\n\\[\n\\pi_y = \\frac{1}{n} \\sum_{m=1}^n \\sum_{x \\in S} \\pi(x) P^m(x,y) = \\sum_{x \\in S} \\pi(x) \\frac{G_n(x,y)}{n}\n\\]\nMoreover, this holds as \\(n \\to \\infty\\), so recalling that \\(\\sum_x \\pi(x) = 1\\), then we find that\n\\[\n  \\pi_y = \\lim_{n \\to \\infty} \\sum_{x \\in S} \\frac{G_n(x,y)}{n} \\pi(x) = \\sum_{x \\in S} \\pi(x) \\frac{1}{m_y} = \\frac{1}{m_y}\n\\]\nThus concludes the proof."
-  },
-  {
-    "objectID": "blog/cycle.html#computing-hitting-times-using-cycles",
-    "href": "blog/cycle.html#computing-hitting-times-using-cycles",
-    "title": "Cycle Analysis",
-    "section": "Computing Hitting Times using Cycles",
-    "text": "Computing Hitting Times using Cycles\nThe hitting time \\(m_y\\) is the expected number of steps starting at \\(y\\) before reaching \\(y\\) again. We can compute this by enumerating all (possibly countable infinite) cycles, computing the probability of taking it, and find the expected length.\nI illustrate this by example. Consider the following two state Markov chain with states \\(T\\) and \\(H\\). Let \\(P(T, H) = p\\), \\(P(H, T) = q\\), and self loops \\(1-p\\) and \\(1-q\\) respectively.\n\n\n\nTo find the hitting time (and therefore, the stationary distribution) \\(m_T\\), then we have the following cycles: \\(e_4\\), \\(e_1 e_3\\), \\(e_1 e_2 e_3\\), \\(e_1 e_2 e_2 e_3\\), …\nTherefore, we can find the average cycle length, i.e. the hitting time, as\n\\[\n\\begin{aligned}\nm_T & = p(e_4) \\cdot 1 + p(e_1 e_3) \\cdot 2 + p(e_1 e_2 e_3) \\cdot 3 + p(e_1 e_2 e_2 e_3) \\cdot 4 + \\ldots \\\\\n    & = (1-p) + \\sum_{\\ell=0}^\\infty (\\ell + 2) pq (1-q)^\\ell \\\\\n    & = (1-p) + 2pq + p(1-q) \\sum_{\\ell = 0}^\\infty (\\ell + 2) q(1-q)^{\\ell - 1} \\\\\n    & = (1-p) + 2pq + p(1-q) (2 + 1/q) = \\frac{p + q}{q}\n\\end{aligned}\n\\]\nThus, \\(\\pi_T = \\frac{p}{p+q}\\).\nWe can now find \\(\\pi_H\\) in one of several ways. First, \\(\\pi_H + \\pi_T = 1\\), so that \\(\\pi_H = \\frac{p}{p+q}\\).\nAlternatively, we can note that \\(\\pi_H / \\pi_T\\) is the averaged number of times we visit \\(H\\) in the above cycles. That is,\n\\[\n\\begin{aligned}\n\\frac{\\pi_H}{\\pi_T} & = p(e_4) \\cdot 0 + p(e_1 e_3) \\cdot 1 + p(e_1 e_2 e_3) \\cdot 2 + \\ldots \\\\\n                & = \\sum_{\\ell=0}^\\infty (\\ell + 1) pq (1-q)^\\ell \\\\\n                & = pq + p(1-q) \\sum_{\\ell = 0}^\\infty (\\ell + 1) q(1-q)^{\\ell - 1} \\\\\n                & = pq + p(1-q) (1 + 1/q) = \\frac{p}{q}\n\\end{aligned}\n\\]\nso that indeed, \\(\\pi_H = \\frac{p}{q} \\frac{q}{p+q} = \\frac{p}{p+q}\\).\nWe can summarize this procedure into the following theorem:\nTheorem: Let \\(x\\) be any state in a finite irreducible Markov chain, and \\(C_x\\) be all cycles from \\(x\\). Then, for any state \\(y\\),\n\\[\n\\pi_y = \\frac{ \\text{average visits to } y \\text{ in } C_x }{ \\text{average length of } C_x }\n\\]\nNote that here, we say cycles to allow repeated links, but passing through the start state exactly once.\nproof: We partition the walk into stages, where each stage is delimited by a cycle in \\(C_x\\). Then, \\(N_n(y)\\) is sum of visits to \\(y\\) in the \\(k\\)-th stage.\n\\[\n\\frac{N_n(y)}{n} = \\frac{N_n(y)}{G_n(x) m_x} = \\frac{1}{m_x} \\frac{N_n(x)}{G_n(x)} \\frac{1}{N_n(x)} \\sum_{k=1}^{N_n(x)} ( \\text{visits to } y \\text{ in } k \\text{-th cycle} )\n\\]\nNow, \\(\\frac{N_n(x)}{G_n(x)} \\to 1\\), and \\(\\frac{1}{N_n(x)} \\sum_{k=1}^{N_n(x)} (..)\\) approaches the average visits to \\(y\\) in \\(C_x\\). Moreover, the LHS approaches \\(\\pi_y\\), and \\(m_x\\) is the average length of \\(C_x\\).\nThus, taking limits, indeed\n\\[\n\\pi_y = \\frac{ \\text{average visits to } y \\text{ in } C_x }{ \\text{average length of } C_x }\n\\]"
-  },
-  {
-    "objectID": "blog/cycle.html#acknowledgements",
-    "href": "blog/cycle.html#acknowledgements",
-    "title": "Cycle Analysis",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nThe cycle analysis technique was introduced to me by my friend taking CS 438 at UIUC. Many probablistic networking protocols exhibit simple irreducible behavior which lend themselves nicely to such analysis."
+    "objectID": "blog/mindbenders/2026-10.html#september",
+    "href": "blog/mindbenders/2026-10.html#september",
+    "title": "2026 Sept/Oct Mindbenders",
+    "section": "September",
+    "text": "September\nGiven a 10-digit number, ending in an odd number excluding \\(5\\), show that there is a multiple that consists only of ones.\nI have no idea what p-adic numbers are, but I’ve seen visuals that remind me of this. In any case, the following documents my stream-of-thoughts for solving this puzzle.\n\nattempts\nTaking my lesson from October, I considered some examples. First, I wondered if the \\(10\\)-digit in the problem was significant, so I tried some fewer-digit numbers. For \\(3\\), then \\(111\\) is a multiple.\nFor \\(7\\), then it was not obvious how to find a multiple with all ones. Suppose there is a multiple, say \\(y\\). But we know that the first digit of \\(y\\) must be a \\(3\\). Then, \\(3 \\times 7 = 21\\), and we actually know the next digit of \\(y\\) must be a \\(7\\) (so that the second digit of \\(yx\\) is a \\(1\\)). Then, \\(73 \\times 7 = 511\\), and the next digit must be an \\(8\\) (so the \\(3\\)rd digit of \\(yx\\) is a \\(1\\)). Repeating this, we find \\(15873 \\times 7 = 111111\\).\nActually, we are building up each digit of \\(y\\) step by step. And each digit of \\(y\\) is forced to be what we say it is (note that it is not unique, as this process can be continued step by step). Thus, we have an algorithm for finding it, if it exists, we just have to characterize if it can ever fail, or ever fail to terminate.\nNow, to prove an algorithm terminates, usually we can find some sort of potential function that is bounded, and goes down at some rate. Of course, finding these is not typically quite difficult.\nSo, what could go wrong with the algorithm? Let’s give some more notation here. Let \\(z_k\\) be the first \\(k\\) digits of \\(z\\) (starting from least significant), which we are building up incrementally. If the first non-one digit of \\((xy)\\) is strictly less than \\(k\\), then we’re screwed (since adding more digits can never change a digit before \\(k\\)). We’re safe in this regard; inductively, we start from \\(k=0\\), and at each step of adding another digit to \\(y\\), we create at least one more \\(1\\) of \\((xy)_k\\).\nThus, we won’t ever get into a failing state. But it is still hard to argue that this process terminates.\nOne idea I had is to consider the most significant non-one digits (as they’re the only real signal from our process), and argue that number always decreases in some metric. This number definitely does not always decrease (e.g. for \\(x = 7\\), then we go from \\(2\\) to \\(5\\) to \\(6\\) to \\(4\\) to \\(1\\), after which we terminate). It seems to have the never increase the number of digits, and this is actually easy to show: if \\(z\\) is this number, then \\(cz\\) for \\(c &lt; 10\\) has at most one more digit than \\(z\\), and since the last digit is trimmed off in the process, we found a non-increasing. We have the first thing we need: something that is bounded.\nAll that’s left is to argue that we can never visit the same number twice, and we win. Suppose we do visit the same number twice, then let \\(y_1\\) be when we first visit it, and \\(y_2 \\circ y_1\\) the second time (where \\(\\circ\\) denotes string concat). Writing this equationally, we have \\((y_2 \\circ y_1) \\times x = (y_1 \\times x) \\circ (1 \\circ \\ldots \\circ 1)\\), but this actually means that \\(y_2\\) is all ones. Moreover, as its a circle, adding another repetition of \\(y_2\\) would also return back to the same potential. This means that our greedy algorithm will continually pick \\(1\\), which is absurd.\nWe are done! We have constructed a greedy algorithm that for any positive odd number \\(x\\) not divisible by \\(5\\), will find a multiple that is all ones. To do this, it incrementally builds the factor digit by digit. At each step of the algorithm, the number of non-one digits never increases, and also the number formed by the non-one digits is always distinct, and so this process terminates."
   },
   {
     "objectID": "blog/mindbenders/2026-03.html",
@@ -378,137 +266,291 @@
     "text": "Pigeonhole and Solution\nUnfortunately, I have seen this puzzle before as an application of the pigeonhole principle.\nThe first observation to make is that the disjointness only means that you need to choose two distinct subsets. That is, given two overlapping but distinct subsets that add to the same sum, then removing the overlapping numbers would find a winning pair of disjoint subsets.\nGiven 10 numbers \\(x_1, \\ldots, x_10\\), there are \\(2^{10} - 2 = 1022\\) possible subsets (ignoring trivial ones). However, any subset must sum to at least \\(1+2+\\ldots+10 = 55\\), and at most \\(100+99+\\ldots+91 = 955\\), so there are \\(901\\) possible sums. As \\(1022\\) subsets must have a range of \\(901\\) values, two of them must have the same sum, by pigeonhole!\nPick those two subsets, remove the overlapping values, and thus you can always find two disjoint non-empty subsets of the same value!"
   },
   {
-    "objectID": "blog/mindbenders/2026-10.html",
-    "href": "blog/mindbenders/2026-10.html",
-    "title": "2026 Sept/Oct Mindbenders",
+    "objectID": "blog/cycle.html",
+    "href": "blog/cycle.html",
+    "title": "Cycle Analysis",
     "section": "",
-    "text": "It has been too long since my last post, so let’s get back into it with some easy. Given two random balls that intersect in \\(\\mathbb{R}^d\\); what is the expected volume of their intersection?\nOf course, the above is actually underspecified (see Bertrands paradox). More precisely, we specify that we have a ball at the origin, and a second ball sampled uniformly with center inside the ball of radius \\(2\\).\n\n\nSomehow, I managed to overcomplicate this quite a bit. So first, consider \\(d=1\\). By symmetry, we can assume WLOG that the random ball always has positive center. Thus, an integral obtains the answer\n\\[\n  \\int_{0}^1 (0.5) (2-x) \\text{d}x + \\int_1^2 (0.5) (x - 1) \\text{d}x = 1\n\\]\nwhere \\((2-x)\\) and \\((x-1)\\) are the lengths of intersection between two intervals of length \\(2\\), for \\(x\\) center less than 1 or between 1 and 2 respectively, and \\(0.5\\) is the probability density at any point.\nA slightly nicer, but equivalent integral, is to consider the left endpoint from \\(-1\\) to \\(1\\), so that the area of intersection is always \\(1-x\\):\n\\[\n  \\int_{-1}^1 (0.5) (1-x) \\text{d}x = 1\n\\]\nThis approach does not extend to 2D easily (lots of gross algebra). Somehow, I thought there were a few things that should make this nice:\n\nwe have two objects that are the same shape\nthe particular object is a sphere, which is nicely symmetric\n\nI wanted to use both of these properties, and so what I thought was to consider a random process with both of these intervals. Originally, I wanted them to have centers anywhere in the plane, but then the density functions are hard to define. Thus, I tried having them be contained in some region \\(A(r)\\), where \\(r\\) is some scaling factor that I will have limit towards \\(\\infty\\).\nI remembered that the expected distance between two points in a rectangle in \\(\\mathbb{R}^d\\) can be calculated (which is relevant in k-nearest neighbors, with the curse of dimensionality)&gt; Thus, intuitively, I thought that this meant we can calculate the probability of them intersecting, and use the decomposition\n\\[\n\\begin{align}\n  \\textbf{Ev}(\\text{area of union}) & = \\textbf{Ev}(\\text{area of union} \\mid \\text{intersect}) \\textbf{P}(\\text{intersect}) \\\\\n                                    & + \\textbf{Ev}(\\text{area of union} \\mid \\text{not intersect}) \\textbf{P}(\\text{not intersect})\n\\end{align}\n\\]\nNow, given that two balls don’t intersect, the area of union is easy (just the sum). The area of union given they intersect is what we want to find. So, what remains is to find the probability of not intersecting (which is perhaps a simpler integral, of which I doing in the past), and also the area of the union. Then, this area of union can be calculated using linearity of expectation; as each ball is placed independently, if \\(p\\) is the probability that a point is not covered by one ball, then \\(p^2\\) is the probability that it is not covered by both.\nDoing this calculation… is messy and I started realizing there is probably some better way. Indeed, because I am already using linearity of expectation, looking at the probability of each point, it is actually easy to calculate it directly!\n\n\n\nConsider again the process where we place a unit disk with center uniformly chosen from the disk of radius \\(2\\). We know any point \\(p\\) in the intersection (with this random disk, and the disk at the origin) is within the disk of radius \\(1\\) from the origin. Then, for this point, we can consider the probability that its in the intersection, and then sum up over all points in the unit ball.\nNow, consider where must the second ball be in order for \\(p\\) to be in the intersection – the center must be in the unit ball centered at \\(p\\)! The probability that this is the case is exactly \\(2^{-d}\\), as this is the ratio of the volume of a unit ball (the success space) over the volume of a ball of radius \\(2\\) (the sample space). Putting this together, we obtain an answer of\n\\[\n  \\frac{\\pi^{d/2}}{\\Gamma(d/2 + 1) \\cdot 2^d}\n\\]\nwhich comes from the volume of a unit ball embedded in \\(\\mathbb{R}^d\\).\nI tried to exploit too much structure in the problem, before trying more straightforward methods. Think about what is relevant; work out some examples!"
+    "text": "Consider an infinitely long sequence of coin flips, i.e. with \\(p\\) probability heads and \\(1-p\\) probability tails. You get points for non-overlapping pairs of consecutive heads. How many points do you expect to obtain per flip? That is, what is the limit for the ratio of the number of points over number of flips?\nFor example, the sequence \\(HHTHHH\\) gets \\(2\\) points. With \\(6\\) flips, the average score is \\(1/3\\)."
   },
   {
-    "objectID": "blog/mindbenders/2026-10.html#october",
-    "href": "blog/mindbenders/2026-10.html#october",
-    "title": "2026 Sept/Oct Mindbenders",
+    "objectID": "blog/cycle.html#markov-chains",
+    "href": "blog/cycle.html#markov-chains",
+    "title": "Cycle Analysis",
+    "section": "Markov Chains",
+    "text": "Markov Chains\nWhat we have just done is find the stationary distribution of the following Markov Chain:\n\n\n\nThe arcs represent the state changes after a coin flip. We want to find to find the long-term probability of being in the \\(HH\\) state.\nLet \\(P(x, y)\\) be the probability of transitioning between states \\(x\\) and \\(y\\) (zero if there is no arc). Then, a stationary distribution satisfies the recurrence\n\\[\n\\pi_y = \\sum_x \\pi_x P(x, y)\n\\]"
+  },
+  {
+    "objectID": "blog/cycle.html#notation",
+    "href": "blog/cycle.html#notation",
+    "title": "Cycle Analysis",
+    "section": "Notation",
+    "text": "Notation\nLet us introduce some notation. - \\(X_m\\), the state of the markov chain after \\(m\\) steps - \\(P^m(x,y)\\) be the probability of moving from state \\(x\\) to \\(y\\) in exactly \\(m\\) steps. - \\(N_n(x,y) = \\sum_{m=1}^n 1_{y}(X_m)\\), the number of visits to state \\(y\\) in \\(n\\) steps, starting at state \\(x\\). - \\(G_n(x,y) = E(N_n(x,y)) = \\sum_{m=1}^n P^m(x,y)\\), the expected number of visits to \\(y\\) from \\(x\\) in \\(n\\) steps. - \\(T_{x,y}^r = \\min \\{ n \\ge 1 \\mid N_n(x,y) \\ge r \\}\\), the earliest time to hit \\(y\\) exactly \\(r\\) times - \\(m_{x,y} = E(T_{x,y}^1)\\), the expected time to hit \\(y\\) starting at state \\(x\\), i.e. the hitting time\nFor brevity, \\(m_y = m_{y,y}, T_y = T_{y,y},\\)…"
+  },
+  {
+    "objectID": "blog/cycle.html#hitting-times-and-stationary-distribution",
+    "href": "blog/cycle.html#hitting-times-and-stationary-distribution",
+    "title": "Cycle Analysis",
+    "section": "Hitting Times and Stationary Distribution",
+    "text": "Hitting Times and Stationary Distribution\nRecall we want to find \\(\\pi_y\\), the stationary distribution of the markov chain.\nTheorem: The stationary distribution is the reciprocal of the hitting time.\n\\[\n\\pi_y = \\frac{1}{m_y} = \\lim_{n \\to \\infty} \\frac{N_n(y)}{n}\n\\]\nproof: First, we show the second equality, that the ratio \\(N_n(y, y) / n\\) approaches \\(1/m_{y}\\). For \\(i \\ge 1\\), we consider \\(\\omega^i = T_{y}^i - T_{y}^{i-1}\\), the marginal time to cycle back to \\(y\\) for the \\(i\\)-th time. Since our transitions are memoryless, then \\(\\omega^i\\) are iid. Now, by the law of large numbers,\n\\[\n\\frac{T_{y}^k}{k} = \\frac{1}{k} \\sum_{i=1}^k \\omega^i \\to E(\\omega) = m_{y}\n\\]\nFinally,\n\\[\n\\frac{T_{y}^{N_n(y)}}{N_n(y)} \\le \\frac{n}{N_n(y)} \\le \\frac{T_y^{N_n(y) + 1}}{N_n(y) + 1}\n\\]\nwhere the left and right both converge to \\(m_y\\). Thus, \\(\\frac{n}{N_n(y)}\\), and moreover \\(\\frac{n}{G_n(y)}\\), both converge to \\(m_y\\) as well.\nNow, for the first equality, note that for any \\(m\\), \\(\\pi_y = \\sum_{x \\in S} \\pi(x) P^{m}(x,y)\\). Therefore, when we sum over \\(m\\), we have\n\\[\n\\pi_y = \\frac{1}{n} \\sum_{m=1}^n \\sum_{x \\in S} \\pi(x) P^m(x,y) = \\sum_{x \\in S} \\pi(x) \\frac{G_n(x,y)}{n}\n\\]\nMoreover, this holds as \\(n \\to \\infty\\), so recalling that \\(\\sum_x \\pi(x) = 1\\), then we find that\n\\[\n  \\pi_y = \\lim_{n \\to \\infty} \\sum_{x \\in S} \\frac{G_n(x,y)}{n} \\pi(x) = \\sum_{x \\in S} \\pi(x) \\frac{1}{m_y} = \\frac{1}{m_y}\n\\]\nThus concludes the proof."
+  },
+  {
+    "objectID": "blog/cycle.html#computing-hitting-times-using-cycles",
+    "href": "blog/cycle.html#computing-hitting-times-using-cycles",
+    "title": "Cycle Analysis",
+    "section": "Computing Hitting Times using Cycles",
+    "text": "Computing Hitting Times using Cycles\nThe hitting time \\(m_y\\) is the expected number of steps starting at \\(y\\) before reaching \\(y\\) again. We can compute this by enumerating all (possibly countable infinite) cycles, computing the probability of taking it, and find the expected length.\nI illustrate this by example. Consider the following two state Markov chain with states \\(T\\) and \\(H\\). Let \\(P(T, H) = p\\), \\(P(H, T) = q\\), and self loops \\(1-p\\) and \\(1-q\\) respectively.\n\n\n\nTo find the hitting time (and therefore, the stationary distribution) \\(m_T\\), then we have the following cycles: \\(e_4\\), \\(e_1 e_3\\), \\(e_1 e_2 e_3\\), \\(e_1 e_2 e_2 e_3\\), …\nTherefore, we can find the average cycle length, i.e. the hitting time, as\n\\[\n\\begin{aligned}\nm_T & = p(e_4) \\cdot 1 + p(e_1 e_3) \\cdot 2 + p(e_1 e_2 e_3) \\cdot 3 + p(e_1 e_2 e_2 e_3) \\cdot 4 + \\ldots \\\\\n    & = (1-p) + \\sum_{\\ell=0}^\\infty (\\ell + 2) pq (1-q)^\\ell \\\\\n    & = (1-p) + 2pq + p(1-q) \\sum_{\\ell = 0}^\\infty (\\ell + 2) q(1-q)^{\\ell - 1} \\\\\n    & = (1-p) + 2pq + p(1-q) (2 + 1/q) = \\frac{p + q}{q}\n\\end{aligned}\n\\]\nThus, \\(\\pi_T = \\frac{p}{p+q}\\).\nWe can now find \\(\\pi_H\\) in one of several ways. First, \\(\\pi_H + \\pi_T = 1\\), so that \\(\\pi_H = \\frac{p}{p+q}\\).\nAlternatively, we can note that \\(\\pi_H / \\pi_T\\) is the averaged number of times we visit \\(H\\) in the above cycles. That is,\n\\[\n\\begin{aligned}\n\\frac{\\pi_H}{\\pi_T} & = p(e_4) \\cdot 0 + p(e_1 e_3) \\cdot 1 + p(e_1 e_2 e_3) \\cdot 2 + \\ldots \\\\\n                & = \\sum_{\\ell=0}^\\infty (\\ell + 1) pq (1-q)^\\ell \\\\\n                & = pq + p(1-q) \\sum_{\\ell = 0}^\\infty (\\ell + 1) q(1-q)^{\\ell - 1} \\\\\n                & = pq + p(1-q) (1 + 1/q) = \\frac{p}{q}\n\\end{aligned}\n\\]\nso that indeed, \\(\\pi_H = \\frac{p}{q} \\frac{q}{p+q} = \\frac{p}{p+q}\\).\nWe can summarize this procedure into the following theorem:\nTheorem: Let \\(x\\) be any state in a finite irreducible Markov chain, and \\(C_x\\) be all cycles from \\(x\\). Then, for any state \\(y\\),\n\\[\n\\pi_y = \\frac{ \\text{average visits to } y \\text{ in } C_x }{ \\text{average length of } C_x }\n\\]\nNote that here, we say cycles to allow repeated links, but passing through the start state exactly once.\nproof: We partition the walk into stages, where each stage is delimited by a cycle in \\(C_x\\). Then, \\(N_n(y)\\) is sum of visits to \\(y\\) in the \\(k\\)-th stage.\n\\[\n\\frac{N_n(y)}{n} = \\frac{N_n(y)}{G_n(x) m_x} = \\frac{1}{m_x} \\frac{N_n(x)}{G_n(x)} \\frac{1}{N_n(x)} \\sum_{k=1}^{N_n(x)} ( \\text{visits to } y \\text{ in } k \\text{-th cycle} )\n\\]\nNow, \\(\\frac{N_n(x)}{G_n(x)} \\to 1\\), and \\(\\frac{1}{N_n(x)} \\sum_{k=1}^{N_n(x)} (..)\\) approaches the average visits to \\(y\\) in \\(C_x\\). Moreover, the LHS approaches \\(\\pi_y\\), and \\(m_x\\) is the average length of \\(C_x\\).\nThus, taking limits, indeed\n\\[\n\\pi_y = \\frac{ \\text{average visits to } y \\text{ in } C_x }{ \\text{average length of } C_x }\n\\]"
+  },
+  {
+    "objectID": "blog/cycle.html#acknowledgements",
+    "href": "blog/cycle.html#acknowledgements",
+    "title": "Cycle Analysis",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThe cycle analysis technique was introduced to me by my friend taking CS 438 at UIUC. Many probablistic networking protocols exhibit simple irreducible behavior which lend themselves nicely to such analysis."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ian Chen",
     "section": "",
-    "text": "It has been too long since my last post, so let’s get back into it with some easy. Given two random balls that intersect in \\(\\mathbb{R}^d\\); what is the expected volume of their intersection?\nOf course, the above is actually underspecified (see Bertrands paradox). More precisely, we specify that we have a ball at the origin, and a second ball sampled uniformly with center inside the ball of radius \\(2\\).\n\n\nSomehow, I managed to overcomplicate this quite a bit. So first, consider \\(d=1\\). By symmetry, we can assume WLOG that the random ball always has positive center. Thus, an integral obtains the answer\n\\[\n  \\int_{0}^1 (0.5) (2-x) \\text{d}x + \\int_1^2 (0.5) (x - 1) \\text{d}x = 1\n\\]\nwhere \\((2-x)\\) and \\((x-1)\\) are the lengths of intersection between two intervals of length \\(2\\), for \\(x\\) center less than 1 or between 1 and 2 respectively, and \\(0.5\\) is the probability density at any point.\nA slightly nicer, but equivalent integral, is to consider the left endpoint from \\(-1\\) to \\(1\\), so that the area of intersection is always \\(1-x\\):\n\\[\n  \\int_{-1}^1 (0.5) (1-x) \\text{d}x = 1\n\\]\nThis approach does not extend to 2D easily (lots of gross algebra). Somehow, I thought there were a few things that should make this nice:\n\nwe have two objects that are the same shape\nthe particular object is a sphere, which is nicely symmetric\n\nI wanted to use both of these properties, and so what I thought was to consider a random process with both of these intervals. Originally, I wanted them to have centers anywhere in the plane, but then the density functions are hard to define. Thus, I tried having them be contained in some region \\(A(r)\\), where \\(r\\) is some scaling factor that I will have limit towards \\(\\infty\\).\nI remembered that the expected distance between two points in a rectangle in \\(\\mathbb{R}^d\\) can be calculated (which is relevant in k-nearest neighbors, with the curse of dimensionality)&gt; Thus, intuitively, I thought that this meant we can calculate the probability of them intersecting, and use the decomposition\n\\[\n\\begin{align}\n  \\textbf{Ev}(\\text{area of union}) & = \\textbf{Ev}(\\text{area of union} \\mid \\text{intersect}) \\textbf{P}(\\text{intersect}) \\\\\n                                    & + \\textbf{Ev}(\\text{area of union} \\mid \\text{not intersect}) \\textbf{P}(\\text{not intersect})\n\\end{align}\n\\]\nNow, given that two balls don’t intersect, the area of union is easy (just the sum). The area of union given they intersect is what we want to find. So, what remains is to find the probability of not intersecting (which is perhaps a simpler integral, of which I doing in the past), and also the area of the union. Then, this area of union can be calculated using linearity of expectation; as each ball is placed independently, if \\(p\\) is the probability that a point is not covered by one ball, then \\(p^2\\) is the probability that it is not covered by both.\nDoing this calculation… is messy and I started realizing there is probably some better way. Indeed, because I am already using linearity of expectation, looking at the probability of each point, it is actually easy to calculate it directly!\n\n\n\nConsider again the process where we place a unit disk with center uniformly chosen from the disk of radius \\(2\\). We know any point \\(p\\) in the intersection (with this random disk, and the disk at the origin) is within the disk of radius \\(1\\) from the origin. Then, for this point, we can consider the probability that its in the intersection, and then sum up over all points in the unit ball.\nNow, consider where must the second ball be in order for \\(p\\) to be in the intersection – the center must be in the unit ball centered at \\(p\\)! The probability that this is the case is exactly \\(2^{-d}\\), as this is the ratio of the volume of a unit ball (the success space) over the volume of a ball of radius \\(2\\) (the sample space). Putting this together, we obtain an answer of\n\\[\n  \\frac{\\pi^{d/2}}{\\Gamma(d/2 + 1) \\cdot 2^d}\n\\]\nwhich comes from the volume of a unit ball embedded in \\(\\mathbb{R}^d\\).\nI tried to exploit too much structure in the problem, before trying more straightforward methods. Think about what is relevant; work out some examples!"
+    "text": "Hey, I’m Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign. I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing."
   },
   {
-    "objectID": "blog/mindbenders/2026-10.html#september",
-    "href": "blog/mindbenders/2026-10.html#september",
-    "title": "2026 Sept/Oct Mindbenders",
-    "section": "September",
-    "text": "September\nGiven a 10-digit number, ending in an odd number excluding \\(5\\), show that there is a multiple that consists only of ones.\nI have no idea what p-adic numbers are, but I’ve seen visuals that remind me of this. In any case, the following documents my stream-of-thoughts for solving this puzzle.\n\nattempts\nTaking my lesson from October, I considered some examples. First, I wondered if the \\(10\\)-digit in the problem was significant, so I tried some fewer-digit numbers. For \\(3\\), then \\(111\\) is a multiple.\nFor \\(7\\), then it was not obvious how to find a multiple with all ones. Suppose there is a multiple, say \\(y\\). But we know that the first digit of \\(y\\) must be a \\(3\\). Then, \\(3 \\times 7 = 21\\), and we actually know the next digit of \\(y\\) must be a \\(7\\) (so that the second digit of \\(yx\\) is a \\(1\\)). Then, \\(73 \\times 7 = 511\\), and the next digit must be an \\(8\\) (so the \\(3\\)rd digit of \\(yx\\) is a \\(1\\)). Repeating this, we find \\(15873 \\times 7 = 111111\\).\nActually, we are building up each digit of \\(y\\) step by step. And each digit of \\(y\\) is forced to be what we say it is (note that it is not unique, as this process can be continued step by step). Thus, we have an algorithm for finding it, if it exists, we just have to characterize if it can ever fail, or ever fail to terminate.\nNow, to prove an algorithm terminates, usually we can find some sort of potential function that is bounded, and goes down at some rate. Of course, finding these is not typically quite difficult.\nSo, what could go wrong with the algorithm? Let’s give some more notation here. Let \\(z_k\\) be the first \\(k\\) digits of \\(z\\) (starting from least significant), which we are building up incrementally. If the first non-one digit of \\((xy)\\) is strictly less than \\(k\\), then we’re screwed (since adding more digits can never change a digit before \\(k\\)). We’re safe in this regard; inductively, we start from \\(k=0\\), and at each step of adding another digit to \\(y\\), we create at least one more \\(1\\) of \\((xy)_k\\).\nThus, we won’t ever get into a failing state. But it is still hard to argue that this process terminates.\nOne idea I had is to consider the most significant non-one digits (as they’re the only real signal from our process), and argue that number always decreases in some metric. This number definitely does not always decrease (e.g. for \\(x = 7\\), then we go from \\(2\\) to \\(5\\) to \\(6\\) to \\(4\\) to \\(1\\), after which we terminate). It seems to have the never increase the number of digits, and this is actually easy to show: if \\(z\\) is this number, then \\(cz\\) for \\(c &lt; 10\\) has at most one more digit than \\(z\\), and since the last digit is trimmed off in the process, we found a non-increasing. We have the first thing we need: something that is bounded.\nAll that’s left is to argue that we can never visit the same number twice, and we win. Suppose we do visit the same number twice, then let \\(y_1\\) be when we first visit it, and \\(y_2 \\circ y_1\\) the second time (where \\(\\circ\\) denotes string concat). Writing this equationally, we have \\((y_2 \\circ y_1) \\times x = (y_1 \\times x) \\circ (1 \\circ \\ldots \\circ 1)\\), but this actually means that \\(y_2\\) is all ones. Moreover, as its a circle, adding another repetition of \\(y_2\\) would also return back to the same potential. This means that our greedy algorithm will continually pick \\(1\\), which is absurd.\nWe are done! We have constructed a greedy algorithm that for any positive odd number \\(x\\) not divisible by \\(5\\), will find a multiple that is all ones. To do this, it incrementally builds the factor digit by digit. At each step of the algorithm, the number of non-one digits never increases, and also the number formed by the non-one digits is always distinct, and so this process terminates."
-  },
-  {
-    "objectID": "publications/chen2026improved.html",
-    "href": "publications/chen2026improved.html",
-    "title": "Improved Methods for \\(k\\)-Core Community Search",
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Ian Chen",
     "section": "",
-    "text": "PDF arXiv"
+    "text": "Hey, I’m Ian Chen, studying Statistics and Computer Science as a fourth-year undergraduate at the University of Illinois-Urbana Champaign. I am interested generally in algorithmic computer science, and more recently, parallel and distributed computing."
   },
   {
-    "objectID": "publications/chen2026improved.html#abstract",
-    "href": "publications/chen2026improved.html#abstract",
-    "title": "Improved Methods for \\(k\\)-Core Community Search",
-    "section": "Abstract",
-    "text": "Abstract\nCommunity search based on user-specified query nodes is complementary to community finding or graph clustering. Prior work in community search is divided into optimizing for external separateness or internal cohesiveness, which does not scale well networks of over a billion edges. We present SteinerKCore, a new scalable k-core based community search algorithm for multi-vertex queries. We also present Par-ShellStruct, a parallel algorithm for building the ShellStruct data structure used for k-core community search. We show that our implementations in Icebug, an open-source toolkit for large-scale network analysis, are both more efficient and more scalable than comparative tools, being able to perform on a benchmark network of 273M and 5.1B edges using just 64GB RAM and under 4 hours runtime with 16 CPUs.\n\n\n\n\nBibTeX\n\n@online{chen2026improved,\n  title = {Improved Methods for $k$-Core Community Search},\n  author = {Chen, Ian and Yi, Haotian and Sharma, Arun and Warnow, Tandy and Chacko, George},\n  year = {2026},\n  month = sep,\n  eprint = {2609.17822},\n  eprinttype = {arxiv},\n  addendum = {Submitted to CompleNet 2027},\n}"
+    "objectID": "index.html#research",
+    "href": "index.html#research",
+    "title": "Ian Chen",
+    "section": "Research",
+    "text": "Research\nMy past research has been focused on Network Science with Tandy Warnow and George Chacko. We are scaling local community detection, also known as community search, towards networks with millions to billions of nodes."
   },
   {
-    "objectID": "publications/park2026modeling.html",
-    "href": "publications/park2026modeling.html",
-    "title": "Modeling citations and cartels",
+    "objectID": "index.html#special-interest-group-in-math-and-algorithms",
+    "href": "index.html#special-interest-group-in-math-and-algorithms",
+    "title": "Ian Chen",
+    "section": "Special Interest Group in math and algorithms",
+    "text": "Special Interest Group in math and algorithms\nI am a lead for the ACM@UIUC group in math and algorithms! This semester, we are participating in CG:SHOP. See our activities here."
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Ian Chen",
+    "section": "News",
+    "text": "News\n\n\n\n\nChanged site format to Quarto!\n\n\nNov 5, 2026\n\n\n\nNo matching items\n\nAll news"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Mindbenders\n\n\n\n\n\n\npuzzle\n\n\n\nMy solutions to the MoMath mindbenders.\n\n\n\n\n\nOct 25, 2026\n\n\n\n\n\n\n\nCycle Analysis\n\n\n\n\n\n\nstochastic-processes\n\n\n\nYou get points for non-overlapping pairs of consecutive heads.\n\n\n\n\n\nMar 15, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-01.html",
+    "href": "blog/mindbenders/2026-01.html",
+    "title": "2026 January Momath Mindbender",
+    "section": "",
+    "text": "Puzzle from here. Consider a ladybug starting on the 12-hand of the clock. During each timestep, it will choose to walk either counterclockwise or clockwise, each with 50% probability. What is the probability that the last new number it visits is 6?\nIt will be useful to establish consistent notation. Let \\(p_y\\) be the probability that \\(y\\) is the last new number the ladybug visits. Let \\(X_t\\) be the position of the ladybug. Let \\(T_y\\) be the first time where \\(X_t = y\\).\nI will also use \\(P_x( ... )\\) to denote the probability of an event given the starting point of a random walk of \\(x\\).\n\nGamblers Ruin\nThe first solution I came up with relies on the setup called “Gambler’s Ruin”. Consider a 1-D symmetric random walk starting at \\(0 &lt; x &lt; d\\). I claim that \\(P_x(T_d &lt; T_0) = \\frac{x}{d}\\).\nFirst, observe that \\(E(X_t) = x\\) (this is called a Martingale process). This is because at each time step, we make no expected progress towards either endpoint. Therefore, at time \\(T = \\min( T_d, T_0)\\), then we obtain the equation\n\\[\n  x = E(X_0) = E(X_T) = 0 P(X_T = 0) + d P(X_T = d) = d P(T_d &lt; T_0)\n\\]\nwhich proves our claim.\n\n\nSolution One\nNow, to solve the puzzle, it remains to enumerate some simple cases. Consider the sequence in which the ladybug sees new numbers. Then, in order for 6 to be last, then it must either see 5 before 7 before 6, or 7 before 5 before 6. That is,\n\\[\n  p_6 = P_{12}(T_5 &lt; T_7 &lt; T_6) + P_{12}(T_7 &lt; T_5 &lt; T_6)\n\\]\nWe can decompose\n\\[\n  P_{12}(T_5 &lt; T_7 &lt; T_6) = P_{12}(T_5 &lt; T_7) \\cdot P_5(T_7 &lt; T_6)\n\\]\nand\n\\[\n  P_{12}(T_7 &lt; T_5 &lt; T_6) = P_{12}(T_7 &lt; T_5) \\cdot P_7(T_5 &lt; T_6)\n\\]\nso that plugging in our expression\n\\[\n  p_6 = (1/2) \\cdot (1/11) + (1/2) \\cdot (1/11) = 1/11\n\\]\n\n\nSolution Two\nFollowing this, I immediately noticed that \\(p_1 = p_2 = \\ldots = p_{11} = 1/11\\). All the probabilities are uniform! This hints that there is a simpler explanation.\nIndeed, in order for 6 to be the last new number visited, there must be an arc between 5 to 7, or from 7 to 5. All the steps before reaching either 5 or 7 are superfluous. Therefore, \\(p_x = P_5(T_7 &lt; T_6)\\).\nIn words, the probability of seeing 6 last is the probability of starting to one side of 6 and reaching the other side of 6 without hitting 6. This holds for any starting position.\nNow, as there are 11 probabilities, the final step is to show that they sum to 1. One way of doing this (although there are likely many) is to shift a perspective: instead of varying the starting point, vary the end point. As there must be some number that is the last one visited, those probabilities must add to 1."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html",
+    "href": "blog/mindbenders/2026-07.html",
+    "title": "2026 July Mindbenders",
+    "section": "",
+    "text": "If you roll six dice, you could get the same number on every die, or (in contrast) all different numbers. What is the probability of getting exactly four distinct numbers? source."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#some-code",
+    "href": "blog/mindbenders/2026-07.html#some-code",
+    "title": "2026 July Mindbenders",
+    "section": "Some code",
+    "text": "Some code\nNot the most efficient, but some pretty clean usage brute-force calculation via the Python standard library.\n&gt; Counter(len(set(x)) for x in it.product(range(6), repeat=6))\nCounter({4: 23400, 3: 10800, 5: 10800, 2: 930, 6: 720, 1: 6})"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#combinatorics",
+    "href": "blog/mindbenders/2026-07.html#combinatorics",
+    "title": "2026 July Mindbenders",
+    "section": "Combinatorics",
+    "text": "Combinatorics\nThere are \\(6^6 = 46'656\\) possible strings of 6 dice. We want to derive an expression for \\(c_k\\), the number of ways for there to be exactly \\(k\\) distinct numbers in that string.\nWe first pick the \\(k\\) distinct numbers, with there being \\(\\binom{6}{k}\\) different ways of doing so. Then, we need to pick the histogram of counts for each of the \\(k\\) numbers. For \\(c_4\\), then this is\n\\[\n  \\binom{6}{4} \\times \\left(\n    \\frac{6!}{1! \\cdot 1! \\cdot 1! \\cdot 3!} \\times \\frac{4!}{3! \\cdot 1!} +\n    \\frac{6!}{1! \\cdot 1! \\cdot 2! \\cdot 2!} \\times \\frac{4!}{2! \\cdot 2!}\n  \\right) = 23'400\n\\]\nAnd the answer is \\(23'400 / 46'656 \\approx 50.2\\%\\). For some reason, \\(c_3 = c_5\\); seems like a coincidence.\nThere are many other ways to do this combinatorially, e.g. with generating functions or inclusion-exclusion. These are besides the point here, but there are some more interesting approaches (many of which were in the pursuit of trying to find an intuitive reason for such a large probability mass)!"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#dynamic-programming",
+    "href": "blog/mindbenders/2026-07.html#dynamic-programming",
+    "title": "2026 July Mindbenders",
+    "section": "Dynamic Programming",
+    "text": "Dynamic Programming\nAnother approach that is maybe less error prone is to do some dynamic programming. Let \\(f(i, j)\\) be the probability that we have \\(i\\) distinct numbers after \\(j\\) rolls. Then, we get the recurrence\n\\[\n  f(i, j) =\n  \\begin{cases}\n    1 & i = j = 1 \\\\\n    0 & i &gt; j \\\\\n    \\frac{i}{6} \\times f(i, j-1) + \\frac{6-i}{6} f(i - 1, j) & \\text{otherwise}\n  \\end{cases}\n\\]\ni.e. we sum up the cases where after a new roll, we get a distinct or not.\n\n\n\nSumming up each column gives a probability of exactly \\(1\\). This also gives us a simpler closed form, namely, we just sum up all the paths! Indeed,\n\\[\nf(i, j) = \\left( \\prod_{k=7-i}^{5} \\frac{k}{6} \\right)\n          \\times\n          \\left( \\sum_{1 \\le k_1 \\le \\ldots \\le k_{j - i} \\le i} \\frac{ k_1 \\cdot \\ldots \\cdot k_{j-i} }{6^{j-i}} \\right)\n\\]\nCalculating \\(f(4, 6)\\), the probability of getting \\(4\\) distinct numbers after \\(6\\) rolls, we have\n\\[\n  f(4, 6) = \\frac{3}{6} \\frac{4}{6} \\frac{5}{6} \\times \\sum_{k_1=1}^4 \\sum_{k_2=k_1}^4 \\frac{k_1 \\cdot k_2}{6^2}\n\\]"
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#hitting-times",
+    "href": "blog/mindbenders/2026-07.html#hitting-times",
+    "title": "2026 July Mindbenders",
+    "section": "Hitting Times",
+    "text": "Hitting Times\nLet us consider aa related problem: how many trials does it take until we get \\(k\\) distinct rolls. The number of rolls until we get our first distinct follows \\(\\text{Geometric}(p = 1)\\). Our second distinct element follows \\(\\text{Geometric}(p = 1 - 1/6)\\). In general, to get the \\(k\\) -th distinct, it follows \\(G_k = \\text{Geometric}(p_k = \\frac{7 - k}{6})\\). The expected number of rolls to get \\(k = 1, \\ldots, 6\\) distinct elements are thus:\n\\[\n  1, 2.2, 3.7, 5.7, 8.7, 14.7\n\\]\nBut, if we recall from our introductory statistics classes, this feels a lot like the Poisson and Gamma duality. The probability of counting \\(\\ge 4\\) successes in \\(6\\) rolls is the same as it taking \\(\\le 6\\) rolls to get the \\(4\\) -th success.\nWe can proceed in a similar path, deriving an analogous for the Gamma distribution. In particular, let \\(T_k = G_1 + \\ldots + G_k\\) be the rolls until we get the \\(k\\) -th distinct element. Then, we want to calculate\n\\[\n  \\textbf{Pr}(T_4 \\le 6) - \\textbf{Pr}( T_5 \\le 6 )\n\\]\nThe full calculation is a bit annoying, and I have instead attached it. In short, probability generating functions are useful."
+  },
+  {
+    "objectID": "blog/mindbenders/2026-07.html#embeddings",
+    "href": "blog/mindbenders/2026-07.html#embeddings",
+    "title": "2026 July Mindbenders",
+    "section": "Embeddings",
+    "text": "Embeddings\nAn extremely powerful tool in stochastic processes, which I hope to learn more about, is to embed this discrete chain into some more general process. Finally, we restrict our view of that more general process to the events that we care about.\nThis in general is known as Poissonification, and I first saw the idea with context of hashing in a UIUC theory seminar. We suppose we throw \\(m = \\textbf{Poisson}(\\lambda)\\) die, and then condition on the event that \\(m = 6\\). The really elegant result from this is that we avoid the negative correlation of the occupancy indicators \\(X_i\\). In particular, if we look instead at the Multinomial distribution of the counts of each dice, then\n\\[\n\\begin{align*}\n  & \\textbf{Pr}(\\textbf{Multinomial}(m, (p_1, \\ldots, p_6) = (n_1, \\ldots, n_6); m \\sim \\textbf{Poisson}(\\lambda)) \\\\\n  & = e^{- \\lambda} \\frac{\\lambda^m}{m!} \\times \\frac{m!}{\\prod_{i=1}^6 n_i!} \\prod_{i=1}^6 p_i^{n_i} = \\prod_{i=1}^6 e^{- \\lambda p_i} \\frac{(\\lambda p_i)^{n_i}}{n_i!}\n\\end{align*}\n\\]\nwhere we recognize each individual term in the product as the mass function for \\(\\textbf{Poisson}( \\lambda p_i )\\). We not only avoid the negative correlation, but we get pure independence! At this point, by conditioning on \\(m\\), we can do the calculation and get an answer.\nIn fact, if one remembers the construction of a Poisson process, then it should be clear why Possionification leads to this nice independence property. Suppose we set a timer \\(T \\sim \\textbf{Exponential}(\\lambda / 6)\\) independently for each of the \\(6\\) bins. Then, a dice is rolled whenever a timer is fired, and the timer gets reset.\nHere, the waiting time between rolls of the dice follow the minimum of \\(6\\) independent \\(\\textbf{Exponential}(\\lambda / 6)\\) timers, i.e. the gap between each of the each of the dice rolls follows \\(\\textbf{Exponential}(\\lambda)\\). Thus, by the construction of Poisson process, then the number of dice rolls at a given time \\(t\\) follows \\(\\textbf{Poisson}( \\lambda t )\\). Moreover, because exponential random variables are memoryless, then the increment between a dice rolling in each bin follows \\(\\textbf{Exponential}(\\lambda / 6)\\), and again by construction of Poisson, then the number of balls in a given bin follows \\(\\textbf{Poisson}(\\lambda t / 6)\\)."
+  },
+  {
+    "objectID": "blog/mindbenders/index.html",
+    "href": "blog/mindbenders/index.html",
+    "title": "Mindbenders",
+    "section": "",
+    "text": "2026 Sept/Oct Mindbenders\n\n\n\npuzzle\n\n\n\nGiven two random balls that intersect, what is the expected volume of their intersection?\n\n\n\n\n\nOct 25, 2026\n\n\n\n\n\n\n\n2026 July Mindbenders\n\n\n\npuzzle\n\n\n\nIf you roll six dice, you could get the same number on every die, or (in contrast) all different numbers.\n\n\n\n\n\nJul 16, 2026\n\n\n\n\n\n\n\n2026 February and March Mindbender\n\n\n\npuzzle\n\npotentials\n\n\n\nToday, I discuss my solutions towards the February and March mindbenders!\n\n\n\n\n\nMar 16, 2026\n\n\n\n\n\n\n\n2026 January Momath Mindbender\n\n\n\nstochastic-processes\n\npuzzle\n\n\n\nConsider a ladybug starting on the 12-hand of the clock.\n\n\n\n\n\nJan 25, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Applied Network Science · June 2026\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\n\n\n\nApplied Network Science · November 2025\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#journal-articles",
+    "href": "publications/index.html#journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Applied Network Science · June 2026\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, João Alfredo Cardoso Lamy, Tomás Alessi, Elfarouk Harb, George Chacko, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\n\n\n\nApplied Network Science · November 2025\n\n\nThe-Anh Vu-Le, Minhyuk Park, Ian Chen, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#conference-papers",
+    "href": "publications/index.html#conference-papers",
+    "title": "Publications",
+    "section": "Conference Papers",
+    "text": "Conference Papers\n\n\n\n\nDense Subgraph Clustering and a New Cluster Ensemble Method\n\nComplex Networks & Their Applications XIV · May 2026\n\n\nThe-Anh Vu-Le, João Alfredo Cardoso Lamy, Tomás Alessi, Ian Chen, Minhyuk Park, Elfarouk Harb, George Chacko, Tandy Warnow\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#preprints",
+    "href": "publications/index.html#preprints",
+    "title": "Publications",
+    "section": "Preprints",
+    "text": "Preprints\n\n\n\n\nImproved Methods for \\(k\\)-Core Community Search\n\nSubmitted to CompleNet 2027 · September 2026\n\n\nIan Chen, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko\n\nPaper BibTeX HTML\n\n\n\n\nModeling citations and cartels\n\nPreprint · April 2026\n\n\nMinhyuk Park, Haotian Yi, Ian Chen, Tandy Warnow, George Chacko\n\nPaper BibTeX HTML\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/vu-le2025using.html",
+    "href": "publications/vu-le2025using.html",
+    "title": "Using stochastic block models for community detection",
     "section": "",
     "text": "PDF DOI"
   },
   {
-    "objectID": "publications/park2026modeling.html#abstract",
-    "href": "publications/park2026modeling.html#abstract",
-    "title": "Modeling citations and cartels",
+    "objectID": "publications/vu-le2025using.html#abstract",
+    "href": "publications/vu-le2025using.html#abstract",
+    "title": "Using stochastic block models for community detection",
     "section": "Abstract",
-    "text": "Abstract\nCitation data are widely used to inform researchers and administrators. Interpreting the results of citation analysis is non-trivial on account of uncertainty around motivations for citation, varied disciplinary practices, data quality, standards for quality, and the lack of ground truths. In-silico approaches that harness autonomous behavior and randomness offer an option in this regard. We have developed an agent-based model of citation that allows us to parsimoniously model citation dynamics at article and author levels. We characterize the model through baseline simulations, sensitivity, and ablation analysis. We also model the behavior of cartels that seek to manipulate citations. We observe an early advantage to cartels that is lost over time implying that, on balance, cartel membership may offer less than its members hope for but may still be incentivizing for some who enroll in such membership.\n\n\n\n\nBibTeX\n\n@misc{park2026modeling,\n\ttitle = {Modeling citations and cartels},\n\turl = {http://dx.doi.org/10.21203/rs.3.rs-9270520/v1},\n\tDOI = {10.21203/rs.3.rs-9270520/v1},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Park, Minhyuk and Yi, Haotian and Chen, Ian and Warnow, Tandy and Chacko, George},\n\tyear = {2026},\n\tmonth = apr,\n\thowpublished = {Preprint},\n}"
+    "text": "Abstract\nA recent study reported by Park et al. (Improved community detection using stochastic block models, Springer, Heidelberg, 2025) in Complex Networks and their Applications 2024 showed that clusterings from three Stochastic Block Models (SBMs) in graph-tool, a popular software package, often had internally disconnected clusters when used on large real-world or synthetic networks. To address this issue, Park et al. (Improved community detection using stochastic block models, Springer, Heidelberg, 2025) presented a simple technique, Well-Connected Clusters (WCC), that repeatedly finds and removes small edge cuts of size at most \\(\\log_{10} n\\) in clusters, where \\(n\\) is the number of nodes in the cluster, and showed that treatment of graph-tool SBM clusterings with WCC improves accuracy. Here we examine the question of cluster connectivity for clusterings computed using other SBM software or nested SBMs within graph-tool. Our study, using a wide range of real-world and synthetic networks ranging up to more than a million nodes, shows that all tested SBM clustering methods frequently produce communities that are disconnected, and that graph-tool improves on PySBM. We provide insight into why graph-tool degree-corrected SBM clustering produces disconnected clusters by examining the description length formula it uses, and explore the impact of modifications to the description length formula. Finally, we show that WCC generally provides an improvement in accuracy for both flat and nested SBMs, except for cases where nearly all nodes in the network are in very sparse ground-truth clusters. We also demonstrate that WCC scales to networks with millions of nodes.\n\n\n\n\nBibTeX\n\n@article{vu-le2025using,\n\ttitle = {Using stochastic block models for community detection},\n\tvolume = {11},\n\tISSN = {2364-8228},\n\turl = {http://dx.doi.org/10.1007/s41109-025-00747-2},\n\tDOI = {10.1007/s41109-025-00747-2},\n\tnumber = {1},\n\tjournal = {Applied Network Science},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Vu-Le, The-Anh and Park, Minhyuk and Chen, Ian and Warnow, Tandy},\n\tyear = {2025},\n\tmonth = nov,\n}"
   },
   {
-    "objectID": "publications/vu-le2026dense.html",
-    "href": "publications/vu-le2026dense.html",
-    "title": "Dense Subgraph Clustering and a New Cluster Ensemble Method",
+    "objectID": "publications/vu-le2026improving.html",
+    "href": "publications/vu-le2026improving.html",
+    "title": "Improving community detection with CVC, a new cluster ensemble method",
     "section": "",
     "text": "PDF DOI"
   },
   {
-    "objectID": "publications/vu-le2026dense.html#abstract",
-    "href": "publications/vu-le2026dense.html#abstract",
-    "title": "Dense Subgraph Clustering and a New Cluster Ensemble Method",
+    "objectID": "publications/vu-le2026improving.html#abstract",
+    "href": "publications/vu-le2026improving.html#abstract",
+    "title": "Improving community detection with CVC, a new cluster ensemble method",
     "section": "Abstract",
-    "text": "Abstract\nWe propose DSC-Flow-Iter, a new community detection algorithm that is based on iterative extraction of dense subgraphs. Although DSC-Flow-Iter leaves many nodes unclustered, it is competitive with leading methods and has high-precision and low-recall, making it complementary to modularity-based methods that typically have high recall but lower precision. Based on this observation, we introduce a novel cluster ensemble technique that combines DSC-Flow-Iter with modularity-based clustering, to provide improved accuracy. We show that our proposed pipeline, which uses this ensemble technique, outperforms its individual components and improves upon the baseline techniques on a large collection of synthetic networks.\n\n\n\n\nBibTeX\n\n@inbook{vu-le2026dense,\n\ttitle = {Dense Subgraph Clustering and a New Cluster Ensemble Method},\n\tISBN = {9783032167194},\n\tISSN = {1860-9503},\n\turl = {http://dx.doi.org/10.1007/978-3-032-16719-4_3},\n\tDOI = {10.1007/978-3-032-16719-4_3},\n\tbooktitle = {Complex Networks \\& Their Applications XIV},\n\tpublisher = {Springer Nature Switzerland},\n\tauthor = {Vu-Le, The-Anh and Lamy, João Alfredo Cardoso and Alessi, Tomás and Chen, Ian and Park, Minhyuk and Harb, Elfarouk and Chacko, George and Warnow, Tandy},\n\tyear = {2026},\n\tmonth = may,\n\tpages = {29-40},\n}"
+    "text": "Abstract\nCommunity detection is an unsupervised learning problem with many applications. In this study, we present Constrained Voting Consensus (CVC), a new ensemble clustering method that is designed to combine multiple clusterings, some of which may only cover a small portion of the network. We demonstrate that combining several dense subgraph clustering methods with standard methods within this ensemble approach produces a more accurate clustering than its constituent clustering methods. We also compare CVC to other ways of combining sets of clusterings, including the median consensus method, and show that CVC achieves higher accuracy and has better robustness. Furthermore, CVC can scale to very large networks with millions of vertices.\n\n\n\n\nBibTeX\n\n@article{vu-le2026improving,\n\ttitle = {Improving community detection with CVC, a new cluster ensemble method},\n\tvolume = {11},\n\tISSN = {2364-8228},\n\turl = {http://dx.doi.org/10.1007/s41109-026-00809-z},\n\tDOI = {10.1007/s41109-026-00809-z},\n\tnumber = {1},\n\tjournal = {Applied Network Science},\n\tpublisher = {Springer Science and Business Media LLC},\n\tauthor = {Vu-Le, The-Anh and Park, Minhyuk and Chen, Ian and Lamy, João Alfredo Cardoso and Alessi, Tomás and Harb, Elfarouk and Chacko, George and Warnow, Tandy},\n\tyear = {2026},\n\tmonth = jun,\n}"
   },
   {
-    "objectID": "talks/2025-05-06-magus.html",
-    "href": "talks/2025-05-06-magus.html",
-    "title": "Exploring the Effect of Iteration on MAGUS",
+    "objectID": "talks/2026-12-02-rdx.html",
+    "href": "talks/2026-12-02-rdx.html",
+    "title": "Remote Direct Code Execution",
     "section": "",
     "text": "Slides"
   },
   {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks",
+    "objectID": "talks/siam/2026-04-03-parallel.html",
+    "href": "talks/siam/2026-04-03-parallel.html",
+    "title": "Parallel Connectivity and Shortest Paths",
     "section": "",
-    "text": "Remote Direct Code Execution\n\n\nECE 509/CS 598 · Urbana, IL, USA\n\n\n3 minute lightning talk for Programmable and High Speed Networks\n\n\n\n\n\nDec 2, 2026\n\n\n\n\n\n\n\nSIAM talks\n\n\nPresentations · SIAM Undergraduate Seminar at UIUC · Urbana, IL, USA\n\n\nTalks for the SIAM Undergraduate Seminar at UIUC.\n\n\n\n\n\nOct 9, 2026\n\n\n\n\n\n\n\nSIGma talks\n\n\nPresentations · SIGma (UIUC Special Interest Group in Math and Algorithms) · Urbana, IL, USA\n\n\nTalks for the UIUC Special Interest Group in Math and Algorithms.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\nExploring the Effect of Iteration on MAGUS\n\n\nPresentation · CS 581 · Urbana, IL, USA\n\n\nCourse project, Multiple Sequence Alignment, MAGUS, …\n\n\n\n\n\nMay 6, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Slides"
   },
   {
-    "objectID": "talks/siam/2026-10-09-gurobi.html",
-    "href": "talks/siam/2026-10-09-gurobi.html",
-    "title": "Graph Optimization with Mixed Integer Programming",
+    "objectID": "talks/siam/index.html",
+    "href": "talks/siam/index.html",
+    "title": "SIAM talks",
     "section": "",
-    "text": "Slides Video Notebook"
+    "text": "Graph Optimization with Mixed Integer Programming\n\n\nMixed integer programming and Gurobi.\n\n\n\n\n\nOct 9, 2026\n\n\n\n\n\n\n\nParallel Connectivity and Shortest Paths\n\n\nNear-linear work algorithms for connectivity and single-source shortest paths (SSSP) have been known since before the 1950s. In this talk, we will describe approaches to increase their parallelism, including coarsening algorithms for connectivity, and incremental stepping algorithms for SSSP.\n\n\n\n\n\nApr 3, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "talks/sigma/2024-11-18-ackermann.html",
-    "href": "talks/sigma/2024-11-18-ackermann.html",
-    "title": "The Inverse Ackermann Function",
+    "objectID": "talks/sigma/2025-02-03-debruijn.html",
+    "href": "talks/sigma/2025-02-03-debruijn.html",
+    "title": "DeBruijn Graphs",
     "section": "",
     "text": "Slides Video"
   },
   {
-    "objectID": "talks/sigma/2025-04-21-msa.html",
-    "href": "talks/sigma/2025-04-21-msa.html",
-    "title": "Multiple Sequence Alignment",
+    "objectID": "talks/sigma/2025-09-14-reservoir.html",
+    "href": "talks/sigma/2025-09-14-reservoir.html",
+    "title": "Generating a Random Sample and Introduction to Discrete Probability",
     "section": "",
     "text": "Slides"
   },
   {
-    "objectID": "talks/sigma/2025-12-01-kkt.html",
-    "href": "talks/sigma/2025-12-01-kkt.html",
-    "title": "Linear Time Minimum Spanning Trees",
+    "objectID": "talks/sigma/2026-02-23-dynamic-conn.html",
+    "href": "talks/sigma/2026-02-23-dynamic-conn.html",
+    "title": "Dynamic Graph Connectivity",
     "section": "",
     "text": "Slides"
   },
   {
-    "objectID": "talks/sigma/2026-08-31-intro.html",
-    "href": "talks/sigma/2026-08-31-intro.html",
-    "title": "Introduction; Convex Hulls",
+    "objectID": "talks/sigma/2026-11-09-tutte.html",
+    "href": "talks/sigma/2026-11-09-tutte.html",
+    "title": "Drawing Graphs and Tutte’s Theorem",
     "section": "",
     "text": "Slides Video"
   },
   {
-    "objectID": "talks/sigma/index.html",
-    "href": "talks/sigma/index.html",
-    "title": "SIGma talks",
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Drawing Graphs and Tutte’s Theorem\n\n\nIn which we discuss the theory behind common graph drawing methods (e.g. implemented in popular software like NetworkX or GraphTool), and prove Tutte’s theorem for a strictly-convex planar embedding of 3-vertex-connected graphs.\n\n\n\n\n\nNov 9, 2026\n\n\n\n\n\n\n\nIntroduction; Convex Hulls\n\n\nThe first SIGma meeting of Fall 2026, with Mihir Tandon and Franklin Zhang.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\nDynamic Graph Connectivity\n\n\nIn a static graph, checking whether nodes are in the connected component takes linear time. I will describe the Kapron, King, Mountjoy algorithm supporting polylog time updates and queries.\n\n\n\n\n\nFeb 23, 2026\n\n\n\n\n\n\n\nLinear Time Minimum Spanning Trees\n\n\nKarger-Klein-Tarjan randomized algorithm for computing minimum spanning trees in linear expected time.\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\nGenerating a Random Sample and Introduction to Discrete Probability\n\n\nSampling with replacement, quickly.\n\n\n\n\n\nSep 14, 2025\n\n\n\n\n\n\n\nMultiple Sequence Alignment\n\n\nMultiple sequence alignment, maximum weight trace, dynamic programing, heuristics…\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\nDeBruijn Graphs\n\n\nElementary graph theory, De Bruijn sequences, and genome assembly…\n\n\n\n\n\nFeb 3, 2025\n\n\n\n\n\n\n\nThe Inverse Ackermann Function\n\n\nRecursion, Inverse Ackermann, Union-Find, Range-Minimum Queries…\n\n\n\n\n\nNov 18, 2024\n\n\n\n\n\nNo matching items"
+    "text": "CS 473 Algorithms\n\n\nUndergraduate/Graduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA\n\n\nUndergraduate course assistant in Fall 2025 and Fall 2026.\n\n\n\n\n\nAug 1, 2025\n\n\n\n\n\n\n\nCS 233 Computer Architecture\n\n\nUndergraduate course · University of Illinois Urbana-Champaign, Siebel School of Computing and Data Science · Urbana, IL, USA\n\n\nUndergraduate course assistant in Fall 2024 and Spring 2025.\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/fa24-phys213.html",
-    "href": "notes/fa24-phys213.html",
-    "title": "PHYS 213: Thermal Physics",
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
     "section": "",
-    "text": "Notes"
+    "text": "CG:SHOP: solving hard optimization problems\n\n\nACM Special Interest Group in math and algorithms · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nMeeting minutes for on SIGma activities; theory team\n\n\n\n\n\nOct 22, 2026\n\n\n\n\n\n\n\nCS 421: Programming Languages and Compilers\n\n\nUndergraduate/Graduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nLecture notes with OCaml cells that run in the browser.\n\n\n\n\n\nAug 1, 2026\n\n\n\n\n\n\n\nReading group\n\n\nUniversity of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nWrite-ups and presentations from summer 2026 reading groups.\n\n\n\n\n\nMay 31, 2026\n\n\n\n\n\n\n\nMining Complex Networks\n\n\nUniversity of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nThese notes very briefly summarize Chapters 2, 3, 5, 6 from Klaminski, Pralat, and Theberge’s book on Mining Complex Networks.\n\n\n\n\n\nMay 8, 2026\n\n\n\n\n\n\n\nPHYS 213: Thermal Physics\n\n\nUndergraduate course · University of Illinois Urbana-Champaign · Urbana, IL, USA\n\n\nIntroduction to thermodynamics…\n\n\n\n\n\nAug 1, 2024\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/mining-networks.html",
-    "href": "notes/mining-networks.html",
-    "title": "Mining Complex Networks",
+    "objectID": "notes/fa26-cgshop/background.html",
+    "href": "notes/fa26-cgshop/background.html",
+    "title": "2027 CG:SHOP: background",
     "section": "",
-    "text": "Notes"
+    "text": "Note: the following text is a mixture of what I said, what I think I said, and what I wish I said. As such, there may be small discrepancies from the lecture. Of course, there may be errors, and there is no peer-review.\nThis semester, we are preparing a submission for CG:SHOP (“CG:SHOP,” n.d.), part of the annual Symposium on Computational Geometry (SoCG). The problem for this year is multi-robot lawn mowing:\n\ninput: axis-aligned polygonal regions \\(R\\) (lawn) and \\(\\chi\\) (cutter), and a parameter \\(k\\)\noutput: axis-aligned tours \\(\\tau_1, \\ldots, \\tau_k\\) such that \\(\\bigcup_{i \\in \\mathopen{\\unicode{x27E6}} k\\mathclose{\\unicode{x27E7}}} \\bigcup_{p_j \\in \\tau_i} \\chi(p_j) \\supseteq R\\), minimizing \\(\\max_{i \\in \\mathopen{\\unicode{x27E6}} k\\mathclose{\\unicode{x27E7}}} \\mathopen{}\\mathclose{\\left\\vert \\tau_i \\right\\vert}\\)\n\nHere, I am using the notation \\(\\mathopen{\\unicode{x27E6}} k\\mathclose{\\unicode{x27E7}} = \\left\\{ 1, \\ldots, k \\right\\}\\), \\(\\chi(p)\\) to denote placing the cutter centered at point \\(p\\). All regions are in the plane \\(\\mathcal{R}^2\\). For this problem in particular, each edge of a region has integer side lengths, and so do the output tours (I will refer to this as integrality). See the 2nd meeting (www.cstheory.org/meetings/) for a slides/video description.\nNow, this is a difficult problem to try and reason about. For example, some of the challenges include:\n\nan infinite amount of potential tours and different regions; moreover without integrality, it is uncountable!\narbitrary regions \\(R\\) and \\(\\chi\\) that can be non-convex or be any other nasty shapes\ncombinatorial explosion from planning \\(k\\) simultaneous tours\n\nTherefore, for the first few weeks, we shall focus on some special cases which are a bit easier to think about. For example, we could:\n\nonly consider one robot at a time (avoiding the combinatorial explosion)\nor restrict the shape of the cutter \\(\\chi\\) or the region\n\nor there are many other simplifications, as we will later see. For today (and next week), we will restrict \\(\\chi\\) to be a unit square and consider only \\(k=1\\) (one robot).\nSee full notes.\n\n\n\n\nReferences\n\n“CG:SHOP: Computational Geometry: Solving Hard Optimization Problems.” n.d. Accessed October 23, 2026. https://cgshop.ibr.cs.tu-bs.de/."
+  },
+  {
+    "objectID": "notes/fa26-cgshop/lawn-mowing-circles.html",
+    "href": "notes/fa26-cgshop/lawn-mowing-circles.html",
+    "title": "2027 CG:SHOP: lawn mowing with circles",
+    "section": "",
+    "text": "Now, we want to generalize lawn-mowing to shapes that are not necessarily a unit-square cutter. Remember that this unit-square cutter allowed us to reduce our problem to TSP, so that the order of visiting the grid exactly specifies the tour. For other shapes (namely, a circle), it is not as clear, and moreover, we would have no idea how to relate such a path to the optimal solution.\nAs such, we have two problems to tackle:\nI want to briefly emphasize, once again, that this is hard!1 The optimal circle-cutter tour can do anything: not axis-aligned, and even the optimal tour has endpoints that are incredibly difficult to calculate (as discussed in (Fekete et al. 2023), roots of 16th-degree polynomials2). Compare to the case last week, where everything was integers, and it worked out much nicer.\nkey observation: Our avenue forward will be to consider local “patterns” of the unit-square tour, and figure out how to cover those patterns with the unit-circle. Then, we can lower-bound the optimal unit-circle tour by the optimal unit-square tour, which we already have tools to analyze (from last week, namely via the traveling salesman problem).\nSee full notes."
+  },
+  {
+    "objectID": "notes/fa26-cgshop/lawn-mowing-circles.html#footnotes",
+    "href": "notes/fa26-cgshop/lawn-mowing-circles.html#footnotes",
+    "title": "2027 CG:SHOP: lawn mowing with circles",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nthat doesn’t mean the state-of-the-art is difficult to understand, but just appreciate the ingenuity that comes into coming up with such ideas.↩︎\nthe algebraic complexity of circles is also cited as why CG:SHOP formulated instances with integers only.↩︎"
+  },
+  {
+    "objectID": "notes/fa26-cgshop/multi-robot.html",
+    "href": "notes/fa26-cgshop/multi-robot.html",
+    "title": "2027 CG:SHOP: multi-robot cover",
+    "section": "",
+    "text": "In the previous weeks, we’ve been focusing on the single-robot case, with either a square-cutter or circle-cutter. There is a very rich space in determining how to split the problem so that we can load-balance across multiple-robots. Namely, as in CG:SHOP 2027, we will consider the makespan objective: minimize the maximum length. In particular, our main tool will be an approximation algorithm for TreeCover: cover a graph using \\(k\\) trees minimizing the maximum size of any tree. See original paper: (Zheng et al. 2010).\nproblem formulation\nThe terrain consists of “large” cells, each binary (visitable or not), with each large cell a \\(2 \\times 2\\) grid of small cells. Let \\(n\\) be the number of visitable small cells. There are many variations here that we can consider:\n\nWeighted (large cells weight \\(w_i \\in \\mathcal{Z}^{\\ge 1}\\)) or unweighted (large cells weight \\(4\\)) cases, where the cost of a move is the average of its start and end.\nRobots are non-blocking (they can occupy the same cell); robots are sized as small cells.\nEach robot is given an initial cell for each robot.\nWithout return (paths) or with return (tours).\n\nAnd as typical, we consider the make-span objective (minimize the max length). Unsurprisingly, the problem is proven to be NP-hard, by reduction from 3-partition (split an array of length \\(3m\\) into \\(m\\) sets, all of equal weight and of size \\(3\\)) (Zheng et al. 2010).\nSee full notes.\n\n\n\n\nReferences\n\nZheng, Xiaoming, Sven Koenig, David Kempe, and Sonal Jain. 2010. “Multirobot Forest Coverage for Weighted and Unweighted Terrain.” IEEE Transactions on Robotics 26 (6): 1018–31. https://doi.org/10.1109/TRO.2010.2072271."
   },
   {
     "objectID": "notes/fa26-cs421/type-systems.html",
