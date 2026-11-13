@@ -1,0 +1,8 @@
+---
+title: "Remote Direct Code Execution"
+subtitle: "ECE 509/CS 598 · Urbana, IL, USA"
+date: 2026-12-02
+description: "3 minute lightning talk for Programmable and High Speed Networks"
+---
+
+[Slides](/files/talks/2026-12-02-rdx/slides.pdf)
