@@ -1,8 +1,8 @@
 ---
 title: "Improved Methods for $k$-Core Community Search"
-subtitle: "Submitted to CompleNet 2027"
+subtitle: "CompleNet 2027"
 date: 2026-09-01
-category: "preprints"
+category: "conferences"
 description: "Ian Chen, Haotian Yi, Arun Sharma, Tandy Warnow, George Chacko"
 nocite: "@chen2026improved"
 ---
