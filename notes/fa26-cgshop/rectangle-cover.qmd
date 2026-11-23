@@ -1,0 +1,17 @@
+---
+title: "2027 CG:SHOP: weighted set cover and partitions"
+subtitle: "CG:SHOP 2027"
+date: 2026-11-12
+bibliography: refs.bib
+---
+
+Lecturer: Mihir Tandon; scribe: Terry Qiu.
+
+Last week, we load-balanced across multiple robots by reducing to the tree-cover problem, for which we derived a 4-approx.
+We continue this trend of multiple-robots by another decomposition of the grid, this time into rectangles.
+Namely, how to cut a rectilinear polygon into rectangles minimizing an affine objective function:
+
+- **input**: a rectilinear polygon $P$ and costs $\alpha, \beta \ge 0$
+- **output**: rectangles $S_1, \ldots, S_n$ with $\bigcup_i S_i = P$, minimizing $\sum_i (\alpha + \beta \cdot A(S_i))$
+
+See [full notes](/files/notes/fa26-cgshop/11-12/notes.pdf).
