@@ -1,8 +1,8 @@
 ---
 title: "Modeling citations and cartels"
-subtitle: "Preprint"
+subtitle: "To appear in Complex Networks 2026"
 date: 2026-04-01
-category: "preprints"
+category: "conferences"
 description: "Minhyuk Park, Haotian Yi, Ian Chen, Tandy Warnow, George Chacko"
 nocite: "@park2026modeling"
 ---
